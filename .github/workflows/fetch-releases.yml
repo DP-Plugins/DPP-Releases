@@ -20,19 +20,28 @@ jobs:
           repos=("darksoldier1404/DPP-Core" "darksoldier1404/DP-Shop" "darksoldier1404/DP-SimplePrefix")
 
           for repo in "${repos[@]}"; do
-            release=$(curl -s "https://api.github.com/repos/$repo/releases/latest")
-            name=$(echo "$release" | jq -r '.name')
-            tag=$(echo "$release" | jq -r '.tag_name')
-            url=$(echo "$release" | jq -r '.html_url')
+            releases=$(curl -s "https://api.github.com/repos/$repo/releases?per_page=10")
 
-            # 릴리즈가 없으면 건너뜀
-            if [[ "$tag" == "null" ]]; then
+            count=$(echo "$releases" | jq 'length')
+            if [[ "$count" -eq 0 ]]; then
               continue
             fi
 
-            json=$(jq -n --arg repo "$repo" --arg name "$name" --arg tag "$tag" --arg url "$url" \
-              '{repo: $repo, name: $name, tag: $tag, url: $url}')
-            jq ". += [$json]" releases.json > tmp.json && mv tmp.json releases.json
+            for i in $(seq 0 $(($count - 1))); do
+              name=$(echo "$releases" | jq -r ".[$i].name")
+              tag=$(echo "$releases" | jq -r ".[$i].tag_name")
+              url=$(echo "$releases" | jq -r ".[$i].html_url")
+              date=$(echo "$releases" | jq -r ".[$i].published_at")
+
+              # 릴리즈가 없거나 태그가 없으면 건너뜀
+              if [[ "$tag" == "null" ]]; then
+                continue
+              fi
+
+              json=$(jq -n --arg repo "$repo" --arg name "$name" --arg tag "$tag" --arg url "$url" --arg date "$date" \
+                '{repo: $repo, name: $name, tag: $tag, url: $url, published_at: $date}')
+              jq ". += [$json]" releases.json > tmp.json && mv tmp.json releases.json
+            done
           done
 
       - name: Commit and push if changed
