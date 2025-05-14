@@ -61,7 +61,7 @@ jobs:
               repo_releases=$(echo "$repo_releases" | jq ". += [$item]")
 
               # Markdown 형식 누적 (중복을 방지)
-              md+="### 🔖 $tag\n[릴리스 바로가기]($url)\n$formatted_body\n\n"
+              md+="### 🔖 $tag\n[Releases]($url)\n$formatted_body\n"
             done
 
             # all_releases.json에 추가
