@@ -27,6 +27,9 @@ jobs:
               continue
             fi
 
+            # repo 이름에서 'darksoldier1404/' 제거
+            repo_name=$(echo "$repo" | sed 's/darksoldier1404\///')
+
             md=""
             repo_releases="[]"
 
@@ -46,7 +49,7 @@ jobs:
 
               # JSON 객체 생성
               item=$(jq -n \
-                --arg repo "$repo" \
+                --arg repo "$repo_name" \
                 --arg name "$name" \
                 --arg tag "$tag" \
                 --arg url "$url" \
@@ -58,14 +61,14 @@ jobs:
               repo_releases=$(echo "$repo_releases" | jq ". += [$item]")
 
               # Markdown 형식 누적
-              md+="### 🔖 $tag\n[릴리스 바로가기]($url)\n$formatted_body\n\n"
+              md+="### 🔖 $tag\n[Releases]($url)\n$formatted_body\n\n"
             done
 
             # all_releases.json에 추가
-            jq --arg repo "$repo" --argjson data "$repo_releases" '.[$repo] = $data' all_releases.json > tmp.json && mv tmp.json all_releases.json
+            jq --arg repo "$repo_name" --argjson data "$repo_releases" '.[$repo] = $data' all_releases.json > tmp.json && mv tmp.json all_releases.json
 
             # all_histories.json에 추가
-            jq --arg repo "$repo" --arg md "$md" '.[$repo] = $md' all_histories.json > tmp.json && mv tmp.json all_histories.json
+            jq --arg repo "$repo_name" --arg md "$md" '.[$repo] = $md' all_histories.json > tmp.json && mv tmp.json all_histories.json
           done
 
           # 최종 JSON 병합
