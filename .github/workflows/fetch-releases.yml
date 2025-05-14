@@ -2,7 +2,7 @@ name: Fetch Latest Releases
 
 on:
   schedule:
-    - cron: '*/30 * * * *'  # 30분마다 실행
+    - cron: '*/30 * * * *'
   workflow_dispatch:
 
 jobs:
@@ -37,14 +37,13 @@ jobs:
               date=$(echo "$releases" | jq -r ".[$i].published_at")
               body=$(echo "$releases" | jq -r ".[$i].body")
 
-              # 커밋 링크 변환
-			  formatted_body=$(echo "$body" | sed -E "s|- ([0-9a-f]{7,40}):|- [\1](https://github.com/$repo/commit/\1):|g")
+              # sed 구분자 문제 해결: | 사용
+              formatted_body=$(echo "$body" | sed -E "s|- ([0-9a-f]{7,40}):|- [\1](https://github.com/$repo/commit/\1):|g")
 
               if [[ "$tag" == "null" ]]; then
                 continue
               fi
 
-              # 개별 릴리스 정보 JSON에 추가
               json=$(jq -n \
                 --arg repo "$repo" \
                 --arg name "$name" \
@@ -55,17 +54,16 @@ jobs:
                 '{repo: $repo, name: $name, tag: $tag, url: $url, published_at: $date, body: $body}')
               jq ". += [$json]" raw_releases.json > tmp.json && mv tmp.json raw_releases.json
 
-              # 마크다운 텍스트 누적
               md+="### 🔖 $tag\n[Releases]($url)\n$formatted_body\n\n"
             done
 
             jq --arg repo "$repo" --arg md "$md" '.[$repo] = $md' project_updates.json > tmp.json && mv tmp.json project_updates.json
           done
 
-          # 마크다운 내역 합치기
+          # 통합 마크다운 내역 문자열
           update_history=$(jq -r 'to_entries | map(.value) | join("\n")' project_updates.json)
 
-          # 최종 releases.json 생성 (update_history + releases)
+          # releases.json 생성
           jq -n \
             --arg update_history "$update_history" \
             --argjson releases "$(cat raw_releases.json)" \
