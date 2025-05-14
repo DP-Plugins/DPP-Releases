@@ -3,18 +3,105 @@
     "repo": "darksoldier1404/DPP-Core",
     "name": "Release #4.0.2.19",
     "tag": "4.0.2.19",
-    "url": "https://github.com/darksoldier1404/DPP-Core/releases/tag/4.0.2.19"
+    "url": "https://github.com/darksoldier1404/DPP-Core/releases/tag/4.0.2.19",
+    "published_at": "2025-05-13T23:35:18Z"
+  },
+  {
+    "repo": "darksoldier1404/DPP-Core",
+    "name": "Release #4.0.2.17",
+    "tag": "4.0.2.17",
+    "url": "https://github.com/darksoldier1404/DPP-Core/releases/tag/4.0.2.17",
+    "published_at": "2025-05-13T06:39:10Z"
+  },
+  {
+    "repo": "darksoldier1404/DPP-Core",
+    "name": "Release #4.0.2.16",
+    "tag": "4.0.2.16",
+    "url": "https://github.com/darksoldier1404/DPP-Core/releases/tag/4.0.2.16",
+    "published_at": "2025-05-12T14:54:13Z"
+  },
+  {
+    "repo": "darksoldier1404/DPP-Core",
+    "name": "Release #4.0.2.15",
+    "tag": "4.0.2.15",
+    "url": "https://github.com/darksoldier1404/DPP-Core/releases/tag/4.0.2.15",
+    "published_at": "2025-05-10T04:12:45Z"
   },
   {
     "repo": "darksoldier1404/DP-Shop",
     "name": "Release #1.0.0.4",
     "tag": "1.0.0.4",
-    "url": "https://github.com/darksoldier1404/DP-Shop/releases/tag/1.0.0.4"
+    "url": "https://github.com/darksoldier1404/DP-Shop/releases/tag/1.0.0.4",
+    "published_at": "2025-05-13T21:23:47Z"
   },
   {
     "repo": "darksoldier1404/DP-SimplePrefix",
     "name": "Test",
     "tag": "Test",
-    "url": "https://github.com/darksoldier1404/DP-SimplePrefix/releases/tag/Test"
+    "url": "https://github.com/darksoldier1404/DP-SimplePrefix/releases/tag/Test",
+    "published_at": "2025-05-05T12:50:21Z"
+  },
+  {
+    "repo": "darksoldier1404/DP-SimplePrefix",
+    "name": "Release #1.0.1.56",
+    "tag": "1.0.1.56",
+    "url": "https://github.com/darksoldier1404/DP-SimplePrefix/releases/tag/1.0.1.56",
+    "published_at": "2022-10-30T20:09:43Z"
+  },
+  {
+    "repo": "darksoldier1404/DP-SimplePrefix",
+    "name": "Release #1.0.1.55",
+    "tag": "1.0.1.55",
+    "url": "https://github.com/darksoldier1404/DP-SimplePrefix/releases/tag/1.0.1.55",
+    "published_at": "2022-10-27T15:55:17Z"
+  },
+  {
+    "repo": "darksoldier1404/DP-SimplePrefix",
+    "name": "Release #1.0.1.54",
+    "tag": "1.0.1.54",
+    "url": "https://github.com/darksoldier1404/DP-SimplePrefix/releases/tag/1.0.1.54",
+    "published_at": "2022-07-13T07:08:46Z"
+  },
+  {
+    "repo": "darksoldier1404/DP-SimplePrefix",
+    "name": "Release #1.0.1.53",
+    "tag": "1.0.1.53",
+    "url": "https://github.com/darksoldier1404/DP-SimplePrefix/releases/tag/1.0.1.53",
+    "published_at": "2022-07-13T07:07:39Z"
+  },
+  {
+    "repo": "darksoldier1404/DP-SimplePrefix",
+    "name": "Release #1.0.1.52",
+    "tag": "1.0.1.52",
+    "url": "https://github.com/darksoldier1404/DP-SimplePrefix/releases/tag/1.0.1.52",
+    "published_at": "2022-06-14T16:39:34Z"
+  },
+  {
+    "repo": "darksoldier1404/DP-SimplePrefix",
+    "name": "[v1.0.0.32-_1.17.1] DP-SimplePrefix",
+    "tag": "v1.0.0.32-_1.17.1",
+    "url": "https://github.com/darksoldier1404/DP-SimplePrefix/releases/tag/v1.0.0.32-_1.17.1",
+    "published_at": "2021-12-02T13:48:49Z"
+  },
+  {
+    "repo": "darksoldier1404/DP-SimplePrefix",
+    "name": "[v1.0.0.32] DP-SimplePrefix",
+    "tag": "v1.0.0.32",
+    "url": "https://github.com/darksoldier1404/DP-SimplePrefix/releases/tag/v1.0.0.32",
+    "published_at": "2021-12-02T04:22:14Z"
+  },
+  {
+    "repo": "darksoldier1404/DP-SimplePrefix",
+    "name": "[v1.0.0.31] DP-SimplePrefix",
+    "tag": "v1.0.0.31",
+    "url": "https://github.com/darksoldier1404/DP-SimplePrefix/releases/tag/v1.0.0.31",
+    "published_at": "2021-12-01T22:01:16Z"
+  },
+  {
+    "repo": "darksoldier1404/DP-SimplePrefix",
+    "name": "[v1.0.0.29] DP-SimplePrefix",
+    "tag": "v1.0.0.29",
+    "url": "https://github.com/darksoldier1404/DP-SimplePrefix/releases/tag/v1.0.0.29",
+    "published_at": "2021-11-30T23:44:23Z"
   }
 ]
