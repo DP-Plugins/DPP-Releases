@@ -13,22 +13,22 @@ jobs:
       - name: Checkout this repository
         uses: actions/checkout@v3
 
-      - name: Fetch release data and write to JSON (with update_history)
+      - name: Fetch release data and write to JSON
         run: |
-          echo "[]" > raw_releases.json
-          echo "{}" > project_updates.json
+          echo "{}" > all_releases.json
+          echo "{}" > all_histories.json
 
           repos=("darksoldier1404/DPP-Core" "darksoldier1404/DP-Shop" "darksoldier1404/DP-SimplePrefix")
 
           for repo in "${repos[@]}"; do
             releases=$(curl -s "https://api.github.com/repos/$repo/releases?per_page=10")
-
             count=$(echo "$releases" | jq 'length')
             if [[ "$count" -eq 0 ]]; then
               continue
             fi
 
-            md="## $repo\n\n"
+            md=""
+            repo_releases="[]"
 
             for i in $(seq 0 $(($count - 1))); do
               name=$(echo "$releases" | jq -r ".[$i].name")
@@ -37,14 +37,15 @@ jobs:
               date=$(echo "$releases" | jq -r ".[$i].published_at")
               body=$(echo "$releases" | jq -r ".[$i].body")
 
-              # sed 구분자 문제 해결: | 사용
-              formatted_body=$(echo "$body" | sed -E "s|- ([0-9a-f]{7,40}):|- [\1](https://github.com/$repo/commit/\1):|g")
-
               if [[ "$tag" == "null" ]]; then
                 continue
               fi
 
-              json=$(jq -n \
+              # 커밋 링크로 변환
+              formatted_body=$(echo "$body" | sed -E "s|- ([0-9a-f]{7,40}):|- [\1](https://github.com/$repo/commit/\1):|g")
+
+              # JSON 객체 생성
+              item=$(jq -n \
                 --arg repo "$repo" \
                 --arg name "$name" \
                 --arg tag "$tag" \
@@ -52,21 +53,25 @@ jobs:
                 --arg date "$date" \
                 --arg body "$formatted_body" \
                 '{repo: $repo, name: $name, tag: $tag, url: $url, published_at: $date, body: $body}')
-              jq ". += [$json]" raw_releases.json > tmp.json && mv tmp.json raw_releases.json
 
-              md+="### 🔖 $tag\n[Releases]($url)\n$formatted_body\n\n"
+              # 배열에 추가
+              repo_releases=$(echo "$repo_releases" | jq ". += [$item]")
+
+              # Markdown 형식 누적
+              md+="### 🔖 $tag\n[릴리스 바로가기]($url)\n$formatted_body\n\n"
             done
 
-            jq --arg repo "$repo" --arg md "$md" '.[$repo] = $md' project_updates.json > tmp.json && mv tmp.json project_updates.json
+            # all_releases.json에 추가
+            jq --arg repo "$repo" --argjson data "$repo_releases" '.[$repo] = $data' all_releases.json > tmp.json && mv tmp.json all_releases.json
+
+            # all_histories.json에 추가
+            jq --arg repo "$repo" --arg md "$md" '.[$repo] = $md' all_histories.json > tmp.json && mv tmp.json all_histories.json
           done
 
-          # 통합 마크다운 내역 문자열
-          update_history=$(jq -r 'to_entries | map(.value) | join("\n")' project_updates.json)
-
-          # releases.json 생성
+          # 최종 JSON 병합
           jq -n \
-            --arg update_history "$update_history" \
-            --argjson releases "$(cat raw_releases.json)" \
+            --argjson releases "$(cat all_releases.json)" \
+            --argjson update_history "$(cat all_histories.json)" \
             '{update_history: $update_history, releases: $releases}' > releases.json
 
       - name: Commit and push if changed
@@ -74,5 +79,5 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add releases.json
-          git diff --cached --quiet || git commit -m "Update releases.json with update history"
+          git diff --cached --quiet || git commit -m "Update releases.json with categorized release data and update history"
           git push
