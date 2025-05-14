@@ -3,7 +3,7 @@ name: Fetch Latest Releases
 on:
   schedule:
     - cron: '*/30 * * * *'  # 30분마다 실행
-  workflow_dispatch:  # 수동 실행
+  workflow_dispatch:
 
 jobs:
   fetch-latest-releases:
@@ -13,9 +13,10 @@ jobs:
       - name: Checkout this repository
         uses: actions/checkout@v3
 
-      - name: Fetch release data and write to JSON
+      - name: Fetch release data and write to JSON (with update_history)
         run: |
-          echo "[]" > releases.json
+          echo "[]" > raw_releases.json
+          echo "{}" > project_updates.json
 
           repos=("darksoldier1404/DPP-Core" "darksoldier1404/DP-Shop" "darksoldier1404/DP-SimplePrefix")
 
@@ -27,27 +28,53 @@ jobs:
               continue
             fi
 
+            md="## $repo\n\n"
+
             for i in $(seq 0 $(($count - 1))); do
               name=$(echo "$releases" | jq -r ".[$i].name")
               tag=$(echo "$releases" | jq -r ".[$i].tag_name")
               url=$(echo "$releases" | jq -r ".[$i].html_url")
               date=$(echo "$releases" | jq -r ".[$i].published_at")
+              body=$(echo "$releases" | jq -r ".[$i].body")
 
-              # 릴리즈가 없거나 태그가 없으면 건너뜀
+              # 커밋 링크 변환
+              formatted_body=$(echo "$body" | sed -E "s/- ([0-9a-f]{7,40}):/- [\1](https:\/\/github.com\/$repo\/commit\/\1):/g")
+
               if [[ "$tag" == "null" ]]; then
                 continue
               fi
 
-              json=$(jq -n --arg repo "$repo" --arg name "$name" --arg tag "$tag" --arg url "$url" --arg date "$date" \
-                '{repo: $repo, name: $name, tag: $tag, url: $url, published_at: $date}')
-              jq ". += [$json]" releases.json > tmp.json && mv tmp.json releases.json
+              # 개별 릴리스 정보 JSON에 추가
+              json=$(jq -n \
+                --arg repo "$repo" \
+                --arg name "$name" \
+                --arg tag "$tag" \
+                --arg url "$url" \
+                --arg date "$date" \
+                --arg body "$formatted_body" \
+                '{repo: $repo, name: $name, tag: $tag, url: $url, published_at: $date, body: $body}')
+              jq ". += [$json]" raw_releases.json > tmp.json && mv tmp.json raw_releases.json
+
+              # 마크다운 텍스트 누적
+              md+="### 🔖 $tag\n[Releases]($url)\n$formatted_body\n\n"
             done
+
+            jq --arg repo "$repo" --arg md "$md" '.[$repo] = $md' project_updates.json > tmp.json && mv tmp.json project_updates.json
           done
+
+          # 마크다운 내역 합치기
+          update_history=$(jq -r 'to_entries | map(.value) | join("\n")' project_updates.json)
+
+          # 최종 releases.json 생성 (update_history + releases)
+          jq -n \
+            --arg update_history "$update_history" \
+            --argjson releases "$(cat raw_releases.json)" \
+            '{update_history: $update_history, releases: $releases}' > releases.json
 
       - name: Commit and push if changed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add releases.json
-          git diff --cached --quiet || git commit -m "Update releases.json"
+          git diff --cached --quiet || git commit -m "Update releases.json with update history"
           git push
