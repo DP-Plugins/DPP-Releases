@@ -27,7 +27,7 @@ jobs:
               continue
             fi
 
-            # repo 이름에서 'darksoldier1404/' 제거
+            # Remove 'darksoldier1404/' from the repo name
             repo_name=$(echo "$repo" | sed 's/darksoldier1404\///')
 
             md=""
@@ -44,15 +44,15 @@ jobs:
                 continue
               fi
 
-              # 커밋 내역 가져오기
+              # Get commit details
               commits=$(curl -s "https://api.github.com/repos/$repo/commits?sha=$tag&per_page=1")
               commit_date=$(echo "$commits" | jq -r '.[0].commit.author.date')
               commit_message=$(echo "$commits" | jq -r '.[0].commit.message')
 
-              # 커밋 링크로 변환
+              # Format commit hashes into links
               formatted_body=$(echo "$body" | sed -E "s|- ([0-9a-f]{7,40}):|- [\1](https://github.com/$repo/commit/\1):|g")
 
-              # JSON 객체 생성
+              # Create JSON object
               item=$(jq -n \
                 --arg repo "$repo_name" \
                 --arg name "$name" \
@@ -64,21 +64,21 @@ jobs:
                 --arg commit_message "$commit_message" \
                 '{repo: $repo, name: $name, tag: $tag, url: $url, published_at: $date, commit_date: $commit_date, commit_message: $commit_message, body: $body}')
 
-              # 배열에 추가
+              # Add to array
               repo_releases=$(echo "$repo_releases" | jq ". += [$item]")
 
-              # Markdown 형식 누적 (중복을 방지)
-              md+="### 🔖 $tag\n[릴리스 바로가기]($url)\n**최신 커밋:** $commit_message\n**커밋 날짜:** $commit_date\n$formatted_body\n"
+              # Append markdown formatted content
+              md+="### 🔖 $tag\n[Release Link]($url)\n**Latest Commit:** $commit_message\n**Commit Date:** $commit_date\n$formatted_body\n"
             done
 
-            # all_releases.json에 추가
+            # Add to all_releases.json
             jq --arg repo "$repo_name" --argjson data "$repo_releases" '.[$repo] = $data' all_releases.json > tmp.json && mv tmp.json all_releases.json
 
-            # all_histories.json에 추가
+            # Add to all_histories.json
             jq --arg repo "$repo_name" --arg md "$md" '.[$repo] = $md' all_histories.json > tmp.json && mv tmp.json all_histories.json
           done
 
-          # 최종 JSON 병합
+          # Merge final JSON data
           jq -n \
             --argjson releases "$(cat all_releases.json)" \
             --argjson update_history "$(cat all_histories.json)" \
