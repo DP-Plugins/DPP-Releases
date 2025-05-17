@@ -1,8 +1,7 @@
 {
   "update_history": {
     "DPP-Core": "### 🔖 4.0.2.19\\n[Release Link](https://github.com/darksoldier1404/DPP-Core/releases/tag/4.0.2.19)\\n**Latest Commit:** Merge remote-tracking branch 'origin/master'\\n**Commit Date:** 2025-05-13T23:34:44Z\\n## Commits\n- [e71892e](https://github.com/darksoldier1404/DPP-Core/commit/e71892e): hanger publish test (darksoldier1404)\n- [387d54d](https://github.com/darksoldier1404/DPP-Core/commit/387d54d): Merge remote-tracking branch 'origin/master' (darksoldier1404)\\n### 🔖 4.0.2.17\\n[Release Link](https://github.com/darksoldier1404/DPP-Core/releases/tag/4.0.2.17)\\n**Latest Commit:** Merge pull request #2 from darksoldier1404/dev\n\nDev\\n**Commit Date:** 2025-05-13T06:37:25Z\\n\\n### 🔖 4.0.2.16\\n[Release Link](https://github.com/darksoldier1404/DPP-Core/releases/tag/4.0.2.16)\\n**Latest Commit:** Create README.md\\n**Commit Date:** 2025-05-12T14:52:03Z\\n## Commits\n- [b93b89b](https://github.com/darksoldier1404/DPP-Core/commit/b93b89b): Create README.md (DEADPOOLIO)\\n### 🔖 4.0.2.15\\n[Release Link](https://github.com/darksoldier1404/DPP-Core/releases/tag/4.0.2.15)\\n**Latest Commit:** Update gradle.yml\\n**Commit Date:** 2025-05-10T04:05:35Z\\n\\n",
-    "DP-Shop": "### 🔖 1.0.0.5\\n[Release Link](https://github.com/darksoldier1404/DP-Shop/releases/tag/1.0.0.5)\\n**Latest Commit:** Merge pull request #1 from darksoldier1404/dev\n\nLang File Update\\n**Commit Date:** 2025-05-15T14:36:08Z\\n\\n### 🔖 1.0.0.4\\n[Release Link](https://github.com/darksoldier1404/DP-Shop/releases/tag/1.0.0.4)\\n**Latest Commit:** Update README.md\\n**Commit Date:** 2025-05-13T21:23:07Z\\n## Commits\n- [59fc1dc](https://github.com/darksoldier1404/DP-Shop/commit/59fc1dc): Update README.md (DEADPOOLIO)\\n",
-    "DP-SimplePrefix": "### 🔖 Test\\n[Release Link](https://github.com/darksoldier1404/DP-SimplePrefix/releases/tag/Test)\\n**Latest Commit:** Create release.yml\\n**Commit Date:** 2025-05-05T12:44:52Z\\n<!-- Release notes generated using configuration in .github/release.yml at master -->\r\n\r\n\r\n\r\n**Full Changelog**: https://github.com/darksoldier1404/DP-SimplePrefix/compare/1.0.1.56...Test\\n### 🔖 1.0.1.56\\n[Release Link](https://github.com/darksoldier1404/DP-SimplePrefix/releases/tag/1.0.1.56)\\n**Latest Commit:** Merge pull request #29 from darksoldier1404/patch\n\n칭호 중복 생성시 설정된 칭호가 초기화되는 버그 수정\\n**Commit Date:** 2022-10-30T20:08:12Z\\n\\n### 🔖 1.0.1.55\\n[Release Link](https://github.com/darksoldier1404/DP-SimplePrefix/releases/tag/1.0.1.55)\\n**Latest Commit:** Merge pull request #28 from darksoldier1404/update\n\n페이징 기능 완성\\n**Commit Date:** 2022-10-27T15:53:06Z\\n## Commits\n- [a250ca2](https://github.com/darksoldier1404/DP-SimplePrefix/commit/a250ca2): 페이징 기능 완성 (darksoldier1404) [#28](https://github.com/darksoldier1404/DP-SimplePrefix/pull/28)\\n### 🔖 1.0.1.54\\n[Release Link](https://github.com/darksoldier1404/DP-SimplePrefix/releases/tag/1.0.1.54)\\n**Latest Commit:** Merge pull request #25 from darksoldier1404/patch\n\n버전 업데이트\\n**Commit Date:** 2022-07-13T07:02:06Z\\n\\n### 🔖 1.0.1.53\\n[Release Link](https://github.com/darksoldier1404/DP-SimplePrefix/releases/tag/1.0.1.53)\\n**Latest Commit:** Merge pull request #24 from darksoldier1404/update\n\nUpdate\\n**Commit Date:** 2022-07-13T07:01:22Z\\n## Commits\n- [35eeba4](https://github.com/darksoldier1404/DP-SimplePrefix/commit/35eeba4): 목록 명령어를 GUI로 대체 (클릭하여 장착 가능), 칭호 설정 명령어를 채팅으로 대체 (darksoldier1404) [#24](https://github.com/darksoldier1404/DP-SimplePrefix/pull/24)\n- [2b115e3](https://github.com/darksoldier1404/DP-SimplePrefix/commit/2b115e3): 목록 명령어를 GUI로 대체 (클릭하여 장착 가능), 칭호 설정 명령어를 채팅으로 대체 (darksoldier1404) [#24](https://github.com/darksoldier1404/DP-SimplePrefix/pull/24)\\n### 🔖 1.0.1.52\\n[Release Link](https://github.com/darksoldier1404/DP-SimplePrefix/releases/tag/1.0.1.52)\\n**Latest Commit:** Create gradle.yml\\n**Commit Date:** 2022-06-14T16:33:41Z\\n\\n### 🔖 v1.0.0.32-_1.17.1\\n[Release Link](https://github.com/darksoldier1404/DP-SimplePrefix/releases/tag/v1.0.0.32-_1.17.1)\\n**Latest Commit:** Merge pull request #4 from darksoldier1404/V1.17.1\n\n1.17.1 레거시 지원\\n**Commit Date:** 2021-12-02T13:47:52Z\\n## What's Changed\r\n* 1.17.1 레거시 지원 by @darksoldier1404 in https://github.com/darksoldier1404/DP-SimplePrefix/pull/4\r\n\r\n\r\n**Full Changelog**: https://github.com/darksoldier1404/DP-SimplePrefix/compare/v1.0.0.32...v1.0.0.32-_1.17.1\\n### 🔖 v1.0.0.32\\n[Release Link](https://github.com/darksoldier1404/DP-SimplePrefix/releases/tag/v1.0.0.32)\\n**Latest Commit:** Merge pull request #3 from darksoldier1404/pre\n\nAnvilGUI API DUC로 옮김\\n**Commit Date:** 2021-12-02T04:21:51Z\\n## What's Changed\r\n* AnvilGUI API DUC로 옮김 by @darksoldier1404 in https://github.com/darksoldier1404/DP-SimplePrefix/pull/3\r\n\r\n\r\n**Full Changelog**: https://github.com/darksoldier1404/DP-SimplePrefix/compare/v1.0.0.31...v1.0.0.32\\n### 🔖 v1.0.0.31\\n[Release Link](https://github.com/darksoldier1404/DP-SimplePrefix/releases/tag/v1.0.0.31)\\n**Latest Commit:** Merge pull request #2 from darksoldier1404/pre\n\n1.18 버전업.\\n**Commit Date:** 2021-12-01T22:00:49Z\\n## What's Changed\r\n* 1.18 버전업. by @darksoldier1404 in https://github.com/darksoldier1404/DP-SimplePrefix/pull/2\r\n\r\n\r\n**Full Changelog**: https://github.com/darksoldier1404/DP-SimplePrefix/compare/v1.0.0.29...v1.0.0.31\\n### 🔖 v1.0.0.29\\n[Release Link](https://github.com/darksoldier1404/DP-SimplePrefix/releases/tag/v1.0.0.29)\\n**Latest Commit:** Merge pull request #1 from darksoldier1404/pre\n\nPre\\n**Commit Date:** 2021-11-30T17:55:38Z\\n## What's Changed\r\n* Pre by @darksoldier1404 in https://github.com/darksoldier1404/DP-SimplePrefix/pull/1\r\n\r\n## New Contributors\r\n* @darksoldier1404 made their first contribution in https://github.com/darksoldier1404/DP-SimplePrefix/pull/1\r\n\r\n**Full Changelog**: https://github.com/darksoldier1404/DP-SimplePrefix/commits/v1.0.0.29\\n"
+    "DP-Shop": "### 🔖 1.0.0.5\\n[Release Link](https://github.com/darksoldier1404/DP-Shop/releases/tag/1.0.0.5)\\n**Latest Commit:** Merge pull request #1 from darksoldier1404/dev\n\nLang File Update\\n**Commit Date:** 2025-05-15T14:36:08Z\\n\\n### 🔖 1.0.0.4\\n[Release Link](https://github.com/darksoldier1404/DP-Shop/releases/tag/1.0.0.4)\\n**Latest Commit:** Update README.md\\n**Commit Date:** 2025-05-13T21:23:07Z\\n## Commits\n- [59fc1dc](https://github.com/darksoldier1404/DP-Shop/commit/59fc1dc): Update README.md (DEADPOOLIO)\\n"
   },
   "releases": {
     "DPP-Core": [
@@ -67,108 +66,6 @@
         "commit_date": "2025-05-13T21:23:07Z",
         "commit_message": "Update README.md",
         "body": "## Commits\n- [59fc1dc](https://github.com/darksoldier1404/DP-Shop/commit/59fc1dc): Update README.md (DEADPOOLIO)"
-      }
-    ],
-    "DP-SimplePrefix": [
-      {
-        "repo": "DP-SimplePrefix",
-        "name": "Test",
-        "tag": "Test",
-        "url": "https://github.com/darksoldier1404/DP-SimplePrefix/releases/tag/Test",
-        "published_at": "2025-05-05T12:50:21Z",
-        "commit_date": "2025-05-05T12:44:52Z",
-        "commit_message": "Create release.yml",
-        "body": "<!-- Release notes generated using configuration in .github/release.yml at master -->\r\n\r\n\r\n\r\n**Full Changelog**: https://github.com/darksoldier1404/DP-SimplePrefix/compare/1.0.1.56...Test"
-      },
-      {
-        "repo": "DP-SimplePrefix",
-        "name": "Release #1.0.1.56",
-        "tag": "1.0.1.56",
-        "url": "https://github.com/darksoldier1404/DP-SimplePrefix/releases/tag/1.0.1.56",
-        "published_at": "2022-10-30T20:09:43Z",
-        "commit_date": "2022-10-30T20:08:12Z",
-        "commit_message": "Merge pull request #29 from darksoldier1404/patch\n\n칭호 중복 생성시 설정된 칭호가 초기화되는 버그 수정",
-        "body": ""
-      },
-      {
-        "repo": "DP-SimplePrefix",
-        "name": "Release #1.0.1.55",
-        "tag": "1.0.1.55",
-        "url": "https://github.com/darksoldier1404/DP-SimplePrefix/releases/tag/1.0.1.55",
-        "published_at": "2022-10-27T15:55:17Z",
-        "commit_date": "2022-10-27T15:53:06Z",
-        "commit_message": "Merge pull request #28 from darksoldier1404/update\n\n페이징 기능 완성",
-        "body": "## Commits\n- [a250ca2](https://github.com/darksoldier1404/DP-SimplePrefix/commit/a250ca2): 페이징 기능 완성 (darksoldier1404) [#28](https://github.com/darksoldier1404/DP-SimplePrefix/pull/28)"
-      },
-      {
-        "repo": "DP-SimplePrefix",
-        "name": "Release #1.0.1.54",
-        "tag": "1.0.1.54",
-        "url": "https://github.com/darksoldier1404/DP-SimplePrefix/releases/tag/1.0.1.54",
-        "published_at": "2022-07-13T07:08:46Z",
-        "commit_date": "2022-07-13T07:02:06Z",
-        "commit_message": "Merge pull request #25 from darksoldier1404/patch\n\n버전 업데이트",
-        "body": ""
-      },
-      {
-        "repo": "DP-SimplePrefix",
-        "name": "Release #1.0.1.53",
-        "tag": "1.0.1.53",
-        "url": "https://github.com/darksoldier1404/DP-SimplePrefix/releases/tag/1.0.1.53",
-        "published_at": "2022-07-13T07:07:39Z",
-        "commit_date": "2022-07-13T07:01:22Z",
-        "commit_message": "Merge pull request #24 from darksoldier1404/update\n\nUpdate",
-        "body": "## Commits\n- [35eeba4](https://github.com/darksoldier1404/DP-SimplePrefix/commit/35eeba4): 목록 명령어를 GUI로 대체 (클릭하여 장착 가능), 칭호 설정 명령어를 채팅으로 대체 (darksoldier1404) [#24](https://github.com/darksoldier1404/DP-SimplePrefix/pull/24)\n- [2b115e3](https://github.com/darksoldier1404/DP-SimplePrefix/commit/2b115e3): 목록 명령어를 GUI로 대체 (클릭하여 장착 가능), 칭호 설정 명령어를 채팅으로 대체 (darksoldier1404) [#24](https://github.com/darksoldier1404/DP-SimplePrefix/pull/24)"
-      },
-      {
-        "repo": "DP-SimplePrefix",
-        "name": "Release #1.0.1.52",
-        "tag": "1.0.1.52",
-        "url": "https://github.com/darksoldier1404/DP-SimplePrefix/releases/tag/1.0.1.52",
-        "published_at": "2022-06-14T16:39:34Z",
-        "commit_date": "2022-06-14T16:33:41Z",
-        "commit_message": "Create gradle.yml",
-        "body": ""
-      },
-      {
-        "repo": "DP-SimplePrefix",
-        "name": "[v1.0.0.32-_1.17.1] DP-SimplePrefix",
-        "tag": "v1.0.0.32-_1.17.1",
-        "url": "https://github.com/darksoldier1404/DP-SimplePrefix/releases/tag/v1.0.0.32-_1.17.1",
-        "published_at": "2021-12-02T13:48:49Z",
-        "commit_date": "2021-12-02T13:47:52Z",
-        "commit_message": "Merge pull request #4 from darksoldier1404/V1.17.1\n\n1.17.1 레거시 지원",
-        "body": "## What's Changed\r\n* 1.17.1 레거시 지원 by @darksoldier1404 in https://github.com/darksoldier1404/DP-SimplePrefix/pull/4\r\n\r\n\r\n**Full Changelog**: https://github.com/darksoldier1404/DP-SimplePrefix/compare/v1.0.0.32...v1.0.0.32-_1.17.1"
-      },
-      {
-        "repo": "DP-SimplePrefix",
-        "name": "[v1.0.0.32] DP-SimplePrefix",
-        "tag": "v1.0.0.32",
-        "url": "https://github.com/darksoldier1404/DP-SimplePrefix/releases/tag/v1.0.0.32",
-        "published_at": "2021-12-02T04:22:14Z",
-        "commit_date": "2021-12-02T04:21:51Z",
-        "commit_message": "Merge pull request #3 from darksoldier1404/pre\n\nAnvilGUI API DUC로 옮김",
-        "body": "## What's Changed\r\n* AnvilGUI API DUC로 옮김 by @darksoldier1404 in https://github.com/darksoldier1404/DP-SimplePrefix/pull/3\r\n\r\n\r\n**Full Changelog**: https://github.com/darksoldier1404/DP-SimplePrefix/compare/v1.0.0.31...v1.0.0.32"
-      },
-      {
-        "repo": "DP-SimplePrefix",
-        "name": "[v1.0.0.31] DP-SimplePrefix",
-        "tag": "v1.0.0.31",
-        "url": "https://github.com/darksoldier1404/DP-SimplePrefix/releases/tag/v1.0.0.31",
-        "published_at": "2021-12-01T22:01:16Z",
-        "commit_date": "2021-12-01T22:00:49Z",
-        "commit_message": "Merge pull request #2 from darksoldier1404/pre\n\n1.18 버전업.",
-        "body": "## What's Changed\r\n* 1.18 버전업. by @darksoldier1404 in https://github.com/darksoldier1404/DP-SimplePrefix/pull/2\r\n\r\n\r\n**Full Changelog**: https://github.com/darksoldier1404/DP-SimplePrefix/compare/v1.0.0.29...v1.0.0.31"
-      },
-      {
-        "repo": "DP-SimplePrefix",
-        "name": "[v1.0.0.29] DP-SimplePrefix",
-        "tag": "v1.0.0.29",
-        "url": "https://github.com/darksoldier1404/DP-SimplePrefix/releases/tag/v1.0.0.29",
-        "published_at": "2021-11-30T23:44:23Z",
-        "commit_date": "2021-11-30T17:55:38Z",
-        "commit_message": "Merge pull request #1 from darksoldier1404/pre\n\nPre",
-        "body": "## What's Changed\r\n* Pre by @darksoldier1404 in https://github.com/darksoldier1404/DP-SimplePrefix/pull/1\r\n\r\n## New Contributors\r\n* @darksoldier1404 made their first contribution in https://github.com/darksoldier1404/DP-SimplePrefix/pull/1\r\n\r\n**Full Changelog**: https://github.com/darksoldier1404/DP-SimplePrefix/commits/v1.0.0.29"
       }
     ]
   }
