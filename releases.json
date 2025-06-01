@@ -4,7 +4,7 @@
     "DP-Shop": "### 🔖 1.0.0.5\\n[Release Link](https://github.com/darksoldier1404/DP-Shop/releases/tag/1.0.0.5)\\n**Latest Commit:** Delete test.prompt.yml\\n**Commit Date:** 2025-05-20T16:01:31Z\\n## Commits\n- [f9f01f6](https://github.com/darksoldier1404/DP-Shop/commit/f9f01f6): Delete test.prompt.yml (DEADPOOLIO)\\n### 🔖 1.0.0.4\\n[Release Link](https://github.com/darksoldier1404/DP-Shop/releases/tag/1.0.0.4)\\n**Latest Commit:** Update README.md\\n**Commit Date:** 2025-05-13T21:23:07Z\\n## Commits\n- [59fc1dc](https://github.com/darksoldier1404/DP-Shop/commit/59fc1dc): Update README.md (DEADPOOLIO)\\n",
     "DP-SimplePrefix": "### 🔖 1.0.0.2\\n[Release Link](https://github.com/darksoldier1404/DP-SimplePrefix/releases/tag/1.0.0.2)\\n**Latest Commit:** Merge pull request #4 from darksoldier1404/dev\n\nDev\\n**Commit Date:** 2025-05-25T05:04:56Z\\n\\n### 🔖 1.0.0.1\\n[Release Link](https://github.com/darksoldier1404/DP-SimplePrefix/releases/tag/1.0.0.1)\\n**Latest Commit:** version up\\n**Commit Date:** 2025-05-20T06:34:11Z\\n\\n### 🔖 1.0.0.0\\n[Release Link](https://github.com/darksoldier1404/DP-SimplePrefix/releases/tag/1.0.0.0)\\n**Latest Commit:** Merge pull request #3 from darksoldier1404/dev\n\nDLang Added\\n**Commit Date:** 2025-05-20T06:31:41Z\\n\\n",
     "DP-BlankCheck": "### 🔖 1.0.0.1\\n[Release Link](https://github.com/darksoldier1404/DP-BlankCheck/releases/tag/1.0.0.1)\\n**Latest Commit:** Merge pull request #2 from BlueEarthCat/dev\n\nAdded **NOTE** in README.md\\n**Commit Date:** 2025-05-29T08:58:20Z\\n\\n### 🔖 1.0.0.0\\n[Release Link](https://github.com/darksoldier1404/DP-BlankCheck/releases/tag/1.0.0.0)\\n**Latest Commit:** Update README.md\\n**Commit Date:** 2025-05-23T14:02:39Z\\n## Commits\n- [319d7f0](https://github.com/darksoldier1404/DP-BlankCheck/commit/319d7f0): Update README.md (BlueEarthCat)\\n",
-    "DP-ConsumeBox": "### 🔖 1.0.0.0\\n[Release Link](https://github.com/darksoldier1404/DP-ConsumeBox/releases/tag/1.0.0.0)\\n**Latest Commit:** Merge pull request #1 from BlueEarthCat/test\n\nfix code\\n**Commit Date:** 2025-06-01T06:55:28Z\\n## Commits\n- [298abc8](https://github.com/darksoldier1404/DP-ConsumeBox/commit/298abc8): fix code (BlueEarthCat) [#1](https://github.com/BlueEarthCat/DP-ConsumeBox/pull/1)\\n"
+    "DP-ConsumeBox": "### 🔖 1.0.0.1\\n[Release Link](https://github.com/darksoldier1404/DP-ConsumeBox/releases/tag/1.0.0.1)\\n**Latest Commit:** Merge pull request #3 from BlueEarthCat/test\n\nRemove Reload Command, fix little bugs. \n\nVersion Up.\\n**Commit Date:** 2025-06-01T08:09:48Z\\n\\n### 🔖 1.0.0.0\\n[Release Link](https://github.com/darksoldier1404/DP-ConsumeBox/releases/tag/1.0.0.0)\\n**Latest Commit:** Merge pull request #1 from BlueEarthCat/test\n\nfix code\\n**Commit Date:** 2025-06-01T06:55:28Z\\n## Commits\n- [298abc8](https://github.com/darksoldier1404/DP-ConsumeBox/commit/298abc8): fix code (BlueEarthCat) [#1](https://github.com/BlueEarthCat/DP-ConsumeBox/pull/1)\\n"
   },
   "releases": {
     "DPP-Core": [
@@ -176,6 +176,16 @@
       }
     ],
     "DP-ConsumeBox": [
+      {
+        "repo": "DP-ConsumeBox",
+        "name": "Release #1.0.0.1",
+        "tag": "1.0.0.1",
+        "url": "https://github.com/darksoldier1404/DP-ConsumeBox/releases/tag/1.0.0.1",
+        "published_at": "2025-06-01T08:28:46Z",
+        "commit_date": "2025-06-01T08:09:48Z",
+        "commit_message": "Merge pull request #3 from BlueEarthCat/test\n\nRemove Reload Command, fix little bugs. \n\nVersion Up.",
+        "body": ""
+      },
       {
         "repo": "DP-ConsumeBox",
         "name": "Release #1.0.0.0",
