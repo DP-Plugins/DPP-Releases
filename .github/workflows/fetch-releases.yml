@@ -18,7 +18,7 @@ jobs:
           echo "{}" > all_releases.json
           echo "{}" > all_histories.json
 
-          repos=("darksoldier1404/DPP-Core" "darksoldier1404/DP-Shop" "darksoldier1404/DP-SimplePrefix" "darksoldier1404/DP-BlankCheck" "darksoldier1404/DP-ConsumeBox")
+          repos=("darksoldier1404/DPP-Core" "darksoldier1404/DP-Shop" "darksoldier1404/DP-SimplePrefix" "darksoldier1404/DP-BlankCheck" "darksoldier1404/DP-ConsumeBox" "darksoldier1404/DP-CustomFarming")
 
           for repo in "${repos[@]}"; do
             releases=$(curl -s "https://api.github.com/repos/$repo/releases?per_page=10")
