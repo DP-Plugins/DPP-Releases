@@ -13,7 +13,7 @@ jobs:
       - name: Checkout this repository
         uses: actions/checkout@v3
 
-      - name: Fetch release data and write to JSON
+      - name: Fetch release data, plugin descriptions, and write to JSON
         run: |
           echo "{}" > all_releases.json
           echo "{}" > all_histories.json
@@ -29,6 +29,22 @@ jobs:
 
             # Remove 'darksoldier1404/' from the repo name
             repo_name=$(echo "$repo" | sed 's/darksoldier1404\///')
+
+            # Set plugin.yml path based on repository
+            if [[ "$repo" == "darksoldier1404/DPP-Core" ]]; then
+              plugin_yml_url="https://raw.githubusercontent.com/$repo/refs/heads/master/common/src/main/resources/plugin.yml"
+            else
+              plugin_yml_url="https://raw.githubusercontent.com/$repo/refs/heads/master/src/main/resources/plugin.yml"
+            fi
+
+            # Fetch plugin.yml description
+            plugin_yml=$(curl -s "$plugin_yml_url")
+            if [[ $? -eq 0 && -n "$plugin_yml" ]]; then
+              description=$(echo "$plugin_yml" | grep '^description:' | sed 's/^description: *//')
+              description=${description:-"No description"}
+            else
+              description="No description"
+            fi
 
             md=""
             repo_releases="[]"
@@ -62,13 +78,14 @@ jobs:
                 --arg commit_date "$commit_date" \
                 --arg body "$formatted_body" \
                 --arg commit_message "$commit_message" \
-                '{repo: $repo, name: $name, tag: $tag, url: $url, published_at: $date, commit_date: $commit_date, commit_message: $commit_message, body: $body}')
+                --arg description "$description" \
+                '{repo: $repo, name: $name, tag: $tag, url: $url, published_at: $date, commit_date: $commit_date, commit_message: $commit_message, body: $body, description: $description}')
 
               # Add to array
               repo_releases=$(echo "$repo_releases" | jq ". += [$item]")
 
               # Append markdown formatted content
-              md+="### 🔖 $tag\n[Release Link]($url)\n**Latest Commit:** $commit_message\n**Commit Date:** $commit_date\n$formatted_body\n"
+              md+="### 🔖 $tag\n[Release Link]($url)\n**Latest Commit:** $commit_message\n**Commit Date:** $commit_date\n**Description:** $description\n$formatted_body\n"
             done
 
             # Add to all_releases.json
@@ -89,5 +106,5 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add releases.json
-          git diff --cached --quiet || git commit -m "Update releases.json with commit date and message"
+          git diff --cached --quiet || git commit -m "Update releases.json with commit date, message, and plugin description"
           git push
