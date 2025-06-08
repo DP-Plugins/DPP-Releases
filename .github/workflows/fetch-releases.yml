@@ -13,7 +13,7 @@ jobs:
       - name: Checkout this repository
         uses: actions/checkout@v3
 
-      - name: Fetch release data, plugin descriptions, and write to JSON
+      - name: Fetch release data, plugin descriptions, authors, and write to JSON
         run: |
           echo "{}" > all_releases.json
           echo "{}" > all_histories.json
@@ -37,13 +37,24 @@ jobs:
               plugin_yml_url="https://raw.githubusercontent.com/$repo/refs/heads/master/src/main/resources/plugin.yml"
             fi
 
-            # Fetch plugin.yml description
+            # Fetch plugin.yml description and author(s)
             plugin_yml=$(curl -s "$plugin_yml_url")
             if [[ $? -eq 0 && -n "$plugin_yml" ]]; then
               description=$(echo "$plugin_yml" | grep '^description:' | sed 's/^description: *//')
               description=${description:-"No description"}
+              
+              # Check for 'authors' first, then 'author'
+              authors=$(echo "$plugin_yml" | grep '^authors:' | sed 's/^authors: *//')
+              if [[ -n "$authors" ]]; then
+                # Clean up YAML list format, remove brackets and quotes
+                authors=$(echo "$authors" | sed 's/[][]//g; s/['\''"]//g; s/,/, /g')
+              else
+                authors=$(echo "$plugin_yml" | grep '^author:' | sed 's/^author: *//')
+              fi
+              authors=${authors:-"No author"}
             else
               description="No description"
+              authors="No author"
             fi
 
             md=""
@@ -79,13 +90,14 @@ jobs:
                 --arg body "$formatted_body" \
                 --arg commit_message "$commit_message" \
                 --arg description "$description" \
-                '{repo: $repo, name: $name, tag: $tag, url: $url, published_at: $date, commit_date: $commit_date, commit_message: $commit_message, body: $body, description: $description}')
+                --arg authors "$authors" \
+                '{repo: $repo, name: $name, tag: $tag, url: $url, published_at: $date, commit_date: $commit_date, commit_message: $commit_message, body: $body, description: $description, authors: $authors}')
 
               # Add to array
               repo_releases=$(echo "$repo_releases" | jq ". += [$item]")
 
               # Append markdown formatted content
-              md+="### 🔖 $tag\n[Release Link]($url)\n**Latest Commit:** $commit_message\n**Commit Date:** $commit_date\n**Description:** $description\n$formatted_body\n"
+              md+="### 🔖 $tag\n[Release Link]($url)\n**Latest Commit:** $commit_message\n**Commit Date:** $commit_date\n**Description:** $description\n**Author(s):** $authors\n$formatted_body\n"
             done
 
             # Add to all_releases.json
@@ -106,5 +118,5 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add releases.json
-          git diff --cached --quiet || git commit -m "Update releases.json with commit date, message, and plugin description"
+          git diff --cached --quiet || git commit -m "Update releases.json with commit date, message, plugin description, and authors"
           git push
