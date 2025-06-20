@@ -18,7 +18,7 @@ jobs:
           echo "{}" > all_releases.json
           echo "{}" > all_histories.json
 
-          repos=("darksoldier1404/DPP-Core" "darksoldier1404/DP-Shop" "darksoldier1404/DP-SimplePrefix" "darksoldier1404/DP-BlankCheck" "darksoldier1404/DP-ConsumeBox" "darksoldier1404/DP-CustomFarming" "darksoldier1404/DP-AFKShop")
+          repos=("DP-Plugins/DPP-Core" "DP-Plugins/DP-Shop" "DP-Plugins/DP-SimplePrefix" "DP-Plugins/DP-BlankCheck" "DP-Plugins/DP-ConsumeBox" "DP-Plugins/DP-CustomFarming" "DP-Plugins/DP-AFKShop")
 
           for repo in "${repos[@]}"; do
             releases=$(curl -s "https://api.github.com/repos/$repo/releases?per_page=10")
@@ -27,11 +27,11 @@ jobs:
               continue
             fi
 
-            # Remove 'darksoldier1404/' from the repo name
-            repo_name=$(echo "$repo" | sed 's/darksoldier1404\///')
+            # Remove 'DP-Plugins/' from the repo name
+            repo_name=$(echo "$repo" | sed 's/DP-Plugins\///')
 
             # Set plugin.yml path based on repository
-            if [[ "$repo" == "darksoldier1404/DPP-Core" ]]; then
+            if [[ "$repo" == "DP-Plugins/DPP-Core" ]]; then
               plugin_yml_url="https://raw.githubusercontent.com/$repo/refs/heads/master/common/src/main/resources/plugin.yml"
             else
               plugin_yml_url="https://raw.githubusercontent.com/$repo/refs/heads/master/src/main/resources/plugin.yml"
