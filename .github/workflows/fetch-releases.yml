@@ -18,7 +18,7 @@ jobs:
           echo "{}" > all_releases.json
           echo "{}" > all_histories.json
 
-          repos=("DP-Plugins/DPP-Core" "DP-Plugins/DP-Shop" "DP-Plugins/DP-SimplePrefix" "DP-Plugins/DP-BlankCheck" "DP-Plugins/DP-ConsumeBox" "DP-Plugins/DP-CustomFarming" "DP-Plugins/DP-AFKShop")
+          repos=("DP-Plugins/DPP-Core" "DP-Plugins/DP-Shop" "DP-Plugins/DP-SimplePrefix" "DP-Plugins/DP-BlankCheck" "DP-Plugins/DP-ConsumeBox" "DP-Plugins/DP-CustomFarming" "DP-Plugins/DP-AFKShop" "DP-Plugins/DP-RewardChest")
 
           for repo in "${repos[@]}"; do
             releases=$(curl -s "https://api.github.com/repos/$repo/releases?per_page=10")
