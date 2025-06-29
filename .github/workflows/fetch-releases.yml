@@ -18,7 +18,7 @@ jobs:
           echo "{}" > all_releases.json
           echo "{}" > all_histories.json
 
-          repos=("DP-Plugins/DPP-Core" "DP-Plugins/DP-Shop" "DP-Plugins/DP-SimplePrefix" "DP-Plugins/DP-BlankCheck" "DP-Plugins/DP-ConsumeBox" "DP-Plugins/DP-CustomFarming" "DP-Plugins/DP-AFKShop" "DP-Plugins/DP-RewardChest")
+          repos=("DP-Plugins/DPP-Core" "DP-Plugins/DP-Shop" "DP-Plugins/DP-SimplePrefix" "DP-Plugins/DP-BlankCheck" "DP-Plugins/DP-ConsumeBox" "DP-Plugins/DP-CustomFarming" "DP-Plugins/DP-AFKShop" "DP-Plugins/DP-Lotto" "DP-Plugins/DP-UserTag" "DP-Plugins/DP-Upgrade")
 
           for repo in "${repos[@]}"; do
             releases=$(curl -s "https://api.github.com/repos/$repo/releases?per_page=10")
@@ -37,7 +37,6 @@ jobs:
               plugin_yml_url="https://raw.githubusercontent.com/$repo/refs/heads/master/src/main/resources/plugin.yml"
             fi
 
-            # Fetch plugin.yml description and author(s)
             plugin_yml=$(curl -s "$plugin_yml_url")
             if [[ $? -eq 0 && -n "$plugin_yml" ]]; then
               description=$(echo "$plugin_yml" | grep '^description:' | sed 's/^description: *//')
@@ -46,15 +45,32 @@ jobs:
               # Check for 'authors' first, then 'author'
               authors=$(echo "$plugin_yml" | grep '^authors:' | sed 's/^authors: *//')
               if [[ -n "$authors" ]]; then
-                # Clean up YAML list format, remove brackets and quotes
                 authors=$(echo "$authors" | sed 's/[][]//g; s/['\''"]//g; s/,/, /g')
               else
                 authors=$(echo "$plugin_yml" | grep '^author:' | sed 's/^author: *//')
               fi
               authors=${authors:-"No author"}
+
+              # depend 추출 (YAML 리스트)
+              depend=$(awk '/^depend:/ {flag=1; next} /^[^ ]/ {flag=0} flag && /- / {gsub("- ", ""); print}' <<< "$plugin_yml")
+              if [[ -z "$depend" ]]; then
+                depend_json="[]"
+              else
+                depend_json=$(printf '%s\n' "$depend" | jq -R . | jq -s .)
+              fi
+
+              # softdepend 추출 (YAML 리스트)
+              softdepend=$(awk '/^softdepend:/ {flag=1; next} /^[^ ]/ {flag=0} flag && /- / {gsub("- ", ""); print}' <<< "$plugin_yml")
+              if [[ -z "$softdepend" ]]; then
+                softdepend_json="[]"
+              else
+                softdepend_json=$(printf '%s\n' "$softdepend" | jq -R . | jq -s .)
+              fi
             else
               description="No description"
               authors="No author"
+              depend_json="[]"
+              softdepend_json="[]"
             fi
 
             md=""
@@ -79,7 +95,7 @@ jobs:
               # Format commit hashes into links
               formatted_body=$(echo "$body" | sed -E "s|- ([0-9a-f]{7,40}):|- [\1](https://github.com/$repo/commit/\1):|g")
 
-              # Create JSON object
+              # Create JSON object (depend/softdepend 추가)
               item=$(jq -n \
                 --arg repo "$repo_name" \
                 --arg name "$name" \
@@ -91,13 +107,16 @@ jobs:
                 --arg commit_message "$commit_message" \
                 --arg description "$description" \
                 --arg authors "$authors" \
-                '{repo: $repo, name: $name, tag: $tag, url: $url, published_at: $date, commit_date: $commit_date, commit_message: $commit_message, body: $body, description: $description, authors: $authors}')
+                --argjson depend "$depend_json" \
+                --argjson softdepend "$softdepend_json" \
+                '{repo: $repo, name: $name, tag: $tag, url: $url, published_at: $date, commit_date: $commit_date, commit_message: $commit_message, body: $body, description: $description, authors: $authors, depend: $depend, softdepend: $softdepend}'
+              )
 
               # Add to array
               repo_releases=$(echo "$repo_releases" | jq ". += [$item]")
 
               # Append markdown formatted content
-              md+="### 🔖 $tag\n[Release Link]($url)\n**Latest Commit:** $commit_message\n**Commit Date:** $commit_date\n**Description:** $description\n**Author(s):** $authors\n$formatted_body\n"
+              md+="### 🔖 $tag\n[Release Link]($url)\n**Latest Commit:** $commit_message\n**Commit Date:** $commit_date\n**Description:** $description\n**Author(s):** $authors\n**Depend:** $depend_json\n**Softdepend:** $softdepend_json\n$formatted_body\n"
             done
 
             # Add to all_releases.json
@@ -118,5 +137,5 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add releases.json
-          git diff --cached --quiet || git commit -m "Update releases.json with commit date, message, plugin description, and authors"
+          git diff --cached --quiet || git commit -m "Update releases.json with commit date, message, plugin description, authors, depend, and softdepend"
           git push
