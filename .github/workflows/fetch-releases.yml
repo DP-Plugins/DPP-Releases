@@ -23,9 +23,11 @@ jobs:
 
           for repo in "${repos[@]}"; do
             echo "Processing repository: $repo"
-            releases=$(curl -s -w "%{http_code}" "https://api.github.com/repos/$repo/releases?per_page=10")
-            http_status=$(echo "$releases" | tail -n1)
-            releases=$(echo "$releases" | head -n -1)
+            # Fetch releases with HTTP status
+            curl -s -o releases.json.tmp -w "%{http_code}" "https://api.github.com/repos/$repo/releases?per_page=10" > http_status.txt
+            http_status=$(cat http_status.txt)
+            releases=$(cat releases.json.tmp)
+            rm -f releases.json.tmp http_status.txt
             if [[ "$http_status" != "200" ]]; then
               echo "Error: Failed to fetch releases for $repo (HTTP status: $http_status)"
               continue
@@ -46,10 +48,13 @@ jobs:
               plugin_yml_url="https://raw.githubusercontent.com/$repo/refs/heads/master/src/main/resources/plugin.yml"
             fi
 
-            plugin_yml=$(curl -s -w "%{http_code}" "$plugin_yml_url")
-            http_status=$(echo "$plugin_yml" | tail -n1)
-            plugin_yml=$(echo "$plugin_yml" | head -n -1)
+            # Fetch plugin.yml with HTTP status
+            curl -s -o plugin.yml.tmp -w "%{http_code}" "$plugin_yml_url" > http_status.txt
+            http_status=$(cat http_status.txt)
+            plugin_yml=$(cat plugin.yml.tmp)
+            rm -f plugin.yml.tmp http_status.txt
             if [[ "$http_status" == "200" && -n "$plugin_yml" ]]; then
+              echo "Fetched plugin.yml for $repo"
               description=$(echo "$plugin_yml" | grep '^description:' | sed 's/^description: *//')
               description=${description:-"No description"}
               
@@ -75,7 +80,7 @@ jobs:
                 if [[ -n "$depend_single" ]]; then
                   depend_single=$(echo "$depend_single" | sed 's/^[ \t]*//;s/[ \t]*$//;s/[^a-zA-Z0-9_-]//g')
                   if [[ -n "$depend_single" ]]; then
-                    depend_json=$(echo "$depend_single" | jq -R . | jq -s .) || { echo "Error: Invalid depend_single for $repo"; depend_json="[]"; }
+                    depend_json=$(echo "$depend_single" | jq -R . | jq -s . 2>/dev/null || { echo "Error: Invalid depend_single for $repo: $depend_single"; depend_json="[]"; })
                   else
                     depend_json="[]"
                   fi
@@ -83,10 +88,15 @@ jobs:
                   depend_json="[]"
                 else
                   depend_list=$(echo "$depend_list" | sed 's/^[ \t]*//;s/[ \t]*$//;s/[^a-zA-Z0-9_-]//g')
-                  depend_json=$(printf '%s\n' "$depend_list" | jq -R 'select(. != "")' | jq -s .) || { echo "Error: Invalid depend_list for $repo"; depend_json="[]"; }
+                  if [[ -n "$depend_list" ]]; then
+                    depend_json=$(printf '%s\n' "$depend_list" | jq -R 'select(. != "")' | jq -s . 2>/dev/null || { echo "Error: Invalid depend_list for $repo: $depend_list"; depend_json="[]"; })
+                  else
+                    depend_json="[]"
+                  fi
                 fi
-                depend_md=$(echo "$depend_json" | jq -r 'if length > 0 then join(", ") else "None" end') || { echo "Error: Failed to format depend_md for $repo"; depend_md="None"; }
+                depend_md=$(echo "$depend_json" | jq -r 'if length > 0 then join(", ") else "None" end' 2>/dev/null || { echo "Error: Failed to format depend_md for $repo"; depend_md="None"; })
               fi
+              echo "depend_json for $repo: $depend_json"
 
               # Check if softdepend field exists
               softdepend_exists=$(echo "$plugin_yml" | grep '^softdepend:')
@@ -101,7 +111,7 @@ jobs:
                 if [[ -n "$softdepend_single" ]]; then
                   softdepend_single=$(echo "$softdepend_single" | sed 's/^[ \t]*//;s/[ \t]*$//;s/[^a-zA-Z0-9_-]//g')
                   if [[ -n "$softdepend_single" ]]; then
-                    softdepend_json=$(echo "$softdepend_single" | jq -R . | jq -s .) || { echo "Error: Invalid softdepend_single for $repo"; softdepend_json="[]"; }
+                    softdepend_json=$(echo "$softdepend_single" | jq -R . | jq -s . 2>/dev/null || { echo "Error: Invalid softdepend_single for $repo: $softdepend_single"; softdepend_json="[]"; })
                   else
                     softdepend_json="[]"
                   fi
@@ -109,10 +119,15 @@ jobs:
                   softdepend_json="[]"
                 else
                   softdepend_list=$(echo "$softdepend_list" | sed 's/^[ \t]*//;s/[ \t]*$//;s/[^a-zA-Z0-9_-]//g')
-                  softdepend_json=$(printf '%s\n' "$softdepend_list" | jq -R 'select(. != "")' | jq -s .) || { echo "Error: Invalid softdepend_list for $repo"; softdepend_json="[]"; }
+                  if [[ -n "$softdepend_list" ]]; then
+                    softdepend_json=$(printf '%s\n' "$softdepend_list" | jq -R 'select(. != "")' | jq -s . 2>/dev/null || { echo "Error: Invalid softdepend_list for $repo: $softdepend_list"; softdepend_json="[]"; })
+                  else
+                    softdepend_json="[]"
+                  fi
                 fi
-                softdepend_md=$(echo "$softdepend_json" | jq -r 'if length > 0 then join(", ") else "None" end') || { echo "Error: Failed to format softdepend_md for $repo"; softdepend_md="None"; }
+                softdepend_md=$(echo "$softdepend_json" | jq -r 'if length > 0 then join(", ") else "None" end' 2>/dev/null || { echo "Error: Failed to format softdepend_md for $repo"; softdepend_md="None"; })
               fi
+              echo "softdepend_json for $repo: $softdepend_json"
             else
               echo "Warning: Failed to fetch plugin.yml for $repo (HTTP status: $http_status)"
               description="No description"
@@ -139,15 +154,19 @@ jobs:
               fi
 
               # Get commit details
-              commits=$(curl -s -w "%{http_code}" "https://api.github.com/repos/$repo/commits?sha=$tag&per_page=1")
-              http_status=$(echo "$commits" | tail -n1)
-              commits=$(echo "$commits" | head -n -1)
+              curl -s -o commits.json.tmp -w "%{http_code}" "https://api.github.com/repos/$repo/commits?sha=$tag&per_page=1" > http_status.txt
+              http_status=$(cat http_status.txt)
+              commits=$(cat commits.json.tmp)
+              rm -f commits.json.tmp http_status.txt
               if [[ "$http_status" != "200" ]]; then
                 echo "Error: Failed to fetch commits for $repo, tag $tag (HTTP status: $http_status)"
                 continue
               fi
               commit_date=$(echo "$commits" | jq -r '.[0].commit.author.date' 2>/dev/null || echo "Unknown")
               commit_message=$(echo "$commits" | jq -r '.[0].commit.message' 2>/dev/null || echo "No commit message")
+
+              # Sanitize commit_message to avoid jq errors
+              commit_message=$(echo "$commit_message" | sed 's/"/\\"/g; s/\\/\\\\/g')
 
               # Format commit hashes into links
               formatted_body=$(echo "$body" | sed -E "s|- ([0-9a-f]{7,40}):|- [\1](https://github.com/$repo/commit/\1):|g")
@@ -172,22 +191,25 @@ jobs:
               fi
 
               # Add to array
-              repo_releases=$(echo "$repo_releases" | jq ". += [$item]" 2>/dev/null || { echo "Error: Failed to add item to repo_releases for $repo_name"; continue; })
+              if ! repo_releases=$(echo "$repo_releases" | jq ". += [$item]" 2>&1); then
+                echo "Error: Failed to add item to repo_releases for $repo_name: $repo_releases"
+                continue
+              fi
 
               # Append markdown formatted content
               md+="### 🔖 $tag\n[Release Link]($url)\n**Latest Commit:** $commit_message\n**Commit Date:** $commit_date\n**Description:** $description\n**Author(s):** $authors\n**Depend:** $depend_md\n**Softdepend:** $softdepend_md\n$formatted_body\n"
             done
 
             # Add to all_releases.json
-            if ! jq --arg repo "$repo_name" --argjson data "$repo_releases" '.[$repo] = $data' all_releases.json > tmp.json 2>/dev/null; then
-              echo "Error: Failed to update all_releases.json for $repo_name"
+            if ! jq --arg repo "$repo_name" --argjson data "$repo_releases" '.[$repo] = $data' all_releases.json > tmp.json 2>&1; then
+              echo "Error: Failed to update all_releases.json for $repo_name: $(cat tmp.json)"
               continue
             fi
             mv tmp.json all_releases.json
 
             # Add to all_histories.json
-            if ! jq --arg repo "$repo_name" --arg md "$md" '.[$repo] = $md' all_histories.json > tmp.json 2>/dev/null; then
-              echo "Error: Failed to update all_histories.json for $repo_name"
+            if ! jq --arg repo "$repo_name" --arg md "$md" '.[$repo] = $md' all_histories.json > tmp.json 2>&1; then
+              echo "Error: Failed to update all_histories.json for $repo_name: $(cat tmp.json)"
               continue
             fi
             mv tmp.json all_histories.json
@@ -197,8 +219,8 @@ jobs:
           if ! jq -n \
             --argjson releases "$(cat all_releases.json)" \
             --argjson update_history "$(cat all_histories.json)" \
-            '{update_history: $update_history, releases: $releases}' > releases.json 2>/dev/null; then
-            echo "Error: Failed to create releases.json"
+            '{update_history: $update_history, releases: $releases}' > releases.json 2>&1; then
+            echo "Error: Failed to create releases.json: $(cat releases.json)"
             exit 1
           fi
 
