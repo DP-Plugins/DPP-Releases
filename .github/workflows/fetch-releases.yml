@@ -24,41 +24,32 @@ jobs:
             if [[ "$count" -eq 0 ]]; then
               continue
             fi
-            # Remove 'DP-Plugins/' from the repo name
             repo_name=$(echo "$repo" | sed 's/DP-Plugins\///')
-            # Set plugin.yml path based on repository
             if [[ "$repo" == "DP-Plugins/DPP-Core" ]]; then
               plugin_yml_url="https://raw.githubusercontent.com/$repo/refs/heads/master/common/src/main/resources/plugin.yml"
             else
               plugin_yml_url="https://raw.githubusercontent.com/$repo/refs/heads/master/src/main/resources/plugin.yml"
             fi
-            # Fetch plugin.yml description, author(s), depend, and softdepend
             plugin_yml=$(curl -s "$plugin_yml_url")
             if [[ $? -eq 0 && -n "$plugin_yml" ]]; then
               description=$(echo "$plugin_yml" | grep '^description:' | sed 's/^description: *//')
               description=${description:-"No description"}
-              
-              # Check for 'authors' first, then 'author'
               authors=$(echo "$plugin_yml" | grep '^authors:' | sed 's/^authors: *//')
               if [[ -n "$authors" ]]; then
-                # Clean up YAML list format, remove brackets and quotes
                 authors=$(echo "$authors" | sed 's/[][]//g; s/['\''"]//g; s/,/, /g')
               else
                 authors=$(echo "$plugin_yml" | grep '^author:' | sed 's/^author: *//')
               fi
               authors=${authors:-"No author"}
-              
-              # Extract depend and softdepend
-              depend=$(echo "$plugin_yml" | awk '/^depend:/{flag=1;next}/^[^ ]/{flag=0}flag' | sed 's/^[[:space:]]*- //;s/^[[:space:]]*//;s/[[:space:]]*$//')
-              softdepend=$(echo "$plugin_yml" | awk '/^softdepend:/{flag=1;next}/^[^ ]/{flag=0}flag' | sed 's/^[[:space:]]*- //;s/^[[:space:]]*//;s/[[:space:]]*$//')
-              # Convert to JSON arrays, handle empty cases
+              depend=$(echo "$plugin_yml" | awk '/^depend:/{flag=1;next}/^[^ ]/{flag=0}flag' | sed 's/^[[:space:]]*- //;s/^[[:space:]]*//;s/[[:space:]]*$//' | tr '\n' ' ')
+              softdepend=$(echo "$plugin_yml" | awk '/^softdepend:/{flag=1;next}/^[^ ]/{flag=0}flag' | sed 's/^[[:space:]]*- //;s/^[[:space:]]*//;s/[[:space:]]*$//' | tr '\n' ' ')
               if [[ -n "$depend" ]]; then
-                depend_json=$(echo "$depend" | jq -R 'split("\n") | map(select(. != ""))')
+                depend_json=$(echo "$depend" | tr ' ' '\n' | jq -R 'split("\n") | map(select(. != "")) | unique')
               else
                 depend_json="[]"
               fi
               if [[ -n "$softdepend" ]]; then
-                softdepend_json=$(echo "$softdepend" | jq -R 'split("\n") | map(select(. != ""))')
+                softdepend_json=$(echo "$softdepend" | tr ' ' '\n' | jq -R 'split("\n") | map(select(. != "")) | unique')
               else
                 softdepend_json="[]"
               fi
@@ -79,13 +70,10 @@ jobs:
               if [[ "$tag" == "null" ]]; then
                 continue
               fi
-              # Get commit details
               commits=$(curl -s "https://api.github.com/repos/$repo/commits?sha=$tag&per_page=1")
               commit_date=$(echo "$commits" | jq -r '.[0].commit.author.date')
               commit_message=$(echo "$commits" | jq -r '.[0].commit.message')
-              # Format commit hashes into links
               formatted_body=$(echo "$body" | sed -E "s|- ([0-9a-f]{7,40}):|- [\1](https://github.com/$repo/commit/\1):|g")
-              # Create JSON object
               item=$(jq -n \
                 --arg repo "$repo_name" \
                 --arg name "$name" \
@@ -97,20 +85,15 @@ jobs:
                 --arg commit_message "$commit_message" \
                 --arg description "$description" \
                 --arg authors "$authors" \
-                --arg depend "$depend_json" \
-                --arg softdepend "$softdepend_json" \
+                --argjson depend "$depend_json" \
+                --argjson softdepend "$softdepend_json" \
                 '{repo: $repo, name: $name, tag: $tag, url: $url, published_at: $date, commit_date: $commit_date, commit_message: $commit_message, body: $body, description: $description, authors: $authors, depend: $depend, softdepend: $softdepend}')
-              # Add to array
               repo_releases=$(echo "$repo_releases" | jq ". += [$item]")
-              # Append markdown formatted content
               md+="### 🔖 $tag\n[Release Link]($url)\n**Latest Commit:** $commit_message\n**Commit Date:** $commit_date\n**Description:** $description\n**Author(s):** $authors\n**Dependencies:** $depend\n**Soft Dependencies:** $softdepend\n$formatted_body\n"
             done
-            # Add to all_releases.json
             jq --arg repo "$repo_name" --argjson data "$repo_releases" '.[$repo] = $data' all_releases.json > tmp.json && mv tmp.json all_releases.json
-            # Add to all_histories.json
             jq --arg repo "$repo_name" --arg md "$md" '.[$repo] = $md' all_histories.json > tmp.json && mv tmp.json all_histories.json
           done
-          # Merge final JSON data
           jq -n \
             --argjson releases "$(cat all_releases.json)" \
             --argjson update_history "$(cat all_histories.json)" \
