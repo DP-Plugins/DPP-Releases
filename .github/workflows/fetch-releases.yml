@@ -97,8 +97,8 @@ jobs:
                 --arg commit_message "$commit_message" \
                 --arg description "$description" \
                 --arg authors "$authors" \
-                --argjson depend "$depend_json" \
-                --argjson softdepend "$softdepend_json" \
+                --arg depend "$depend_json" \
+                --arg softdepend "$softdepend_json" \
                 '{repo: $repo, name: $name, tag: $tag, url: $url, published_at: $date, commit_date: $commit_date, commit_message: $commit_message, body: $body, description: $description, authors: $authors, depend: $depend, softdepend: $softdepend}')
               # Add to array
               repo_releases=$(echo "$repo_releases" | jq ". += [$item]")
