@@ -51,26 +51,52 @@ jobs:
               fi
               authors=${authors:-"No author"}
 
-              # depend 추출 (YAML 리스트)
-              depend=$(awk '/^depend:/ {flag=1; next} /^[^ ]/ {flag=0} flag && /- / {gsub("- ", ""); print}' <<< "$plugin_yml")
-              if [[ -z "$depend" ]]; then
+              # Check if depend field exists
+              depend_exists=$(echo "$plugin_yml" | grep '^depend:')
+              if [[ -z "$depend_exists" ]]; then
                 depend_json="[]"
+                depend_md="None"
               else
-                depend_json=$(printf '%s\n' "$depend" | jq -R . | jq -s .)
+                # Check for single-value depend
+                depend_single=$(echo "$plugin_yml" | grep '^depend: *[^[]' | sed 's/^depend: *//')
+                # Check for list-based depend
+                depend_list=$(awk '/^depend:/ {flag=1; next} flag && /^[^- ]/ {flag=0} flag && /- / {gsub("- ", ""); print}' <<< "$plugin_yml")
+                if [[ -n "$depend_single" ]]; then
+                  depend_json=$(echo "$depend_single" | sed 's/^[ \t]*//;s/[ \t]*$//' | jq -R . | jq -s .)
+                elif [[ -z "$depend_list" ]]; then
+                  depend_json="[]"
+                else
+                  depend_json=$(printf '%s\n' "$depend_list" | sed 's/^[ \t]*//;s/[ \t]*$//' | jq -R 'select(. != "")' | jq -s .)
+                fi
+                depend_md=$(echo "$depend_json" | jq -r 'if length > 0 then join(", ") else "None" end')
               fi
 
-              # softdepend 추출 (YAML 리스트)
-              softdepend=$(awk '/^softdepend:/ {flag=1; next} /^[^ ]/ {flag=0} flag && /- / {gsub("- ", ""); print}' <<< "$plugin_yml")
-              if [[ -z "$softdepend" ]]; then
+              # Check if softdepend field exists
+              softdepend_exists=$(echo "$plugin_yml" | grep '^softdepend:')
+              if [[ -z "$softdepend_exists" ]]; then
                 softdepend_json="[]"
+                softdepend_md="None"
               else
-                softdepend_json=$(printf '%s\n' "$softdepend" | jq -R . | jq -s .)
+                # Check for single-value softdepend
+                softdepend_single=$(echo "$plugin_yml" | grep '^softdepend: *[^[]' | sed 's/^softdepend: *//')
+                # Check for list-based softdepend
+                softdepend_list=$(awk '/^softdepend:/ {flag=1; next} flag && /^[^- ]/ {flag=0} flag && /- / {gsub("- ", ""); print}' <<< "$plugin_yml")
+                if [[ -n "$softdepend_single" ]]; then
+                  softdepend_json=$(echo "$softdepend_single" | sed 's/^[ \t]*//;s/[ \t]*$//' | jq -R . | jq -s .)
+                elif [[ -z "$softdepend_list" ]]; then
+                  softdepend_json="[]"
+                else
+                  softdepend_json=$(printf '%s\n' "$softdepend_list" | sed 's/^[ \t]*//;s/[ \t]*$//' | jq -R 'select(. != "")' | jq -s .)
+                fi
+                softdepend_md=$(echo "$softdepend_json" | jq -r 'if length > 0 then join(", ") else "None" end')
               fi
             else
               description="No description"
               authors="No author"
               depend_json="[]"
               softdepend_json="[]"
+              depend_md="None"
+              softdepend_md="None"
             fi
 
             md=""
@@ -95,8 +121,8 @@ jobs:
               # Format commit hashes into links
               formatted_body=$(echo "$body" | sed -E "s|- ([0-9a-f]{7,40}):|- [\1](https://github.com/$repo/commit/\1):|g")
 
-              # Create JSON object (depend/softdepend 추가)
-              item=$(jq -n \
+              # Create JSON object
+              if ! item=$(jq -n \
                 --arg repo "$repo_name" \
                 --arg name "$name" \
                 --arg tag "$tag" \
@@ -109,14 +135,16 @@ jobs:
                 --arg authors "$authors" \
                 --argjson depend "$depend_json" \
                 --argjson softdepend "$softdepend_json" \
-                '{repo: $repo, name: $name, tag: $tag, url: $url, published_at: $date, commit_date: $commit_date, commit_message: $commit_message, body: $body, description: $description, authors: $authors, depend: $depend, softdepend: $softdepend}'
-              )
+                '{repo: $repo, name: $name, tag: $tag, url: $url, published_at: $date, commit_date: $commit_date, commit_message: $commit_message, body: $body, description: $description, authors: $authors, depend: $depend, softdepend: $softdepend}' 2>/dev/null); then
+                echo "Error processing jq for repo $repo_name, tag $tag"
+                continue
+              fi
 
               # Add to array
               repo_releases=$(echo "$repo_releases" | jq ". += [$item]")
 
               # Append markdown formatted content
-              md+="### 🔖 $tag\n[Release Link]($url)\n**Latest Commit:** $commit_message\n**Commit Date:** $commit_date\n**Description:** $description\n**Author(s):** $authors\n**Depend:** $depend_json\n**Softdepend:** $softdepend_json\n$formatted_body\n"
+              md+="### 🔖 $tag\n[Release Link]($url)\n**Latest Commit:** $commit_message\n**Commit Date:** $commit_date\n**Description:** $description\n**Author(s):** $authors\n**Depend:** $depend_md\n**Softdepend:** $softdepend_md\n$formatted_body\n"
             done
 
             # Add to all_releases.json
