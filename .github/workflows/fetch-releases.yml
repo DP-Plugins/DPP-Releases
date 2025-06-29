@@ -41,15 +41,15 @@ jobs:
                 authors=$(echo "$plugin_yml" | grep '^author:' | sed 's/^author: *//')
               fi
               authors=${authors:-"No author"}
-              depend=$(echo "$plugin_yml" | awk '/^depend:/{flag=1;next}/^[^ ]/{flag=0}flag' | sed 's/^[[:space:]]*- //;s/^[[:space:]]*//;s/[[:space:]]*$//' | tr '\n' ' ')
-              softdepend=$(echo "$plugin_yml" | awk '/^softdepend:/{flag=1;next}/^[^ ]/{flag=0}flag' | sed 's/^[[:space:]]*- //;s/^[[:space:]]*//;s/[[:space:]]*$//' | tr '\n' ' ')
+              depend=$(echo "$plugin_yml" | awk '/^depend:/{flag=1;next}/^[^ ]/{flag=0}flag' | sed 's/^[[:space:]]*- //;s/^[[:space:]]*//;s/[[:space:]]*$//' | tr '\n' ' ' | sed 's/[[:space:]]\+/ /g')
+              softdepend=$(echo "$plugin_yml" | awk '/^softdepend:/{flag=1;next}/^[^ ]/{flag=0}flag' | sed 's/^[[:space:]]*- //;s/^[[:space:]]*//;s/[[:space:]]*$//' | tr '\n' ' ' | sed 's/[[:space:]]\+/ /g')
               if [[ -n "$depend" ]]; then
-                depend_json=$(echo "$depend" | tr ' ' '\n' | jq -R 'split("\n") | map(select(. != "")) | unique')
+                depend_json=$(echo "$depend" | jq -R 'split(" ") | map(select(. != "")) | unique')
               else
                 depend_json="[]"
               fi
               if [[ -n "$softdepend" ]]; then
-                softdepend_json=$(echo "$softdepend" | tr ' ' '\n' | jq -R 'split("\n") | map(select(. != "")) | unique')
+                softdepend_json=$(echo "$softdepend" | jq -R 'split(" ") | map(select(. != "")) | unique')
               else
                 softdepend_json="[]"
               fi
@@ -64,7 +64,8 @@ jobs:
             for i in $(seq 0 $(($count - 1))); do
               name=$(echo "$releases" | jq -r ".[$i].name")
               tag=$(echo "$releases" | jq -r ".[$i].tag_name")
-              url=$(echo "$releases" | jq -r ".[$i].html_url")
+              url\bin/bash: line 1: url: command not found
+=$(echo "$releases" | jq -r ".[$i].html_url")
               date=$(echo "$releases" | jq -r ".[$i].published_at")
               body=$(echo "$releases" | jq -r ".[$i].body")
               if [[ "$tag" == "null" ]]; then
