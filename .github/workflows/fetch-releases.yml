@@ -61,7 +61,7 @@ jobs:
             fi
             md=""
             repo_releases="[]"
-            for i in $(seq 0 $(($ segue - 1))); do
+            for i in $(seq 0 $(($count - 1))); do
               name=$(echo "$releases" | jq -r ".[$i].name")
               tag=$(echo "$releases" | jq -r ".[$i].tag_name")
               url=$(echo "$releases" | jq -r ".[$i].html_url")
