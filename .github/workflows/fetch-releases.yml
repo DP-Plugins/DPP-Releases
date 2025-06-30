@@ -25,11 +25,7 @@ jobs:
               continue
             fi
             repo_name=$(echo "$repo" | sed 's/DP-Plugins\///')
-            if [[ "$repo" == "DP-Plugins/DPP-Core" ]]; then
-              plugin_yml_url="https://raw.githubusercontent.com/$repo/refs/heads/master/common/src/main/resources/plugin.yml"
-            else
-              plugin_yml_url="https://raw.githubusercontent.com/$repo/refs/heads/master/src/main/resources/plugin.yml"
-            fi
+            plugin_yml_url="https://raw.githubusercontent.com/$repo/refs/heads/master/src/main/resources/plugin.yml"
             plugin_yml=$(curl -s "$plugin_yml_url")
             if [[ $? -eq 0 && -n "$plugin_yml" ]]; then
               description=$(echo "$plugin_yml" | grep '^description:' | sed 's/^description: *//')
