@@ -1,6 +1,6 @@
 {
   "update_history": {
-    "DPP-Core": "### 🔖 5.0.0.34\\n[Release Link](https://github.com/DP-Plugins/DPP-Core/releases/tag/5.0.0.34)\\n**Latest Commit:** Merge pull request #25 from darksoldier1404/master\n\nfix build.gradle\\n**Commit Date:** 2025-06-30T13:33:28Z\\n**Description:** No description\\n**Author(s):** No author\\n**Dependencies:** \\n**Soft Dependencies:** \\n\\n### 🔖 4.1.0.33\\n[Release Link](https://github.com/DP-Plugins/DPP-Core/releases/tag/4.1.0.33)\\n**Latest Commit:** Merge pull request #21 from DP-Plugins/dev\n\nNBTAPI change, remove 1.14, 1.15 mc version\\n**Commit Date:** 2025-06-29T09:33:22Z\\n**Description:** No description\\n**Author(s):** No author\\n**Dependencies:** \\n**Soft Dependencies:** \\n## Commits\n- [7f815dc](https://github.com/DP-Plugins/DPP-Core/commit/7f815dc): Update README.md (DEADPOOLIO)\\n### 🔖 4.0.6.32\\n[Release Link](https://github.com/DP-Plugins/DPP-Core/releases/tag/4.0.6.32)\\n**Latest Commit:** Merge pull request #19 from darksoldier1404/master\n\nupdate action workflow\\n**Commit Date:** 2025-06-29T09:24:16Z\\n**Description:** No description\\n**Author(s):** No author\\n**Dependencies:** \\n**Soft Dependencies:** \\n## Commits\n- [1ca268c](https://github.com/DP-Plugins/DPP-Core/commit/1ca268c): update action workflow (darksoldier1404) [#19](https://github.com/DP-Plugins/DPP-Core/pull/19)\n- [21db363](https://github.com/DP-Plugins/DPP-Core/commit/21db363): Merge branch 'master' into master (DEADPOOLIO) [#19](https://github.com/DP-Plugins/DPP-Core/pull/19)\\n### 🔖 4.0.6.31\\n[Release Link](https://github.com/DP-Plugins/DPP-Core/releases/tag/4.0.6.31)\\n**Latest Commit:** Merge pull request #15 from darksoldier1404/master\n\n PluginUtil fix #1\\n**Commit Date:** 2025-06-22T03:51:08Z\\n**Description:** No description\\n**Author(s):** No author\\n**Dependencies:** \\n**Soft Dependencies:** \\n\\n### 🔖 4.0.5.30\\n[Release Link](https://github.com/DP-Plugins/DPP-Core/releases/tag/4.0.5.30)\\n**Latest Commit:** Merge pull request #13 from darksoldier1404/dev\n\n[1.21.5 version NBT Error fix](https://github.com/darksoldier1404/DPP-Core/commit/e91bd412a2510b70deb5366c8d02cf3a8581975e)\n\nDO NOT USE 1.21.6 VERSION\\n**Commit Date:** 2025-06-17T17:17:30Z\\n**Description:** No description\\n**Author(s):** No author\\n**Dependencies:** \\n**Soft Dependencies:** \\n\\n### 🔖 4.0.4.29\\n[Release Link](https://github.com/DP-Plugins/DPP-Core/releases/tag/4.0.4.29)\\n**Latest Commit:** github action merge #4\\n**Commit Date:** 2025-06-17T16:40:09Z\\n**Description:** No description\\n**Author(s):** No author\\n**Dependencies:** \\n**Soft Dependencies:** \\n## Commits\n- [c622d0e](https://github.com/DP-Plugins/DPP-Core/commit/c622d0e): github action merge #4 (darksoldier1404)\\n### 🔖 4.0.4.28\\n[Release Link](https://github.com/DP-Plugins/DPP-Core/releases/tag/4.0.4.28)\\n**Latest Commit:** Update README.md\\n**Commit Date:** 2025-06-11T19:41:24Z\\n**Description:** No description\\n**Author(s):** No author\\n**Dependencies:** \\n**Soft Dependencies:** \\n## Commits\n- [fa77df8](https://github.com/DP-Plugins/DPP-Core/commit/fa77df8): Update README.md (DEADPOOLIO)\\n### 🔖 4.0.4.27\\n[Release Link](https://github.com/DP-Plugins/DPP-Core/releases/tag/4.0.4.27)\\n**Latest Commit:** Merge remote-tracking branch 'origin/master'\\n**Commit Date:** 2025-06-07T04:19:02Z\\n**Description:** No description\\n**Author(s):** No author\\n**Dependencies:** \\n**Soft Dependencies:** \\n\\n### 🔖 4.0.4.26\\n[Release Link](https://github.com/DP-Plugins/DPP-Core/releases/tag/4.0.4.26)\\n**Latest Commit:** init\\n**Commit Date:** 2025-06-07T04:16:06Z\\n**Description:** No description\\n**Author(s):** No author\\n**Dependencies:** \\n**Soft Dependencies:** \\n## Commits\n- [e3ada7a](https://github.com/DP-Plugins/DPP-Core/commit/e3ada7a): init (darksoldier1404)\\n### 🔖 4.0.3.25\\n[Release Link](https://github.com/DP-Plugins/DPP-Core/releases/tag/4.0.3.25)\\n**Latest Commit:** fix that update checker is not running async\\n**Commit Date:** 2025-05-25T11:38:01Z\\n**Description:** No description\\n**Author(s):** No author\\n**Dependencies:** \\n**Soft Dependencies:** \\n\\n",
+    "DPP-Core": "### 🔖 5.0.0.34\\n[Release Link](https://github.com/DP-Plugins/DPP-Core/releases/tag/5.0.0.34)\\n**Latest Commit:** Merge pull request #25 from darksoldier1404/master\n\nfix build.gradle\\n**Commit Date:** 2025-06-30T13:33:28Z\\n**Description:** All DP-PLUGINS plugins require this plugin.\\n**Author(s):**  DEAD_POOLIO_ \\n**Dependencies:** \\n**Soft Dependencies:** Essentials PlaceholderAPI ProtocolLib LuckPerms WorldGuard Vault \\n\\n### 🔖 4.1.0.33\\n[Release Link](https://github.com/DP-Plugins/DPP-Core/releases/tag/4.1.0.33)\\n**Latest Commit:** Merge pull request #21 from DP-Plugins/dev\n\nNBTAPI change, remove 1.14, 1.15 mc version\\n**Commit Date:** 2025-06-29T09:33:22Z\\n**Description:** All DP-PLUGINS plugins require this plugin.\\n**Author(s):**  DEAD_POOLIO_ \\n**Dependencies:** \\n**Soft Dependencies:** Essentials PlaceholderAPI ProtocolLib LuckPerms WorldGuard Vault \\n## Commits\n- [7f815dc](https://github.com/DP-Plugins/DPP-Core/commit/7f815dc): Update README.md (DEADPOOLIO)\\n### 🔖 4.0.6.32\\n[Release Link](https://github.com/DP-Plugins/DPP-Core/releases/tag/4.0.6.32)\\n**Latest Commit:** Merge pull request #19 from darksoldier1404/master\n\nupdate action workflow\\n**Commit Date:** 2025-06-29T09:24:16Z\\n**Description:** All DP-PLUGINS plugins require this plugin.\\n**Author(s):**  DEAD_POOLIO_ \\n**Dependencies:** \\n**Soft Dependencies:** Essentials PlaceholderAPI ProtocolLib LuckPerms WorldGuard Vault \\n## Commits\n- [1ca268c](https://github.com/DP-Plugins/DPP-Core/commit/1ca268c): update action workflow (darksoldier1404) [#19](https://github.com/DP-Plugins/DPP-Core/pull/19)\n- [21db363](https://github.com/DP-Plugins/DPP-Core/commit/21db363): Merge branch 'master' into master (DEADPOOLIO) [#19](https://github.com/DP-Plugins/DPP-Core/pull/19)\\n### 🔖 4.0.6.31\\n[Release Link](https://github.com/DP-Plugins/DPP-Core/releases/tag/4.0.6.31)\\n**Latest Commit:** Merge pull request #15 from darksoldier1404/master\n\n PluginUtil fix #1\\n**Commit Date:** 2025-06-22T03:51:08Z\\n**Description:** All DP-PLUGINS plugins require this plugin.\\n**Author(s):**  DEAD_POOLIO_ \\n**Dependencies:** \\n**Soft Dependencies:** Essentials PlaceholderAPI ProtocolLib LuckPerms WorldGuard Vault \\n\\n### 🔖 4.0.5.30\\n[Release Link](https://github.com/DP-Plugins/DPP-Core/releases/tag/4.0.5.30)\\n**Latest Commit:** Merge pull request #13 from darksoldier1404/dev\n\n[1.21.5 version NBT Error fix](https://github.com/darksoldier1404/DPP-Core/commit/e91bd412a2510b70deb5366c8d02cf3a8581975e)\n\nDO NOT USE 1.21.6 VERSION\\n**Commit Date:** 2025-06-17T17:17:30Z\\n**Description:** All DP-PLUGINS plugins require this plugin.\\n**Author(s):**  DEAD_POOLIO_ \\n**Dependencies:** \\n**Soft Dependencies:** Essentials PlaceholderAPI ProtocolLib LuckPerms WorldGuard Vault \\n\\n### 🔖 4.0.4.29\\n[Release Link](https://github.com/DP-Plugins/DPP-Core/releases/tag/4.0.4.29)\\n**Latest Commit:** github action merge #4\\n**Commit Date:** 2025-06-17T16:40:09Z\\n**Description:** All DP-PLUGINS plugins require this plugin.\\n**Author(s):**  DEAD_POOLIO_ \\n**Dependencies:** \\n**Soft Dependencies:** Essentials PlaceholderAPI ProtocolLib LuckPerms WorldGuard Vault \\n## Commits\n- [c622d0e](https://github.com/DP-Plugins/DPP-Core/commit/c622d0e): github action merge #4 (darksoldier1404)\\n### 🔖 4.0.4.28\\n[Release Link](https://github.com/DP-Plugins/DPP-Core/releases/tag/4.0.4.28)\\n**Latest Commit:** Update README.md\\n**Commit Date:** 2025-06-11T19:41:24Z\\n**Description:** All DP-PLUGINS plugins require this plugin.\\n**Author(s):**  DEAD_POOLIO_ \\n**Dependencies:** \\n**Soft Dependencies:** Essentials PlaceholderAPI ProtocolLib LuckPerms WorldGuard Vault \\n## Commits\n- [fa77df8](https://github.com/DP-Plugins/DPP-Core/commit/fa77df8): Update README.md (DEADPOOLIO)\\n### 🔖 4.0.4.27\\n[Release Link](https://github.com/DP-Plugins/DPP-Core/releases/tag/4.0.4.27)\\n**Latest Commit:** Merge remote-tracking branch 'origin/master'\\n**Commit Date:** 2025-06-07T04:19:02Z\\n**Description:** All DP-PLUGINS plugins require this plugin.\\n**Author(s):**  DEAD_POOLIO_ \\n**Dependencies:** \\n**Soft Dependencies:** Essentials PlaceholderAPI ProtocolLib LuckPerms WorldGuard Vault \\n\\n### 🔖 4.0.4.26\\n[Release Link](https://github.com/DP-Plugins/DPP-Core/releases/tag/4.0.4.26)\\n**Latest Commit:** init\\n**Commit Date:** 2025-06-07T04:16:06Z\\n**Description:** All DP-PLUGINS plugins require this plugin.\\n**Author(s):**  DEAD_POOLIO_ \\n**Dependencies:** \\n**Soft Dependencies:** Essentials PlaceholderAPI ProtocolLib LuckPerms WorldGuard Vault \\n## Commits\n- [e3ada7a](https://github.com/DP-Plugins/DPP-Core/commit/e3ada7a): init (darksoldier1404)\\n### 🔖 4.0.3.25\\n[Release Link](https://github.com/DP-Plugins/DPP-Core/releases/tag/4.0.3.25)\\n**Latest Commit:** fix that update checker is not running async\\n**Commit Date:** 2025-05-25T11:38:01Z\\n**Description:** All DP-PLUGINS plugins require this plugin.\\n**Author(s):**  DEAD_POOLIO_ \\n**Dependencies:** \\n**Soft Dependencies:** Essentials PlaceholderAPI ProtocolLib LuckPerms WorldGuard Vault \\n\\n",
     "DP-Shop": "### 🔖 1.0.1.8\\n[Release Link](https://github.com/DP-Plugins/DP-Shop/releases/tag/1.0.1.8)\\n**Latest Commit:** Merge pull request #4 from darksoldier1404/master\n\nupdate for DPP-Core 5.0.0.34\\n**Commit Date:** 2025-06-30T13:54:04Z\\n**Description:** No description\\n**Author(s):**  DEAD_POOLIO_ \\n**Dependencies:** DPP-Core Essentials PlaceholderAPI \\n**Soft Dependencies:** \\n\\n### 🔖 1.0.1.7\\n[Release Link](https://github.com/DP-Plugins/DP-Shop/releases/tag/1.0.1.7)\\n**Latest Commit:** NPE fix\\n**Commit Date:** 2025-06-06T11:28:34Z\\n**Description:** No description\\n**Author(s):**  DEAD_POOLIO_ \\n**Dependencies:** DPP-Core Essentials PlaceholderAPI \\n**Soft Dependencies:** \\n\\n### 🔖 1.0.1.6\\n[Release Link](https://github.com/DP-Plugins/DP-Shop/releases/tag/1.0.1.6)\\n**Latest Commit:** Merge remote-tracking branch 'origin/master'\\n**Commit Date:** 2025-06-03T09:39:29Z\\n**Description:** No description\\n**Author(s):**  DEAD_POOLIO_ \\n**Dependencies:** DPP-Core Essentials PlaceholderAPI \\n**Soft Dependencies:** \\n## Commits\n- [3014b60](https://github.com/DP-Plugins/DP-Shop/commit/3014b60): version fix (darksoldier1404)\n- [fbf400d](https://github.com/DP-Plugins/DP-Shop/commit/fbf400d): Merge remote-tracking branch 'origin/master' (darksoldier1404)\\n### 🔖 1.0.0.5\\n[Release Link](https://github.com/DP-Plugins/DP-Shop/releases/tag/1.0.0.5)\\n**Latest Commit:** Delete test.prompt.yml\\n**Commit Date:** 2025-05-20T16:01:31Z\\n**Description:** No description\\n**Author(s):**  DEAD_POOLIO_ \\n**Dependencies:** DPP-Core Essentials PlaceholderAPI \\n**Soft Dependencies:** \\n## Commits\n- [f9f01f6](https://github.com/DP-Plugins/DP-Shop/commit/f9f01f6): Delete test.prompt.yml (DEADPOOLIO)\\n### 🔖 1.0.0.4\\n[Release Link](https://github.com/DP-Plugins/DP-Shop/releases/tag/1.0.0.4)\\n**Latest Commit:** Update README.md\\n**Commit Date:** 2025-05-13T21:23:07Z\\n**Description:** No description\\n**Author(s):**  DEAD_POOLIO_ \\n**Dependencies:** DPP-Core Essentials PlaceholderAPI \\n**Soft Dependencies:** \\n## Commits\n- [59fc1dc](https://github.com/DP-Plugins/DP-Shop/commit/59fc1dc): Update README.md (DEADPOOLIO)\\n",
     "DP-SimplePrefix": "### 🔖 1.0.1.4\\n[Release Link](https://github.com/DP-Plugins/DP-SimplePrefix/releases/tag/1.0.1.4)\\n**Latest Commit:** Merge pull request #5 from darksoldier1404/master\n\nupdate for DPP-Core 5.0.0.34\\n**Commit Date:** 2025-06-30T13:41:38Z\\n**Description:** No description\\n**Author(s):**  DEAD_POOLIO_ \\n**Dependencies:** DPP-Core \\n**Soft Dependencies:** LuckPerms Vault \\n\\n### 🔖 1.0.0.2\\n[Release Link](https://github.com/DP-Plugins/DP-SimplePrefix/releases/tag/1.0.0.2)\\n**Latest Commit:** Merge pull request #4 from darksoldier1404/dev\n\nDev\\n**Commit Date:** 2025-05-25T05:04:56Z\\n**Description:** No description\\n**Author(s):**  DEAD_POOLIO_ \\n**Dependencies:** DPP-Core \\n**Soft Dependencies:** LuckPerms Vault \\n\\n### 🔖 1.0.0.1\\n[Release Link](https://github.com/DP-Plugins/DP-SimplePrefix/releases/tag/1.0.0.1)\\n**Latest Commit:** version up\\n**Commit Date:** 2025-05-20T06:34:11Z\\n**Description:** No description\\n**Author(s):**  DEAD_POOLIO_ \\n**Dependencies:** DPP-Core \\n**Soft Dependencies:** LuckPerms Vault \\n\\n### 🔖 1.0.0.0\\n[Release Link](https://github.com/DP-Plugins/DP-SimplePrefix/releases/tag/1.0.0.0)\\n**Latest Commit:** Merge pull request #3 from darksoldier1404/dev\n\nDLang Added\\n**Commit Date:** 2025-05-20T06:31:41Z\\n**Description:** No description\\n**Author(s):**  DEAD_POOLIO_ \\n**Dependencies:** DPP-Core \\n**Soft Dependencies:** LuckPerms Vault \\n\\n",
     "DP-BlankCheck": "### 🔖 1.0.0.1\\n[Release Link](https://github.com/DP-Plugins/DP-BlankCheck/releases/tag/1.0.0.1)\\n**Latest Commit:** Update README.md\\n**Commit Date:** 2025-05-30T11:59:47Z\\n**Description:** No description\\n**Author(s):**  BlueEarthCat \\n**Dependencies:** DPP-Core Essentials \\n**Soft Dependencies:** \\n## Commits\n- [1ab8b97](https://github.com/DP-Plugins/DP-BlankCheck/commit/1ab8b97): Update README.md (BlueEarthCat)\\n### 🔖 1.0.0.0\\n[Release Link](https://github.com/DP-Plugins/DP-BlankCheck/releases/tag/1.0.0.0)\\n**Latest Commit:** fix config GUI\\n**Commit Date:** 2025-05-29T08:33:25Z\\n**Description:** No description\\n**Author(s):**  BlueEarthCat \\n**Dependencies:** DPP-Core Essentials \\n**Soft Dependencies:** \\n## Commits\r\n- init\\n",
@@ -20,10 +20,17 @@
         "commit_date": "2025-06-30T13:33:28Z",
         "commit_message": "Merge pull request #25 from darksoldier1404/master\n\nfix build.gradle",
         "body": "",
-        "description": "No description",
-        "authors": "No author",
+        "description": "All DP-PLUGINS plugins require this plugin.",
+        "authors": " DEAD_POOLIO_ ",
         "depend": [],
-        "softdepend": []
+        "softdepend": [
+          "Essentials",
+          "LuckPerms",
+          "PlaceholderAPI",
+          "ProtocolLib",
+          "Vault",
+          "WorldGuard"
+        ]
       },
       {
         "repo": "DPP-Core",
@@ -34,10 +41,17 @@
         "commit_date": "2025-06-29T09:33:22Z",
         "commit_message": "Merge pull request #21 from DP-Plugins/dev\n\nNBTAPI change, remove 1.14, 1.15 mc version",
         "body": "## Commits\n- [7f815dc](https://github.com/DP-Plugins/DPP-Core/commit/7f815dc): Update README.md (DEADPOOLIO)",
-        "description": "No description",
-        "authors": "No author",
+        "description": "All DP-PLUGINS plugins require this plugin.",
+        "authors": " DEAD_POOLIO_ ",
         "depend": [],
-        "softdepend": []
+        "softdepend": [
+          "Essentials",
+          "LuckPerms",
+          "PlaceholderAPI",
+          "ProtocolLib",
+          "Vault",
+          "WorldGuard"
+        ]
       },
       {
         "repo": "DPP-Core",
@@ -48,10 +62,17 @@
         "commit_date": "2025-06-29T09:24:16Z",
         "commit_message": "Merge pull request #19 from darksoldier1404/master\n\nupdate action workflow",
         "body": "## Commits\n- [1ca268c](https://github.com/DP-Plugins/DPP-Core/commit/1ca268c): update action workflow (darksoldier1404) [#19](https://github.com/DP-Plugins/DPP-Core/pull/19)\n- [21db363](https://github.com/DP-Plugins/DPP-Core/commit/21db363): Merge branch 'master' into master (DEADPOOLIO) [#19](https://github.com/DP-Plugins/DPP-Core/pull/19)",
-        "description": "No description",
-        "authors": "No author",
+        "description": "All DP-PLUGINS plugins require this plugin.",
+        "authors": " DEAD_POOLIO_ ",
         "depend": [],
-        "softdepend": []
+        "softdepend": [
+          "Essentials",
+          "LuckPerms",
+          "PlaceholderAPI",
+          "ProtocolLib",
+          "Vault",
+          "WorldGuard"
+        ]
       },
       {
         "repo": "DPP-Core",
@@ -62,10 +83,17 @@
         "commit_date": "2025-06-22T03:51:08Z",
         "commit_message": "Merge pull request #15 from darksoldier1404/master\n\n PluginUtil fix #1",
         "body": "",
-        "description": "No description",
-        "authors": "No author",
+        "description": "All DP-PLUGINS plugins require this plugin.",
+        "authors": " DEAD_POOLIO_ ",
         "depend": [],
-        "softdepend": []
+        "softdepend": [
+          "Essentials",
+          "LuckPerms",
+          "PlaceholderAPI",
+          "ProtocolLib",
+          "Vault",
+          "WorldGuard"
+        ]
       },
       {
         "repo": "DPP-Core",
@@ -76,10 +104,17 @@
         "commit_date": "2025-06-17T17:17:30Z",
         "commit_message": "Merge pull request #13 from darksoldier1404/dev\n\n[1.21.5 version NBT Error fix](https://github.com/darksoldier1404/DPP-Core/commit/e91bd412a2510b70deb5366c8d02cf3a8581975e)\n\nDO NOT USE 1.21.6 VERSION",
         "body": "",
-        "description": "No description",
-        "authors": "No author",
+        "description": "All DP-PLUGINS plugins require this plugin.",
+        "authors": " DEAD_POOLIO_ ",
         "depend": [],
-        "softdepend": []
+        "softdepend": [
+          "Essentials",
+          "LuckPerms",
+          "PlaceholderAPI",
+          "ProtocolLib",
+          "Vault",
+          "WorldGuard"
+        ]
       },
       {
         "repo": "DPP-Core",
@@ -90,10 +125,17 @@
         "commit_date": "2025-06-17T16:40:09Z",
         "commit_message": "github action merge #4",
         "body": "## Commits\n- [c622d0e](https://github.com/DP-Plugins/DPP-Core/commit/c622d0e): github action merge #4 (darksoldier1404)",
-        "description": "No description",
-        "authors": "No author",
+        "description": "All DP-PLUGINS plugins require this plugin.",
+        "authors": " DEAD_POOLIO_ ",
         "depend": [],
-        "softdepend": []
+        "softdepend": [
+          "Essentials",
+          "LuckPerms",
+          "PlaceholderAPI",
+          "ProtocolLib",
+          "Vault",
+          "WorldGuard"
+        ]
       },
       {
         "repo": "DPP-Core",
@@ -104,10 +146,17 @@
         "commit_date": "2025-06-11T19:41:24Z",
         "commit_message": "Update README.md",
         "body": "## Commits\n- [fa77df8](https://github.com/DP-Plugins/DPP-Core/commit/fa77df8): Update README.md (DEADPOOLIO)",
-        "description": "No description",
-        "authors": "No author",
+        "description": "All DP-PLUGINS plugins require this plugin.",
+        "authors": " DEAD_POOLIO_ ",
         "depend": [],
-        "softdepend": []
+        "softdepend": [
+          "Essentials",
+          "LuckPerms",
+          "PlaceholderAPI",
+          "ProtocolLib",
+          "Vault",
+          "WorldGuard"
+        ]
       },
       {
         "repo": "DPP-Core",
@@ -118,10 +167,17 @@
         "commit_date": "2025-06-07T04:19:02Z",
         "commit_message": "Merge remote-tracking branch 'origin/master'",
         "body": "",
-        "description": "No description",
-        "authors": "No author",
+        "description": "All DP-PLUGINS plugins require this plugin.",
+        "authors": " DEAD_POOLIO_ ",
         "depend": [],
-        "softdepend": []
+        "softdepend": [
+          "Essentials",
+          "LuckPerms",
+          "PlaceholderAPI",
+          "ProtocolLib",
+          "Vault",
+          "WorldGuard"
+        ]
       },
       {
         "repo": "DPP-Core",
@@ -132,10 +188,17 @@
         "commit_date": "2025-06-07T04:16:06Z",
         "commit_message": "init",
         "body": "## Commits\n- [e3ada7a](https://github.com/DP-Plugins/DPP-Core/commit/e3ada7a): init (darksoldier1404)",
-        "description": "No description",
-        "authors": "No author",
+        "description": "All DP-PLUGINS plugins require this plugin.",
+        "authors": " DEAD_POOLIO_ ",
         "depend": [],
-        "softdepend": []
+        "softdepend": [
+          "Essentials",
+          "LuckPerms",
+          "PlaceholderAPI",
+          "ProtocolLib",
+          "Vault",
+          "WorldGuard"
+        ]
       },
       {
         "repo": "DPP-Core",
@@ -146,10 +209,17 @@
         "commit_date": "2025-05-25T11:38:01Z",
         "commit_message": "fix that update checker is not running async",
         "body": "",
-        "description": "No description",
-        "authors": "No author",
+        "description": "All DP-PLUGINS plugins require this plugin.",
+        "authors": " DEAD_POOLIO_ ",
         "depend": [],
-        "softdepend": []
+        "softdepend": [
+          "Essentials",
+          "LuckPerms",
+          "PlaceholderAPI",
+          "ProtocolLib",
+          "Vault",
+          "WorldGuard"
+        ]
       }
     ],
     "DP-Shop": [
