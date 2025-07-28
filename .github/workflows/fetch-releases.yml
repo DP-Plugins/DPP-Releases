@@ -1,10 +1,5 @@
 name: Fetch Latest Releases
 
-on:
-  schedule:
-    - cron: '*/60 * * * *'
-  workflow_dispatch:
-
 jobs:
   fetch-latest-releases:
     runs-on: ubuntu-latest
