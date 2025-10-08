@@ -21,6 +21,10 @@ jobs:
           for repo in "${repos[@]}"; do
             releases=$(curl -s "https://api.github.com/repos/$repo/releases?per_page=10")
             count=$(echo "$releases" | jq 'length')
+            # Fix: Normalize count to 0 if null (e.g., API error object instead of array)
+            if [[ "$count" == "null" ]]; then
+              count=0
+            fi
             if [[ "$count" -eq 0 ]]; then
               continue
             fi
@@ -67,8 +71,18 @@ jobs:
                 continue
               fi
               commits=$(curl -s "https://api.github.com/repos/$repo/commits?sha=$tag&per_page=1")
-              commit_date=$(echo "$commits" | jq -r '.[0].commit.author.date')
-              commit_message=$(echo "$commits" | jq -r '.[0].commit.message')
+              # Fix: Safely handle non-array or empty commits response
+              commit_count=$(echo "$commits" | jq 'length')
+              if [[ "$commit_count" == "null" ]]; then
+                commit_count=0
+              fi
+              if [[ $commit_count -gt 0 ]]; then
+                commit_date=$(echo "$commits" | jq -r '.[0].commit.author.date')
+                commit_message=$(echo "$commits" | jq -r '.[0].commit.message')
+              else
+                commit_date="unknown"
+                commit_message="No commit info available"
+              fi
               formatted_body=$(echo "$body" | sed -E "s|- ([0-9a-f]{7,40}):|- [\1](https://github.com/$repo/commit/\1):|g")
               item=$(jq -n \
                 --arg repo "$repo_name" \
