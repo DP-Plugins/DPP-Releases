@@ -17,7 +17,7 @@ jobs:
         run: |
           echo "{}" > all_releases.json
           echo "{}" > all_histories.json
-          repos=("DP-Plugins/DPP-Core" "DP-Plugins/DP-SimplePrefix" "DP-Plugins/DP-BlankCheck" "DP-Plugins/DP-ConsumeBox" "DP-Plugins/DP-CustomFarming" "DP-Plugins/DP-AFKShop" "DP-Plugins/DP-RewardChest" "DP-Plugins/DP-Menu" "DP-Plugins/DP-Cash" "DP-Plugins/DP-ItemEditor" "DP-Plugins/DP-GUIShop" "DP-Plugins/DP-VirtualStorage" "DP-Plugins/DP-Evaluation" "DP-Plugins/DP-SimpleAnnouncement")
+          repos=("DP-Plugins/DPP-Core" "DP-Plugins/DP-SimplePrefix" "DP-Plugins/DP-BlankCheck" "DP-Plugins/DP-ConsumeBox" "DP-Plugins/DP-CustomFarming" "DP-Plugins/DP-AfkShop" "DP-Plugins/DP-RewardChest" "DP-Plugins/DP-Menu" "DP-Plugins/DP-Cash" "DP-Plugins/DP-ItemEditor" "DP-Plugins/DP-GUIShop" "DP-Plugins/DP-VirtualStorage" "DP-Plugins/DP-Evaluation" "DP-Plugins/DP-SimpleAnnouncement")
           for repo in "${repos[@]}"; do
             releases=$(curl -s "https://api.github.com/repos/$repo/releases?per_page=10")
             # Fix: Check if releases response is an array
