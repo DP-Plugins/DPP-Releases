@@ -2,7 +2,7 @@ name: Fetch Latest Releases
 
 on:
   schedule:
-    - cron: '*/60 * * * *'
+    - cron: '0 */3 * * *'
   workflow_dispatch: 
 
 jobs:
