@@ -8,8 +8,7 @@
     "DP-AfkShop": "### 🔖 2.0.0\\n[Release Link](https://github.com/DP-Plugins/DP-AfkShop/releases/tag/2.0.0)\\n**Latest Commit:** Merge pull request #10 from darksoldier1404/master\n\nfix user data\\n**Commit Date:** 2025-10-07T10:55:19Z\\n**Description:** No description\\n**Author(s):**  BlueEarthCat \\n**Dependencies:** DPP-Core PlaceholderAPI WorldGuard \\n**Soft Dependencies:** \\n## Commits\n- [e966c9d](https://github.com/DP-Plugins/DP-AfkShop/commit/e966c9d): fix user data (DEADPOOLIO) [#10](https://github.com/DP-Plugins/DP-AfkShop/pull/10)\\n### 🔖 1.0.0.2\\n[Release Link](https://github.com/DP-Plugins/DP-AfkShop/releases/tag/1.0.0.2)\\n**Latest Commit:** Merge pull request #5 from BlueEarthCat/master\n\nfix InventoryClickEvent\\n**Commit Date:** 2025-09-15T13:32:54Z\\n**Description:** No description\\n**Author(s):**  BlueEarthCat \\n**Dependencies:** DPP-Core PlaceholderAPI WorldGuard \\n**Soft Dependencies:** \\n\\n### 🔖 1.0.0.0\\n[Release Link](https://github.com/DP-Plugins/DP-AfkShop/releases/tag/1.0.0.0)\\n**Latest Commit:** Merge pull request #4 from BlueEarthCat/master\n\nfix save item logic\\n**Commit Date:** 2025-08-17T23:25:46Z\\n**Description:** No description\\n**Author(s):**  BlueEarthCat \\n**Dependencies:** DPP-Core PlaceholderAPI WorldGuard \\n**Soft Dependencies:** \\n## Commits\n- [5d9931f](https://github.com/DP-Plugins/DP-AfkShop/commit/5d9931f): fix save item logic (BlueEarthCat) [#4](https://github.com/DP-Plugins/DP-AfkShop/pull/4)\\n",
     "DP-RewardChest": "### 🔖 2.0.1\\n[Release Link](https://github.com/DP-Plugins/DP-RewardChest/releases/tag/2.0.1)\\n**Latest Commit:** Merge pull request #5 from darksoldier1404/master\n\nfix reload command\\n**Commit Date:** 2025-10-01T10:08:30Z\\n**Description:** No description\\n**Author(s):**  DEAD_POOLIO_ \\n**Dependencies:** DPP-Core \\n**Soft Dependencies:** \\n\\n### 🔖 2.0.0\\n[Release Link](https://github.com/DP-Plugins/DP-RewardChest/releases/tag/2.0.0)\\n**Latest Commit:** Merge pull request #4 from darksoldier1404/master\n\n5.2 update\\n**Commit Date:** 2025-09-21T19:08:58Z\\n**Description:** No description\\n**Author(s):**  DEAD_POOLIO_ \\n**Dependencies:** DPP-Core \\n**Soft Dependencies:** \\n\\n### 🔖 1.0.1.5\\n[Release Link](https://github.com/DP-Plugins/DP-RewardChest/releases/tag/1.0.1.5)\\n**Latest Commit:** Merge pull request #3 from darksoldier1404/master\n\ndefaultoffset fix\\n**Commit Date:** 2025-07-20T12:39:54Z\\n**Description:** No description\\n**Author(s):**  DEAD_POOLIO_ \\n**Dependencies:** DPP-Core \\n**Soft Dependencies:** \\n\\n### 🔖 1.0.1.4\\n[Release Link](https://github.com/DP-Plugins/DP-RewardChest/releases/tag/1.0.1.4)\\n**Latest Commit:** Merge pull request #2 from darksoldier1404/master\n\nadd defaultoffset to config.yml\\n**Commit Date:** 2025-07-18T12:10:58Z\\n**Description:** No description\\n**Author(s):**  DEAD_POOLIO_ \\n**Dependencies:** DPP-Core \\n**Soft Dependencies:** \\n\\n### 🔖 1.0.0.3\\n[Release Link](https://github.com/DP-Plugins/DP-RewardChest/releases/tag/1.0.0.3)\\n**Latest Commit:** Merge pull request #1 from darksoldier1404/master\n\nupdate for DPP-Core 5.0.0.34\\n**Commit Date:** 2025-06-30T13:57:30Z\\n**Description:** No description\\n**Author(s):**  DEAD_POOLIO_ \\n**Dependencies:** DPP-Core \\n**Soft Dependencies:** \\n\\n### 🔖 1.0.0.2\\n[Release Link](https://github.com/DP-Plugins/DP-RewardChest/releases/tag/1.0.0.2)\\n**Latest Commit:** Initial commit\\n**Commit Date:** 2025-06-21T07:22:13Z\\n**Description:** No description\\n**Author(s):**  DEAD_POOLIO_ \\n**Dependencies:** DPP-Core \\n**Soft Dependencies:** \\n\\n",
     "DP-Menu": "### 🔖 2.0.0\\n[Release Link](https://github.com/DP-Plugins/DP-Menu/releases/tag/2.0.0)\\n**Latest Commit:** Merge pull request #7 from darksoldier1404/master\n\n5.2 update\\n**Commit Date:** 2025-09-21T18:57:51Z\\n**Description:** No description\\n**Author(s):**  DEAD_POOLIO_,  BlueEarthCat \\n**Dependencies:** DPP-Core \\n**Soft Dependencies:** Essentials PlaceholderAPI \\n\\n### 🔖 1.0.1.6\\n[Release Link](https://github.com/DP-Plugins/DP-Menu/releases/tag/1.0.1.6)\\n**Latest Commit:** Merge pull request #6 from darksoldier1404/master\n\nfix command permission _ to .\\n**Commit Date:** 2025-07-23T14:35:00Z\\n**Description:** No description\\n**Author(s):**  DEAD_POOLIO_,  BlueEarthCat \\n**Dependencies:** DPP-Core \\n**Soft Dependencies:** Essentials PlaceholderAPI \\n\\n### 🔖 1.0.1.5\\n[Release Link](https://github.com/DP-Plugins/DP-Menu/releases/tag/1.0.1.5)\\n**Latest Commit:** Merge pull request #5 from darksoldier1404/master\n\nfix bstats id\\n**Commit Date:** 2025-07-19T18:27:00Z\\n**Description:** No description\\n**Author(s):**  DEAD_POOLIO_,  BlueEarthCat \\n**Dependencies:** DPP-Core \\n**Soft Dependencies:** Essentials PlaceholderAPI \\n\\n### 🔖 1.0.1.4\\n[Release Link](https://github.com/DP-Plugins/DP-Menu/releases/tag/1.0.1.4)\\n**Latest Commit:** Update README.md\\n**Commit Date:** 2025-07-19T17:56:44Z\\n**Description:** No description\\n**Author(s):**  DEAD_POOLIO_,  BlueEarthCat \\n**Dependencies:** DPP-Core \\n**Soft Dependencies:** Essentials PlaceholderAPI \\n## Commits\n- [a4d3f51](https://github.com/DP-Plugins/DP-Menu/commit/a4d3f51): Update README.md (DEADPOOLIO)\\n",
-    "DP-Cash": "### 🔖 2.0.1\\n[Release Link](https://github.com/DP-Plugins/DP-Cash/releases/tag/2.0.1)\\n**Latest Commit:** Merge pull request #6 from darksoldier1404/master\n\nfix reload command\\n**Commit Date:** 2025-10-01T12:30:14Z\\n**Description:** No description\\n**Author(s):**  DEAD_POOLIO_ \\n**Dependencies:** DPP-Core \\n**Soft Dependencies:** \\n\\n### 🔖 2.0.0\\n[Release Link](https://github.com/DP-Plugins/DP-Cash/releases/tag/2.0.0)\\n**Latest Commit:** Merge pull request #5 from darksoldier1404/master\n\n5.2 update\\n**Commit Date:** 2025-09-30T10:07:13Z\\n**Description:** No description\\n**Author(s):**  DEAD_POOLIO_ \\n**Dependencies:** DPP-Core \\n**Soft Dependencies:** \\n## Commits\n- [c110eba](https://github.com/DP-Plugins/DP-Cash/commit/c110eba): 5.2 update (DEADPOOLIO) [#5](https://github.com/DP-Plugins/DP-Cash/pull/5)\\n### 🔖 1.0.0.0\\n[Release Link](https://github.com/DP-Plugins/DP-Cash/releases/tag/1.0.0.0)\\n**Latest Commit:** Merge pull request #1 from darksoldier1404/master\n\nadd github action\\n**Commit Date:** 2025-07-18T12:55:52Z\\n**Description:** No description\\n**Author(s):**  DEAD_POOLIO_ \\n**Dependencies:** DPP-Core \\n**Soft Dependencies:** \\n\\n",
-    "DP-ItemEditor": "### 🔖 2.0.0\\n[Release Link](https://github.com/DP-Plugins/DP-ItemEditor/releases/tag/2.0.0)\\n**Latest Commit:** Merge pull request #2 from darksoldier1404/master\n\nupdate 5.2\\n**Commit Date:** 2025-09-21T20:59:11Z\\n**Description:** No description\\n**Author(s):**  DEAD_POOLIO_ \\n**Dependencies:** DPP-Core \\n**Soft Dependencies:** \\n\\n### 🔖 1.0.0.0\\n[Release Link](https://github.com/DP-Plugins/DP-ItemEditor/releases/tag/1.0.0.0)\\n**Latest Commit:** Merge pull request #1 from darksoldier1404/master\n\nadd DLang\\n**Commit Date:** 2025-07-19T19:52:50Z\\n**Description:** No description\\n**Author(s):**  DEAD_POOLIO_ \\n**Dependencies:** DPP-Core \\n**Soft Dependencies:** \\n\\n"
+    "DP-Cash": "### 🔖 2.0.1\\n[Release Link](https://github.com/DP-Plugins/DP-Cash/releases/tag/2.0.1)\\n**Latest Commit:** Merge pull request #6 from darksoldier1404/master\n\nfix reload command\\n**Commit Date:** 2025-10-01T12:30:14Z\\n**Description:** No description\\n**Author(s):**  DEAD_POOLIO_ \\n**Dependencies:** DPP-Core \\n**Soft Dependencies:** \\n\\n### 🔖 2.0.0\\n[Release Link](https://github.com/DP-Plugins/DP-Cash/releases/tag/2.0.0)\\n**Latest Commit:** Merge pull request #5 from darksoldier1404/master\n\n5.2 update\\n**Commit Date:** 2025-09-30T10:07:13Z\\n**Description:** No description\\n**Author(s):**  DEAD_POOLIO_ \\n**Dependencies:** DPP-Core \\n**Soft Dependencies:** \\n## Commits\n- [c110eba](https://github.com/DP-Plugins/DP-Cash/commit/c110eba): 5.2 update (DEADPOOLIO) [#5](https://github.com/DP-Plugins/DP-Cash/pull/5)\\n### 🔖 1.0.0.0\\n[Release Link](https://github.com/DP-Plugins/DP-Cash/releases/tag/1.0.0.0)\\n**Latest Commit:** No commit info available\\n**Commit Date:** unknown\\n**Description:** No description\\n**Author(s):**  DEAD_POOLIO_ \\n**Dependencies:** DPP-Core \\n**Soft Dependencies:** \\n\\n"
   },
   "releases": {
     "DPP-Core": [
@@ -861,42 +860,8 @@
         "tag": "1.0.0.0",
         "url": "https://github.com/DP-Plugins/DP-Cash/releases/tag/1.0.0.0",
         "published_at": "2025-07-18T12:56:41Z",
-        "commit_date": "2025-07-18T12:55:52Z",
-        "commit_message": "Merge pull request #1 from darksoldier1404/master\n\nadd github action",
-        "body": "",
-        "description": "No description",
-        "authors": " DEAD_POOLIO_ ",
-        "depend": [
-          "DPP-Core"
-        ],
-        "softdepend": []
-      }
-    ],
-    "DP-ItemEditor": [
-      {
-        "repo": "DP-ItemEditor",
-        "name": "Release #2.0.0",
-        "tag": "2.0.0",
-        "url": "https://github.com/DP-Plugins/DP-ItemEditor/releases/tag/2.0.0",
-        "published_at": "2025-09-21T20:59:54Z",
-        "commit_date": "2025-09-21T20:59:11Z",
-        "commit_message": "Merge pull request #2 from darksoldier1404/master\n\nupdate 5.2",
-        "body": "",
-        "description": "No description",
-        "authors": " DEAD_POOLIO_ ",
-        "depend": [
-          "DPP-Core"
-        ],
-        "softdepend": []
-      },
-      {
-        "repo": "DP-ItemEditor",
-        "name": "Release #1.0.0.0",
-        "tag": "1.0.0.0",
-        "url": "https://github.com/DP-Plugins/DP-ItemEditor/releases/tag/1.0.0.0",
-        "published_at": "2025-07-19T19:54:40Z",
-        "commit_date": "2025-07-19T19:52:50Z",
-        "commit_message": "Merge pull request #1 from darksoldier1404/master\n\nadd DLang",
+        "commit_date": "unknown",
+        "commit_message": "No commit info available",
         "body": "",
         "description": "No description",
         "authors": " DEAD_POOLIO_ ",
