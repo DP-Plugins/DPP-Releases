@@ -1,7 +1,7 @@
 name: Fetch Latest Releases
 on:
   schedule:
-    - cron: '1 * * * *'
+    - cron: '0 */3 * * *'
   workflow_dispatch:
 jobs:
   fetch-latest-releases:
@@ -24,9 +24,6 @@ jobs:
               count=0
             else
               count=$(echo "$releases" | jq 'length')
-            fi
-            if [[ "$count" -eq 0 ]]; then
-              continue
             fi
             repo_name=$(echo "$repo" | sed 's/DP-Plugins\///')
             plugin_yml_url="https://raw.githubusercontent.com/$repo/refs/heads/master/src/main/resources/plugin.yml"
