@@ -106,20 +106,40 @@ jobs:
             jq --arg repo "$repo_name" --argjson data "$repo_releases" '.[$repo] = $data' all_releases.json > tmp.json && mv tmp.json all_releases.json
             jq --arg repo "$repo_name" --arg md "$md" '.[$repo] = $md' all_histories.json > tmp.json && mv tmp.json all_histories.json
           done
-          jq -n \
-            --argjson releases "$(cat all_releases.json)" \
-            --argjson update_history "$(cat all_histories.json)" \
-            '{update_history: $update_history, releases: $releases}' > temp_releases.json
+          # Compute version summary for comparison (only tags, sorted and joined)
+          if [ -f releases.json ]; then
+            current_versions=$(cat releases.json | jq -c '.releases | map_values([.[] | select(.tag != null) | .tag] | sort | join(","))')
+          else
+            current_versions="{}"
+          fi
+          new_versions=$(cat all_releases.json | jq -c 'map_values([.[] | select(.tag != null) | .tag] | sort | join(","))')
+          changed=false
+          if [[ "$current_versions" != "$new_versions" ]]; then
+            changed=true
+          fi
+          if [ "$changed" = true ]; then
+            jq -n \
+              --argjson releases "$(cat all_releases.json)" \
+              --argjson update_history "$(cat all_histories.json)" \
+              '{update_history: $update_history, releases: $releases}' > temp_releases.json
+            echo "Version changes detected; updating releases.json"
+          else
+            echo "No version changes; skipping update."
+          fi
       - name: Commit and push if changed
         run: |
-          if [ ! -f releases.json ] || ! cmp -s releases.json temp_releases.json; then
+          if [ -f temp_releases.json ]; then
             mv temp_releases.json releases.json
             git config user.name "github-actions[bot]"
             git config user.email "github-actions[bot]@users.noreply.github.com"
             git add releases.json
-            git commit -m "Update releases.json with commit date, message, plugin metadata, depend, and softdepend"
-            git push
+            if git diff --cached --quiet; then
+              echo "No actual changes after update; skipping commit."
+            else
+              git commit -m "Update releases.json with commit date, message, plugin metadata, depend, and softdepend"
+              git push
+            fi
+            rm -f all_releases.json all_histories.json
           else
-            echo "No changes in version information; skipping commit."
-            rm temp_releases.json
+            echo "No update needed."
           fi
