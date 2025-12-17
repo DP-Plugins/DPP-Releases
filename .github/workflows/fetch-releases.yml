@@ -1,7 +1,7 @@
 name: Fetch Latest Releases
 on:
   schedule:
-    - cron: '0 */3 * * *'
+    - cron: '0 15 * * *'
   workflow_dispatch:
 jobs:
   fetch-latest-releases:
