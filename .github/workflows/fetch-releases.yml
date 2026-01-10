@@ -16,7 +16,7 @@ jobs:
           export GITHUB_TOKEN="${{ github.token }}"
           echo "{}" > all_releases.json
           echo "{}" > all_histories.json
-          repos=("DP-Plugins/DPP-Core" "DP-Plugins/DP-SimplePrefix" "DP-Plugins/DP-CustomFarming" "DP-Plugins/DP-AfkShop" "DP-Plugins/DP-RewardChest" "DP-Plugins/DP-Menu" "DP-Plugins/DP-Cash" "DP-Plugins/DP-ItemEditor" "DP-Plugins/DP-GUIShop" "DP-Plugins/DP-VirtualStorage" "DP-Plugins/DP-Evaluation" "DP-Plugins/DP-SimpleAnnouncement" "DP-Plugins/DP-Ban" "DP-Plugins/DP-ConsumeBox" "DP-Plugins/DP-ItemCategory" "DP-Plugins/DP-ItemCollection" "DP-Plugins/DP-ItemSkin" "DP-Plugins/DP-MailBox" "DP-Plugins/DP-StreamNotify" "DP-Plugins/DP-CustomCrafting" "DP-Plugins/DP-ToolRepair" "DP-Plugins/DP-MaterialShop" "DP-Plugins/DP-DailyReward" "DP-Plugins/DP-Coupon")
+          repos=("DP-Plugins/DPP-Core" "DP-Plugins/DP-SimplePrefix" "DP-Plugins/DP-CustomFarming" "DP-Plugins/DP-AFKShop" "DP-Plugins/DP-RewardChest" "DP-Plugins/DP-Menu" "DP-Plugins/DP-Cash" "DP-Plugins/DP-ItemEditor" "DP-Plugins/DP-GUIShop" "DP-Plugins/DP-VirtualStorage" "DP-Plugins/DP-Evaluation" "DP-Plugins/DP-SimpleAnnouncement" "DP-Plugins/DP-Ban" "DP-Plugins/DP-ConsumeBox" "DP-Plugins/DP-ItemCategory" "DP-Plugins/DP-ItemCollection" "DP-Plugins/DP-ItemSkin" "DP-Plugins/DP-MailBox" "DP-Plugins/DP-StreamNotify" "DP-Plugins/DP-CustomCrafting" "DP-Plugins/DP-Banknote" "DP-Plugins/DP-ToolRepair" "DP-Plugins/DP-MaterialShop" "DP-Plugins/DP-DailyReward" "DP-Plugins/DP-Coupon")
           for repo in "${repos[@]}"; do
             releases=$(curl -s -H "Authorization: token $GITHUB_TOKEN" -H "Accept: application/vnd.github.v3+json" "https://api.github.com/repos/$repo/releases?per_page=10")
             # Fix: Check if releases response is an array
