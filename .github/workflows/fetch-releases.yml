@@ -3,23 +3,28 @@ on:
   schedule:
     - cron: '0 15 * * *'
   workflow_dispatch:
+
 jobs:
   fetch-latest-releases:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout this repository
         uses: actions/checkout@v4
+
       - name: Install dependencies
         run: sudo apt-get update -qq && sudo apt-get install -y jq
+
       - name: Fetch release data, plugin metadata, and write to JSON
         run: |
           export GITHUB_TOKEN="${{ github.token }}"
           echo "{}" > all_releases.json
           echo "{}" > all_histories.json
+
           repos=("DP-Plugins/DPP-Core" "DP-Plugins/DP-SimplePrefix" "DP-Plugins/DP-CustomFarming" "DP-Plugins/DP-AFKShop" "DP-Plugins/DP-RewardChest" "DP-Plugins/DP-Menu" "DP-Plugins/DP-Cash" "DP-Plugins/DP-ItemEditor" "DP-Plugins/DP-GUIShop" "DP-Plugins/DP-VirtualStorage" "DP-Plugins/DP-Evaluation" "DP-Plugins/DP-SimpleAnnouncement" "DP-Plugins/DP-Ban" "DP-Plugins/DP-ConsumeBox" "DP-Plugins/DP-ItemCategory" "DP-Plugins/DP-ItemCollection" "DP-Plugins/DP-ItemSkin" "DP-Plugins/DP-MailBox" "DP-Plugins/DP-StreamNotify" "DP-Plugins/DP-CustomCrafting" "DP-Plugins/DP-Banknote" "DP-Plugins/DP-ToolRepair" "DP-Plugins/DP-MaterialShop" "DP-Plugins/DP-DailyReward" "DP-Plugins/DP-Coupon")
+
           for repo in "${repos[@]}"; do
             releases=$(curl -s -H "Authorization: token $GITHUB_TOKEN" -H "Accept: application/vnd.github.v3+json" "https://api.github.com/repos/$repo/releases?per_page=10")
-            # Fix: Check if releases response is an array
+
             is_array=$(echo "$releases" | jq 'type == "array"')
             if [[ "$is_array" != "true" ]]; then
               echo "Error fetching releases for $repo: $(echo "$releases" | jq -r .message || echo "Unknown error")"
@@ -27,12 +32,16 @@ jobs:
             else
               count=$(echo "$releases" | jq 'length')
             fi
+
             repo_name=$(echo "$repo" | sed 's/DP-Plugins\///')
+
             plugin_yml_url="https://raw.githubusercontent.com/$repo/refs/heads/master/src/main/resources/plugin.yml"
             plugin_yml=$(curl -s -H "Authorization: token $GITHUB_TOKEN" "$plugin_yml_url")
+
             if [[ $? -eq 0 && -n "$plugin_yml" ]]; then
               description=$(echo "$plugin_yml" | grep '^description:' | sed 's/^description: *//')
               description=${description:-"No description"}
+
               authors=$(echo "$plugin_yml" | grep '^authors:' | sed 's/^authors: *//')
               if [[ -n "$authors" ]]; then
                 authors=$(echo "$authors" | sed 's/[][]//g; s/['\''"]//g; s/,/, /g')
@@ -40,13 +49,16 @@ jobs:
                 authors=$(echo "$plugin_yml" | grep '^author:' | sed 's/^author: *//')
               fi
               authors=${authors:-"No author"}
+
               depend=$(echo "$plugin_yml" | awk '/^depend:/{flag=1;next}/^[^ ]/{flag=0}flag' | sed 's/^[[:space:]]*- //;s/^[[:space:]]*//;s/[[:space:]]*$//' | tr '\n' ' ' | sed 's/[[:space:]]\+/ /g')
               softdepend=$(echo "$plugin_yml" | awk '/^softdepend:/{flag=1;next}/^[^ ]/{flag=0}flag' | sed 's/^[[:space:]]*- //;s/^[[:space:]]*//;s/[[:space:]]*$//' | tr '\n' ' ' | sed 's/[[:space:]]\+/ /g')
+
               if [[ -n "$depend" ]]; then
                 depend_json=$(echo "$depend" | jq -R 'split(" ") | map(select(. != "")) | unique')
               else
                 depend_json="[]"
               fi
+
               if [[ -n "$softdepend" ]]; then
                 softdepend_json=$(echo "$softdepend" | jq -R 'split(" ") | map(select(. != "")) | unique')
               else
@@ -58,26 +70,48 @@ jobs:
               depend_json="[]"
               softdepend_json="[]"
             fi
+
             md=""
             repo_releases="[]"
+
             for i in $(seq 0 $(($count - 1))); do
               name=$(echo "$releases" | jq -r ".[$i].name")
               tag=$(echo "$releases" | jq -r ".[$i].tag_name")
               url=$(echo "$releases" | jq -r ".[$i].html_url")
               date=$(echo "$releases" | jq -r ".[$i].published_at")
               body=$(echo "$releases" | jq -r ".[$i].body")
+
               if [[ "$tag" == "null" ]]; then
                 continue
               fi
+
+              # 🔽 assets + 다운로드 수 처리
+              assets=$(echo "$releases" | jq ".[$i].assets")
+              is_array=$(echo "$assets" | jq 'type == "array"')
+
+              if [[ "$is_array" != "true" ]]; then
+                assets_json="[]"
+                total_download_count=0
+              else
+                assets_json=$(echo "$assets" | jq '[.[] | {
+                  name: .name,
+                  download_count: .download_count,
+                  url: .browser_download_url
+                }]')
+
+                total_download_count=$(echo "$assets" | jq '[.[].download_count] | add // 0')
+              fi
+
               commits=$(curl -s -H "Authorization: token $GITHUB_TOKEN" -H "Accept: application/vnd.github.v3+json" "https://api.github.com/repos/$repo/commits?sha=$tag&per_page=1")
-              # Fix: Check if commits response is an array
+
               is_array=$(echo "$commits" | jq 'type == "array"')
               if [[ "$is_array" != "true" ]]; then
-                echo "Error fetching commits for $repo tag $tag: $(echo "$commits" | jq -r .message || echo "Unknown error")"
+                echo "Error fetching commits for $repo tag $tag"
                 commit_count=0
               else
                 commit_count=$(echo "$commits" | jq 'length')
               fi
+
               if [[ $commit_count -gt 0 ]]; then
                 commit_date=$(echo "$commits" | jq -r '.[0].commit.author.date')
                 commit_message=$(echo "$commits" | jq -r '.[0].commit.message')
@@ -85,7 +119,9 @@ jobs:
                 commit_date="unknown"
                 commit_message="No commit info available"
               fi
+
               formatted_body=$(echo "$body" | sed -E "s|- ([0-9a-f]{7,40}):|- [\1](https://github.com/$repo/commit/\1):|g")
+
               item=$(jq -n \
                 --arg repo "$repo_name" \
                 --arg name "$name" \
@@ -99,24 +135,47 @@ jobs:
                 --arg authors "$authors" \
                 --arg depend "$depend_json" \
                 --arg softdepend "$softdepend_json" \
-                '{repo: $repo, name: $name, tag: $tag, url: $url, published_at: $date, commit_date: $commit_date, commit_message: $commit_message, body: $body, description: $description, authors: $authors, depend: ($depend | fromjson), softdepend: ($softdepend | fromjson)}')
+                --argjson assets "$assets_json" \
+                --argjson total_download_count "$total_download_count" \
+                '{
+                  repo: $repo,
+                  name: $name,
+                  tag: $tag,
+                  url: $url,
+                  published_at: $date,
+                  commit_date: $commit_date,
+                  commit_message: $commit_message,
+                  body: $body,
+                  description: $description,
+                  authors: $authors,
+                  depend: ($depend | fromjson),
+                  softdepend: ($softdepend | fromjson),
+                  assets: $assets,
+                  total_download_count: $total_download_count
+                }')
+
               repo_releases=$(echo "$repo_releases" | jq ". += [$item]")
-              md+="### 🔖 $tag\n[Release Link]($url)\n**Latest Commit:** $commit_message\n**Commit Date:** $commit_date\n**Description:** $description\n**Author(s):** $authors\n**Dependencies:** $depend\n**Soft Dependencies:** $softdepend\n$formatted_body\n"
+
+              md+="### 🔖 $tag\n[Release Link]($url)\n**Downloads:** $total_download_count\n**Latest Commit:** $commit_message\n**Commit Date:** $commit_date\n**Description:** $description\n**Author(s):** $authors\n$formatted_body\n"
             done
+
             jq --arg repo "$repo_name" --argjson data "$repo_releases" '.[$repo] = $data' all_releases.json > tmp.json && mv tmp.json all_releases.json
             jq --arg repo "$repo_name" --arg md "$md" '.[$repo] = $md' all_histories.json > tmp.json && mv tmp.json all_histories.json
           done
-          # Compute version summary for comparison (only tags, sorted and joined)
+
           if [ -f releases.json ]; then
             current_versions=$(cat releases.json | jq -c '.releases | map_values([.[] | select(.tag != null) | .tag] | sort | join(","))')
           else
             current_versions="{}"
           fi
+
           new_versions=$(cat all_releases.json | jq -c 'map_values([.[] | select(.tag != null) | .tag] | sort | join(","))')
+
           changed=false
           if [[ "$current_versions" != "$new_versions" ]]; then
             changed=true
           fi
+
           if [ "$changed" = true ]; then
             jq -n \
               --argjson releases "$(cat all_releases.json)" \
@@ -126,6 +185,7 @@ jobs:
           else
             echo "No version changes; skipping update."
           fi
+
       - name: Commit and push if changed
         run: |
           if [ -f temp_releases.json ]; then
@@ -133,12 +193,14 @@ jobs:
             git config user.name "github-actions[bot]"
             git config user.email "github-actions[bot]@users.noreply.github.com"
             git add releases.json
+
             if git diff --cached --quiet; then
               echo "No actual changes after update; skipping commit."
             else
-              git commit -m "Update releases.json with commit date, message, plugin metadata, depend, and softdepend"
+              git commit -m "Update releases.json with download counts"
               git push
             fi
+
             rm -f all_releases.json all_histories.json
           else
             echo "No update needed."
