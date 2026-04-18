@@ -12,7 +12,11 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Install dependencies
-        run: sudo apt-get update -qq && sudo apt-get install -y jq
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y jq
+          sudo wget -qO /usr/local/bin/yq https://github.com/mikefarah/yq/releases/latest/download/yq_linux_amd64
+          sudo chmod +x /usr/local/bin/yq
 
       - name: Fetch release data, plugin metadata, and write to JSON
         run: |
@@ -23,17 +27,27 @@ jobs:
           repos=("DP-Plugins/DPP-Core" "DP-Plugins/DP-SimplePrefix" "DP-Plugins/DP-CustomFarming" "DP-Plugins/DP-AFKShop" "DP-Plugins/DP-RewardChest" "DP-Plugins/DP-Menu" "DP-Plugins/DP-Cash" "DP-Plugins/DP-ItemEditor" "DP-Plugins/DP-GUIShop" "DP-Plugins/DP-VirtualStorage" "DP-Plugins/DP-Evaluation" "DP-Plugins/DP-SimpleAnnouncement" "DP-Plugins/DP-Ban" "DP-Plugins/DP-ConsumeBox" "DP-Plugins/DP-ItemCategory" "DP-Plugins/DP-ItemCollection" "DP-Plugins/DP-ItemSkin" "DP-Plugins/DP-MailBox" "DP-Plugins/DP-StreamNotify" "DP-Plugins/DP-CustomCrafting" "DP-Plugins/DP-Banknote" "DP-Plugins/DP-ToolRepair" "DP-Plugins/DP-MaterialShop" "DP-Plugins/DP-DailyReward" "DP-Plugins/DP-Coupon")
 
           for repo in "${repos[@]}"; do
-            releases=$(curl -s -H "Authorization: token $GITHUB_TOKEN" -H "Accept: application/vnd.github.v3+json" "https://api.github.com/repos/$repo/releases?per_page=10")
+            releases=$(curl -s -H "Authorization: token $GITHUB_TOKEN" \
+              "https://api.github.com/repos/$repo/releases?per_page=10")
 
             is_array=$(echo "$releases" | jq 'type == "array"')
             if [[ "$is_array" != "true" ]]; then
               echo "Error fetching releases for $repo"
               exit 1
-            else
-              count=$(echo "$releases" | jq 'length')
             fi
 
+            count=$(echo "$releases" | jq 'length')
             repo_name=$(echo "$repo" | sed 's/DP-Plugins\///')
+
+            # 🔽 plugin.yml → JSON 변환
+            plugin_yml_url="https://raw.githubusercontent.com/$repo/refs/heads/master/src/main/resources/plugin.yml"
+            plugin_yml=$(curl -s "$plugin_yml_url")
+
+            if [[ -n "$plugin_yml" ]]; then
+              plugin_json=$(echo "$plugin_yml" | yq -o=json)
+            else
+              plugin_json="{}"
+            fi
 
             md=""
             repo_releases="[]"
@@ -49,7 +63,7 @@ jobs:
                 continue
               fi
 
-              # 🔽 assets + 다운로드 수 처리 (안정 버전)
+              # 🔽 assets + 다운로드 수
               assets=$(echo "$releases" | jq ".[$i].assets")
               is_array=$(echo "$assets" | jq 'type == "array"')
 
@@ -66,8 +80,22 @@ jobs:
                 total_download_count=$(echo "$assets" | jq '[.[].download_count] | add // 0')
               fi
 
-              # 🔽 숫자 안정화 (핵심)
               total_download_count=${total_download_count:-0}
+
+              # 🔽 커밋 정보
+              commits=$(curl -s -H "Authorization: token $GITHUB_TOKEN" \
+                "https://api.github.com/repos/$repo/commits?sha=$tag&per_page=1")
+
+              is_array=$(echo "$commits" | jq 'type == "array"')
+              if [[ "$is_array" != "true" ]]; then
+                commit_date="unknown"
+                commit_message="No commit info"
+              else
+                commit_date=$(echo "$commits" | jq -r '.[0].commit.author.date')
+                commit_message=$(echo "$commits" | jq -r '.[0].commit.message')
+              fi
+
+              formatted_body=$(echo "$body" | sed -E "s|- ([0-9a-f]{7,40}):|- [\1](https://github.com/$repo/commit/\1):|g")
 
               item=$(jq -n \
                 --arg repo "$repo_name" \
@@ -75,29 +103,39 @@ jobs:
                 --arg tag "$tag" \
                 --arg url "$url" \
                 --arg date "$date" \
+                --arg commit_date "$commit_date" \
                 --arg body "$body" \
+                --arg commit_message "$commit_message" \
                 --argjson assets "$assets_json" \
                 --arg total_download_count "$total_download_count" \
+                --argjson plugin "$plugin_json" \
                 '{
                   repo: $repo,
                   name: $name,
                   tag: $tag,
                   url: $url,
                   published_at: $date,
+                  commit_date: $commit_date,
+                  commit_message: $commit_message,
                   body: $body,
                   assets: $assets,
-                  total_download_count: ($total_download_count | tonumber)
+                  total_download_count: ($total_download_count | tonumber),
+                  plugin: $plugin
                 }')
 
               repo_releases=$(echo "$repo_releases" | jq ". += [$item]")
 
-              md+="### 🔖 $tag\n[Release Link]($url)\n**Downloads:** $total_download_count\n"
+              md+="### 🔖 $tag\n[Release Link]($url)\n**Downloads:** $total_download_count\n**Latest Commit:** $commit_message\n**Commit Date:** $commit_date\n$formatted_body\n"
             done
 
-            jq --arg repo "$repo_name" --argjson data "$repo_releases" '.[$repo] = $data' all_releases.json > tmp.json && mv tmp.json all_releases.json
-            jq --arg repo "$repo_name" --arg md "$md" '.[$repo] = $md' all_histories.json > tmp.json && mv tmp.json all_histories.json
+            jq --arg repo "$repo_name" --argjson data "$repo_releases" \
+              '.[$repo] = $data' all_releases.json > tmp.json && mv tmp.json all_releases.json
+
+            jq --arg repo "$repo_name" --arg md "$md" \
+              '.[$repo] = $md' all_histories.json > tmp.json && mv tmp.json all_histories.json
           done
 
+          # 🔽 변경 감지
           if [ -f releases.json ]; then
             current_versions=$(cat releases.json | jq -c '.releases | map_values([.[] | .tag] | sort | join(","))')
           else
@@ -132,7 +170,7 @@ jobs:
             if git diff --cached --quiet; then
               echo "No actual changes after update; skipping commit."
             else
-              git commit -m "Update releases.json with download counts (fixed)"
+              git commit -m "Update releases.json (plugin.yml JSON + download counts)"
               git push
             fi
 
