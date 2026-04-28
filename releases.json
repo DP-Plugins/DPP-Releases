@@ -1,25 +1,25 @@
 {
   "update_history": {
-    "DPP-Core": "### 🔖 5.3.3\\n[Release Link](https://github.com/DP-Plugins/DPP-Core/releases/tag/5.3.3)\\n**Downloads:** 13\\n**Latest Commit:** Update README.md\\n**Commit Date:** 2026-04-11T17:26:34Z\\n## Commits\n- [0dd2fef](https://github.com/DP-Plugins/DPP-Core/commit/0dd2fef): Update README.md (DEADPOOLIO)\\n### 🔖 5.3.2\\n[Release Link](https://github.com/DP-Plugins/DPP-Core/releases/tag/5.3.2)\\n**Downloads:** 78\\n**Latest Commit:** Merge pull request #78 from darksoldier1404/master\n\nfix ArrayIndexOutOfBoundsException\\n**Commit Date:** 2025-11-25T18:42:29Z\\n## Commits\n- [4423d88](https://github.com/DP-Plugins/DPP-Core/commit/4423d88): Add isPlayerInventory flag to DInventoryClickEvent and update event listener (DEADPOOLIO) [#78](https://github.com/DP-Plugins/DPP-Core/pull/78)\n- [8a7e0bb](https://github.com/DP-Plugins/DPP-Core/commit/8a7e0bb): Add isOutSide flag to DInventoryClickEvent and update pageItemSet logic (DEADPOOLIO) [#78](https://github.com/DP-Plugins/DPP-Core/pull/78)\\n### 🔖 5.3.1\\n[Release Link](https://github.com/DP-Plugins/DPP-Core/releases/tag/5.3.1)\\n**Downloads:** 7\\n**Latest Commit:** Merge pull request #76 from darksoldier1404/master\n\nRefactor Argument class to use Collection for suggestions and update …\\n**Commit Date:** 2025-11-11T01:03:29Z\\n## Commits\r\n- [3c3d274](https://github.com/DP-Plugins/DPP-Core/commit/3c3d274): Refactor Argument class to use Collection for suggestions and update CommandBuilder accordingly (darksoldier1404) [#76](https://github.com/DP-Plugins/DPP-Core/pull/76)\\n### 🔖 5.3.0\\n[Release Link](https://github.com/DP-Plugins/DPP-Core/releases/tag/5.3.0)\\n**Downloads:** 12\\n**Latest Commit:** Merge pull request #71 from darksoldier1404/master\n\n5.3.0\\n**Commit Date:** 2025-11-05T08:20:59Z\\n## Commits\r\n- [c9b375b](https://github.com/DP-Plugins/DPP-Core/commit/c9b375b): 5.3 pre-1 (DEADPOOLIO) [#71](https://github.com/DP-Plugins/DPP-Core/pull/71)\r\n- [06a9c8b](https://github.com/DP-Plugins/DPP-Core/commit/06a9c8b): 5.3 pre-1 (DEADPOOLIO) [#71](https://github.com/DP-Plugins/DPP-Core/pull/71)\r\n- [105c464](https://github.com/DP-Plugins/DPP-Core/commit/105c464): 5.3 pre-1 (DEADPOOLIO) [#71](https://github.com/DP-Plugins/DPP-Core/pull/71)\r\n- [bc95675](https://github.com/DP-Plugins/DPP-Core/commit/bc95675): 5.3 pre-1 (DEADPOOLIO) [#71](https://github.com/DP-Plugins/DPP-Core/pull/71)\r\n- [9091086](https://github.com/DP-Plugins/DPP-Core/commit/9091086): 5.3 pre-2 (DEADPOOLIO) [#71](https://github.com/DP-Plugins/DPP-Core/pull/71)\r\n- [c4e272e](https://github.com/DP-Plugins/DPP-Core/commit/c4e272e): 5.3 pre-3 (darksoldier1404) [#71](https://github.com/DP-Plugins/DPP-Core/pull/71)\r\n- [f250732](https://github.com/DP-Plugins/DPP-Core/commit/f250732): Merge branch 'DP-Plugins:master' into master (DEADPOOLIO) [#71](https://github.com/DP-Plugins/DPP-Core/pull/71)\r\n- [0bea05e](https://github.com/DP-Plugins/DPP-Core/commit/0bea05e): 5.3 release (darksoldier1404) [#71](https://github.com/DP-Plugins/DPP-Core/pull/71)\\n### 🔖 5.2.3\\n[Release Link](https://github.com/DP-Plugins/DPP-Core/releases/tag/5.2.3)\\n**Downloads:** 8\\n**Latest Commit:** Update README.md\\n**Commit Date:** 2025-10-08T20:30:18Z\\n## Commits\n- [81c712c](https://github.com/DP-Plugins/DPP-Core/commit/81c712c): Update README.md (DEADPOOLIO)\\n### 🔖 5.2.2\\n[Release Link](https://github.com/DP-Plugins/DPP-Core/releases/tag/5.2.2)\\n**Downloads:** 4\\n**Latest Commit:** Merge pull request #65 from darksoldier1404/master\n\nupdate DInventory, InventoryUtils\\n**Commit Date:** 2025-10-07T15:22:17Z\\n\\n### 🔖 5.2.1\\n[Release Link](https://github.com/DP-Plugins/DPP-Core/releases/tag/5.2.1)\\n**Downloads:** 9\\n**Latest Commit:** Merge pull request #64 from darksoldier1404/master\n\nnew method added.\\n**Commit Date:** 2025-10-01T12:30:04Z\\n\\n### 🔖 5.2.0\\n[Release Link](https://github.com/DP-Plugins/DPP-Core/releases/tag/5.2.0)\\n**Downloads:** 8\\n**Latest Commit:** Merge pull request #63 from darksoldier1404/master\n\n5.2 released\\n**Commit Date:** 2025-09-28T15:41:55Z\\n## Commits\n- [d081e45](https://github.com/DP-Plugins/DPP-Core/commit/d081e45): 5.2 released (DEADPOOLIO) [#63](https://github.com/DP-Plugins/DPP-Core/pull/63)\\n### 🔖 5.0.6.51\\n[Release Link](https://github.com/DP-Plugins/DPP-Core/releases/tag/5.0.6.51)\\n**Downloads:** 5\\n**Latest Commit:** Merge pull request #47 from darksoldier1404/5.2\n\npending fix\\n**Commit Date:** 2025-08-12T19:43:21Z\\nadd inventory contents save, load in DInventory class\\n### 🔖 5.1.0.52\\n[Release Link](https://github.com/DP-Plugins/DPP-Core/releases/tag/5.1.0.52)\\n**Downloads:** 7\\n**Latest Commit:** Merge pull request #44 from darksoldier1404/master\n\nupdate CommandBuilder, DLang\\n**Commit Date:** 2025-07-24T00:58:28Z\\n\\n",
-    "DP-SimplePrefix": "",
+    "DPP-Core": "### 🔖 5.3.3\\n[Release Link](https://github.com/DP-Plugins/DPP-Core/releases/tag/5.3.3)\\n**Downloads:** 14\\n**Latest Commit:** Update README.md\\n**Commit Date:** 2026-04-11T17:26:34Z\\n## Commits\n- [0dd2fef](https://github.com/DP-Plugins/DPP-Core/commit/0dd2fef): Update README.md (DEADPOOLIO)\\n### 🔖 5.3.2\\n[Release Link](https://github.com/DP-Plugins/DPP-Core/releases/tag/5.3.2)\\n**Downloads:** 78\\n**Latest Commit:** Merge pull request #78 from darksoldier1404/master\n\nfix ArrayIndexOutOfBoundsException\\n**Commit Date:** 2025-11-25T18:42:29Z\\n## Commits\n- [4423d88](https://github.com/DP-Plugins/DPP-Core/commit/4423d88): Add isPlayerInventory flag to DInventoryClickEvent and update event listener (DEADPOOLIO) [#78](https://github.com/DP-Plugins/DPP-Core/pull/78)\n- [8a7e0bb](https://github.com/DP-Plugins/DPP-Core/commit/8a7e0bb): Add isOutSide flag to DInventoryClickEvent and update pageItemSet logic (DEADPOOLIO) [#78](https://github.com/DP-Plugins/DPP-Core/pull/78)\\n### 🔖 5.3.1\\n[Release Link](https://github.com/DP-Plugins/DPP-Core/releases/tag/5.3.1)\\n**Downloads:** 7\\n**Latest Commit:** Merge pull request #76 from darksoldier1404/master\n\nRefactor Argument class to use Collection for suggestions and update …\\n**Commit Date:** 2025-11-11T01:03:29Z\\n## Commits\r\n- [3c3d274](https://github.com/DP-Plugins/DPP-Core/commit/3c3d274): Refactor Argument class to use Collection for suggestions and update CommandBuilder accordingly (darksoldier1404) [#76](https://github.com/DP-Plugins/DPP-Core/pull/76)\\n### 🔖 5.3.0\\n[Release Link](https://github.com/DP-Plugins/DPP-Core/releases/tag/5.3.0)\\n**Downloads:** 12\\n**Latest Commit:** Merge pull request #71 from darksoldier1404/master\n\n5.3.0\\n**Commit Date:** 2025-11-05T08:20:59Z\\n## Commits\r\n- [c9b375b](https://github.com/DP-Plugins/DPP-Core/commit/c9b375b): 5.3 pre-1 (DEADPOOLIO) [#71](https://github.com/DP-Plugins/DPP-Core/pull/71)\r\n- [06a9c8b](https://github.com/DP-Plugins/DPP-Core/commit/06a9c8b): 5.3 pre-1 (DEADPOOLIO) [#71](https://github.com/DP-Plugins/DPP-Core/pull/71)\r\n- [105c464](https://github.com/DP-Plugins/DPP-Core/commit/105c464): 5.3 pre-1 (DEADPOOLIO) [#71](https://github.com/DP-Plugins/DPP-Core/pull/71)\r\n- [bc95675](https://github.com/DP-Plugins/DPP-Core/commit/bc95675): 5.3 pre-1 (DEADPOOLIO) [#71](https://github.com/DP-Plugins/DPP-Core/pull/71)\r\n- [9091086](https://github.com/DP-Plugins/DPP-Core/commit/9091086): 5.3 pre-2 (DEADPOOLIO) [#71](https://github.com/DP-Plugins/DPP-Core/pull/71)\r\n- [c4e272e](https://github.com/DP-Plugins/DPP-Core/commit/c4e272e): 5.3 pre-3 (darksoldier1404) [#71](https://github.com/DP-Plugins/DPP-Core/pull/71)\r\n- [f250732](https://github.com/DP-Plugins/DPP-Core/commit/f250732): Merge branch 'DP-Plugins:master' into master (DEADPOOLIO) [#71](https://github.com/DP-Plugins/DPP-Core/pull/71)\r\n- [0bea05e](https://github.com/DP-Plugins/DPP-Core/commit/0bea05e): 5.3 release (darksoldier1404) [#71](https://github.com/DP-Plugins/DPP-Core/pull/71)\\n### 🔖 5.2.3\\n[Release Link](https://github.com/DP-Plugins/DPP-Core/releases/tag/5.2.3)\\n**Downloads:** 8\\n**Latest Commit:** Update README.md\\n**Commit Date:** 2025-10-08T20:30:18Z\\n## Commits\n- [81c712c](https://github.com/DP-Plugins/DPP-Core/commit/81c712c): Update README.md (DEADPOOLIO)\\n### 🔖 5.2.2\\n[Release Link](https://github.com/DP-Plugins/DPP-Core/releases/tag/5.2.2)\\n**Downloads:** 4\\n**Latest Commit:** Merge pull request #65 from darksoldier1404/master\n\nupdate DInventory, InventoryUtils\\n**Commit Date:** 2025-10-07T15:22:17Z\\n\\n### 🔖 5.2.1\\n[Release Link](https://github.com/DP-Plugins/DPP-Core/releases/tag/5.2.1)\\n**Downloads:** 9\\n**Latest Commit:** Merge pull request #64 from darksoldier1404/master\n\nnew method added.\\n**Commit Date:** 2025-10-01T12:30:04Z\\n\\n### 🔖 5.2.0\\n[Release Link](https://github.com/DP-Plugins/DPP-Core/releases/tag/5.2.0)\\n**Downloads:** 8\\n**Latest Commit:** Merge pull request #63 from darksoldier1404/master\n\n5.2 released\\n**Commit Date:** 2025-09-28T15:41:55Z\\n## Commits\n- [d081e45](https://github.com/DP-Plugins/DPP-Core/commit/d081e45): 5.2 released (DEADPOOLIO) [#63](https://github.com/DP-Plugins/DPP-Core/pull/63)\\n### 🔖 5.0.6.51\\n[Release Link](https://github.com/DP-Plugins/DPP-Core/releases/tag/5.0.6.51)\\n**Downloads:** 5\\n**Latest Commit:** Merge pull request #47 from darksoldier1404/5.2\n\npending fix\\n**Commit Date:** 2025-08-12T19:43:21Z\\nadd inventory contents save, load in DInventory class\\n### 🔖 5.1.0.52\\n[Release Link](https://github.com/DP-Plugins/DPP-Core/releases/tag/5.1.0.52)\\n**Downloads:** 7\\n**Latest Commit:** Merge pull request #44 from darksoldier1404/master\n\nupdate CommandBuilder, DLang\\n**Commit Date:** 2025-07-24T00:58:28Z\\n\\n",
+    "DP-SimplePrefix": "### 🔖 2.1.1\\n[Release Link](https://github.com/DP-Plugins/DP-SimplePrefix/releases/tag/2.1.1)\\n**Downloads:** 46\\n**Latest Commit:** Merge pull request #10 from darksoldier1404/master\n\nfix wrong import\\n**Commit Date:** 2025-12-15T12:57:38Z\\n\\n### 🔖 2.1.0\\n[Release Link](https://github.com/DP-Plugins/DP-SimplePrefix/releases/tag/2.1.0)\\n**Downloads:** 42\\n**Latest Commit:** Merge pull request #9 from darksoldier1404/master\n\n5.3.0 Update\\n**Commit Date:** 2025-11-05T09:52:17Z\\n\\n### 🔖 2.0.0\\n[Release Link](https://github.com/DP-Plugins/DP-SimplePrefix/releases/tag/2.0.0)\\n**Downloads:** 3\\n**Latest Commit:** Merge pull request #8 from darksoldier1404/master\n\nupdate 5.2 code clean\\n**Commit Date:** 2025-09-28T15:45:07Z\\n## Commits\n- [94040f9](https://github.com/DP-Plugins/DP-SimplePrefix/commit/94040f9): update 5.2 code clean (DEADPOOLIO) [#8](https://github.com/DP-Plugins/DP-SimplePrefix/pull/8)\\n### 🔖 1.0.1.5\\n[Release Link](https://github.com/DP-Plugins/DP-SimplePrefix/releases/tag/1.0.1.5)\\n**Downloads:** 16\\n**Latest Commit:** Merge pull request #6 from darksoldier1404/master\n\nfix missing lang key in config.yml\\n**Commit Date:** 2025-07-19T15:21:27Z\\n\\n### 🔖 1.0.1.4\\n[Release Link](https://github.com/DP-Plugins/DP-SimplePrefix/releases/tag/1.0.1.4)\\n**Downloads:** 7\\n**Latest Commit:** Merge pull request #5 from darksoldier1404/master\n\nupdate for DPP-Core 5.0.0.34\\n**Commit Date:** 2025-06-30T13:41:38Z\\n\\n### 🔖 1.0.0.2\\n[Release Link](https://github.com/DP-Plugins/DP-SimplePrefix/releases/tag/1.0.0.2)\\n**Downloads:** 17\\n**Latest Commit:** Merge pull request #4 from darksoldier1404/dev\n\nDev\\n**Commit Date:** 2025-05-25T05:04:56Z\\n\\n### 🔖 1.0.0.1\\n[Release Link](https://github.com/DP-Plugins/DP-SimplePrefix/releases/tag/1.0.0.1)\\n**Downloads:** 4\\n**Latest Commit:** version up\\n**Commit Date:** 2025-05-20T06:34:11Z\\n\\n### 🔖 1.0.0.0\\n[Release Link](https://github.com/DP-Plugins/DP-SimplePrefix/releases/tag/1.0.0.0)\\n**Downloads:** 3\\n**Latest Commit:** Merge pull request #3 from darksoldier1404/dev\n\nDLang Added\\n**Commit Date:** 2025-05-20T06:31:41Z\\n\\n",
     "DP-CustomFarming": "### 🔖 2.0.4\\n[Release Link](https://github.com/DP-Plugins/DP-CustomFarming/releases/tag/2.0.4)\\n**Downloads:** 15\\n**Latest Commit:** Merge pull request #9 from darksoldier1404/master\n\nupdate um..\\n**Commit Date:** 2025-10-08T15:37:49Z\\n\\n### 🔖 2.0.1\\n[Release Link](https://github.com/DP-Plugins/DP-CustomFarming/releases/tag/2.0.1)\\n**Downloads:** 1\\n**Latest Commit:** Merge pull request #8 from darksoldier1404/master\n\nadd exception for old seed data.\\n**Commit Date:** 2025-10-01T13:19:35Z\\n\\n### 🔖 2.0.0\\n[Release Link](https://github.com/DP-Plugins/DP-CustomFarming/releases/tag/2.0.0)\\n**Downloads:** 6\\n**Latest Commit:** Merge pull request #7 from darksoldier1404/master\n\nupdate 5.2\\n**Commit Date:** 2025-09-28T16:51:27Z\\n## Commits\n- [53a38fe](https://github.com/DP-Plugins/DP-CustomFarming/commit/53a38fe): update 5.2 (DEADPOOLIO) [#7](https://github.com/DP-Plugins/DP-CustomFarming/pull/7)\\n### 🔖 1.0.1.5\\n[Release Link](https://github.com/DP-Plugins/DP-CustomFarming/releases/tag/1.0.1.5)\\n**Downloads:** 4\\n**Latest Commit:** Merge pull request #5 from darksoldier1404/master\n\ndata type fix\\n**Commit Date:** 2025-06-30T19:01:46Z\\n\\n### 🔖 1.0.1.4\\n[Release Link](https://github.com/DP-Plugins/DP-CustomFarming/releases/tag/1.0.1.4)\\n**Downloads:** 0\\n**Latest Commit:** Merge pull request #4 from darksoldier1404/master\n\nworld limit toggle fix\\n**Commit Date:** 2025-06-30T18:25:47Z\\n\\n### 🔖 1.0.1.3\\n[Release Link](https://github.com/DP-Plugins/DP-CustomFarming/releases/tag/1.0.1.3)\\n**Downloads:** 3\\n**Latest Commit:** Merge pull request #3 from darksoldier1404/master\n\nupdate for DPP-Core 5.0.0.34\\n**Commit Date:** 2025-06-30T13:51:49Z\\n\\n### 🔖 1.0.1.2\\n[Release Link](https://github.com/DP-Plugins/DP-CustomFarming/releases/tag/1.0.1.2)\\n**Downloads:** 3\\n**Latest Commit:** Merge pull request #2 from darksoldier1404/master\n\nadd missing env val in gradle.yml\\n**Commit Date:** 2025-06-21T05:51:32Z\\n\\n### 🔖 1.0.0.0\\n[Release Link](https://github.com/DP-Plugins/DP-CustomFarming/releases/tag/1.0.0.0)\\n**Downloads:** 3\\n**Latest Commit:** Create README.md\\n**Commit Date:** 2025-06-04T03:45:12Z\\n## Commits\n- [e2f5961](https://github.com/DP-Plugins/DP-CustomFarming/commit/e2f5961): Create README.md (DEADPOOLIO)\\n",
-    "DP-AFKShop": "",
+    "DP-AFKShop": "### 🔖 2.1.0\\n[Release Link](https://github.com/DP-Plugins/DP-AFKShop/releases/tag/2.1.0)\\n**Downloads:** 22\\n**Latest Commit:** Merge pull request #2 from darksoldier1404/master\n\nUpdate AFKShop functionality and localization support; increment vers…\\n**Commit Date:** 2026-01-10T17:50:36Z\\n\\n### 🔖 2.0.0\\n[Release Link](https://github.com/DP-Plugins/DP-AFKShop/releases/tag/2.0.0)\\n**Downloads:** 3\\n**Latest Commit:** Add README for DP-AFKShop plugin\n\nAdded detailed information about the DP-AFKShop plugin, including features, installation instructions, command list, and API integration.\\n**Commit Date:** 2026-01-10T08:52:40Z\\n## Commits\n- [9777922](https://github.com/DP-Plugins/DP-AFKShop/commit/9777922): Add README for DP-AFKShop plugin (DEADPOOLIO)\\n### 🔖 1.0.0\\n[Release Link](https://github.com/DP-Plugins/DP-AFKShop/releases/tag/1.0.0)\\n**Downloads:** 8\\n**Latest Commit:** Initial commit\\n**Commit Date:** 2025-12-30T20:08:50Z\\n\\n",
     "DP-RewardChest": "### 🔖 2.2.0\\n[Release Link](https://github.com/DP-Plugins/DP-RewardChest/releases/tag/2.2.0)\\n**Downloads:** 10\\n**Latest Commit:** Merge pull request #11 from darksoldier1404/master\n\nEnhance global preview functionality and add missing lang key\\n**Commit Date:** 2026-03-08T12:36:16Z\\n\\n### 🔖 2.1.2\\n[Release Link](https://github.com/DP-Plugins/DP-RewardChest/releases/tag/2.1.2)\\n**Downloads:** 19\\n**Latest Commit:** Create README.md\\n**Commit Date:** 2026-01-10T15:53:44Z\\n## Commits\n- [37d5456](https://github.com/DP-Plugins/DP-RewardChest/commit/37d5456): Create README.md (DEADPOOLIO)\\n### 🔖 2.1.1\\n[Release Link](https://github.com/DP-Plugins/DP-RewardChest/releases/tag/2.1.1)\\n**Downloads:** 4\\n**Latest Commit:** Merge pull request #8 from darksoldier1404/master\n\n2.1.2\\n**Commit Date:** 2025-11-29T13:38:57Z\\n## Commits\n- [6432f78](https://github.com/DP-Plugins/DP-RewardChest/commit/6432f78): 2.1.2 (DEADPOOLIO) [#8](https://github.com/DP-Plugins/DP-RewardChest/pull/8)\\n### 🔖 2.1.0\\n[Release Link](https://github.com/DP-Plugins/DP-RewardChest/releases/tag/2.1.0)\\n**Downloads:** 2\\n**Latest Commit:** Merge pull request #6 from darksoldier1404/master\n\n5.3.0 Update\\n**Commit Date:** 2025-11-05T09:40:16Z\\n\\n### 🔖 2.0.1\\n[Release Link](https://github.com/DP-Plugins/DP-RewardChest/releases/tag/2.0.1)\\n**Downloads:** 5\\n**Latest Commit:** Merge pull request #5 from darksoldier1404/master\n\nfix reload command\\n**Commit Date:** 2025-10-01T10:08:30Z\\n\\n### 🔖 2.0.0\\n[Release Link](https://github.com/DP-Plugins/DP-RewardChest/releases/tag/2.0.0)\\n**Downloads:** 4\\n**Latest Commit:** Merge pull request #4 from darksoldier1404/master\n\n5.2 update\\n**Commit Date:** 2025-09-21T19:08:58Z\\n\\n### 🔖 1.0.1.5\\n[Release Link](https://github.com/DP-Plugins/DP-RewardChest/releases/tag/1.0.1.5)\\n**Downloads:** 7\\n**Latest Commit:** Merge pull request #3 from darksoldier1404/master\n\ndefaultoffset fix\\n**Commit Date:** 2025-07-20T12:39:54Z\\n\\n### 🔖 1.0.1.4\\n[Release Link](https://github.com/DP-Plugins/DP-RewardChest/releases/tag/1.0.1.4)\\n**Downloads:** 6\\n**Latest Commit:** Merge pull request #2 from darksoldier1404/master\n\nadd defaultoffset to config.yml\\n**Commit Date:** 2025-07-18T12:10:58Z\\n\\n### 🔖 1.0.0.3\\n[Release Link](https://github.com/DP-Plugins/DP-RewardChest/releases/tag/1.0.0.3)\\n**Downloads:** 4\\n**Latest Commit:** Merge pull request #1 from darksoldier1404/master\n\nupdate for DPP-Core 5.0.0.34\\n**Commit Date:** 2025-06-30T13:57:30Z\\n\\n### 🔖 1.0.0.2\\n[Release Link](https://github.com/DP-Plugins/DP-RewardChest/releases/tag/1.0.0.2)\\n**Downloads:** 5\\n**Latest Commit:** Initial commit\\n**Commit Date:** 2025-06-21T07:22:13Z\\n\\n",
     "DP-Menu": "### 🔖 2.1.1\\n[Release Link](https://github.com/DP-Plugins/DP-Menu/releases/tag/2.1.1)\\n**Downloads:** 26\\n**Latest Commit:** Update README.md\\n**Commit Date:** 2026-01-10T14:49:05Z\\n## Commits\n- [b36ad1e](https://github.com/DP-Plugins/DP-Menu/commit/b36ad1e): Update README.md (DEADPOOLIO)\\n### 🔖 2.1.0\\n[Release Link](https://github.com/DP-Plugins/DP-Menu/releases/tag/2.1.0)\\n**Downloads:** 25\\n**Latest Commit:** Merge pull request #8 from darksoldier1404/master\n\n5.3.0 update\\n**Commit Date:** 2025-11-05T09:37:29Z\\n\\n### 🔖 2.0.0\\n[Release Link](https://github.com/DP-Plugins/DP-Menu/releases/tag/2.0.0)\\n**Downloads:** 7\\n**Latest Commit:** Merge pull request #7 from darksoldier1404/master\n\n5.2 update\\n**Commit Date:** 2025-09-21T18:57:51Z\\n\\n### 🔖 1.0.1.6\\n[Release Link](https://github.com/DP-Plugins/DP-Menu/releases/tag/1.0.1.6)\\n**Downloads:** 8\\n**Latest Commit:** Merge pull request #6 from darksoldier1404/master\n\nfix command permission _ to .\\n**Commit Date:** 2025-07-23T14:35:00Z\\n\\n### 🔖 1.0.1.5\\n[Release Link](https://github.com/DP-Plugins/DP-Menu/releases/tag/1.0.1.5)\\n**Downloads:** 8\\n**Latest Commit:** Merge pull request #5 from darksoldier1404/master\n\nfix bstats id\\n**Commit Date:** 2025-07-19T18:27:00Z\\n\\n### 🔖 1.0.1.4\\n[Release Link](https://github.com/DP-Plugins/DP-Menu/releases/tag/1.0.1.4)\\n**Downloads:** 2\\n**Latest Commit:** Update README.md\\n**Commit Date:** 2025-07-19T17:56:44Z\\n## Commits\n- [a4d3f51](https://github.com/DP-Plugins/DP-Menu/commit/a4d3f51): Update README.md (DEADPOOLIO)\\n",
     "DP-Cash": "### 🔖 2.2.0\\n[Release Link](https://github.com/DP-Plugins/DP-Cash/releases/tag/2.2.0)\\n**Downloads:** 24\\n**Latest Commit:** Create README.md\\n**Commit Date:** 2026-01-10T09:50:23Z\\n## Commits\n- [55dc911](https://github.com/DP-Plugins/DP-Cash/commit/55dc911): Create README.md (DEADPOOLIO)\\n### 🔖 2.0.1\\n[Release Link](https://github.com/DP-Plugins/DP-Cash/releases/tag/2.0.1)\\n**Downloads:** 3\\n**Latest Commit:** Merge pull request #6 from darksoldier1404/master\n\nfix reload command\\n**Commit Date:** 2025-10-01T12:30:14Z\\n\\n### 🔖 2.0.0\\n[Release Link](https://github.com/DP-Plugins/DP-Cash/releases/tag/2.0.0)\\n**Downloads:** 3\\n**Latest Commit:** Merge pull request #5 from darksoldier1404/master\n\n5.2 update\\n**Commit Date:** 2025-09-30T10:07:13Z\\n## Commits\n- [c110eba](https://github.com/DP-Plugins/DP-Cash/commit/c110eba): 5.2 update (DEADPOOLIO) [#5](https://github.com/DP-Plugins/DP-Cash/pull/5)\\n### 🔖 1.0.0.0\\n[Release Link](https://github.com/DP-Plugins/DP-Cash/releases/tag/1.0.0.0)\\n**Downloads:** 3\\n**Latest Commit:** Merge pull request #1 from darksoldier1404/master\n\nadd github action\\n**Commit Date:** 2025-07-18T12:55:52Z\\n\\n",
-    "DP-ItemEditor": "",
+    "DP-ItemEditor": "### 🔖 2.1.0\\n[Release Link](https://github.com/DP-Plugins/DP-ItemEditor/releases/tag/2.1.0)\\n**Downloads:** 24\\n**Latest Commit:** Create README.md\\n**Commit Date:** 2026-01-10T12:51:04Z\\n## Commits\n- [4d5d61f](https://github.com/DP-Plugins/DP-ItemEditor/commit/4d5d61f): Create README.md (DEADPOOLIO)\\n### 🔖 2.0.0\\n[Release Link](https://github.com/DP-Plugins/DP-ItemEditor/releases/tag/2.0.0)\\n**Downloads:** 6\\n**Latest Commit:** Merge pull request #2 from darksoldier1404/master\n\nupdate 5.2\\n**Commit Date:** 2025-09-21T20:59:11Z\\n\\n### 🔖 1.0.0.0\\n[Release Link](https://github.com/DP-Plugins/DP-ItemEditor/releases/tag/1.0.0.0)\\n**Downloads:** 2\\n**Latest Commit:** Merge pull request #1 from darksoldier1404/master\n\nadd DLang\\n**Commit Date:** 2025-07-19T19:52:50Z\\n\\n",
     "DP-GUIShop": "### 🔖 2.3.1\\n[Release Link](https://github.com/DP-Plugins/DP-GUIShop/releases/tag/2.3.1)\\n**Downloads:** 14\\n**Latest Commit:** Merge pull request #24 from darksoldier1404/master\n\nupdate version to 2.3.1 and refactor shop price handling to use BigIn…\\n**Commit Date:** 2026-04-18T20:51:33Z\\n\\n### 🔖 2.3.0\\n[Release Link](https://github.com/DP-Plugins/DP-GUIShop/releases/tag/2.3.0)\\n**Downloads:** 16\\n**Latest Commit:** Merge pull request #23 from darksoldier1404/master\n\nbump version to 2.3.0 and enhance shop price management features\\n**Commit Date:** 2026-02-26T09:34:59Z\\n\\n### 🔖 2.2.0\\n[Release Link](https://github.com/DP-Plugins/DP-GUIShop/releases/tag/2.2.0)\\n**Downloads:** 28\\n**Latest Commit:** Update README.md\\n**Commit Date:** 2026-01-10T10:47:49Z\\n## Commits\n- [2f09238](https://github.com/DP-Plugins/DP-GUIShop/commit/2f09238): Update README.md (DEADPOOLIO)\\n### 🔖 2.0.2\\n[Release Link](https://github.com/DP-Plugins/DP-GUIShop/releases/tag/2.0.2)\\n**Downloads:** 1\\n**Latest Commit:** Merge pull request #20 from darksoldier1404/master\n\nfix NPE\\n**Commit Date:** 2025-10-08T15:35:07Z\\n\\n### 🔖 2.0.1\\n[Release Link](https://github.com/DP-Plugins/DP-GUIShop/releases/tag/2.0.1)\\n**Downloads:** 7\\n**Latest Commit:** Merge pull request #18 from darksoldier1404/master\n\nfix reload command\\n**Commit Date:** 2025-10-01T10:05:35Z\\n\\n### 🔖 2.0.0\\n[Release Link](https://github.com/DP-Plugins/DP-GUIShop/releases/tag/2.0.0)\\n**Downloads:** 4\\n**Latest Commit:** Merge pull request #17 from darksoldier1404/master\n\n5.2 update\\n**Commit Date:** 2025-09-28T15:38:43Z\\n## Commits\n- [ccc32f4](https://github.com/DP-Plugins/DP-GUIShop/commit/ccc32f4): 5.2 update (DEADPOOLIO) [#17](https://github.com/DP-Plugins/DP-GUIShop/pull/17)\\n### 🔖 1.0.0.7\\n[Release Link](https://github.com/DP-Plugins/DP-GUIShop/releases/tag/1.0.0.7)\\n**Downloads:** 2\\n**Latest Commit:** fix click event\\n**Commit Date:** 2025-09-08T09:03:48Z\\n\\n### 🔖 1.0.1.6\\n[Release Link](https://github.com/DP-Plugins/DP-GUIShop/releases/tag/1.0.1.6)\\n**Downloads:** 1\\n**Latest Commit:** Merge pull request #10 from darksoldier1404/master\n\nupdate for DPP-Core 5.1\\n**Commit Date:** 2025-07-27T11:03:50Z\\n\\n### 🔖 1.0.0.5\\n[Release Link](https://github.com/DP-Plugins/DP-GUIShop/releases/tag/1.0.0.5)\\n**Downloads:** 6\\n**Latest Commit:** Merge pull request #9 from darksoldier1404/master\n\nadd set title sub command\\n**Commit Date:** 2025-07-21T06:59:19Z\\n\\n### 🔖 1.0.0.4\\n[Release Link](https://github.com/DP-Plugins/DP-GUIShop/releases/tag/1.0.0.4)\\n**Downloads:** 6\\n**Latest Commit:** Merge pull request #8 from darksoldier1404/master\n\nfix lang file and create sub command\\n**Commit Date:** 2025-07-20T16:02:18Z\\n## Commits\n- [7f83335](https://github.com/DP-Plugins/DP-GUIShop/commit/7f83335): fix lang file and create sub command (darksoldier1404) [#8](https://github.com/DP-Plugins/DP-GUIShop/pull/8)\\n",
     "DP-VirtualStorage": "### 🔖 1.2.0\\n[Release Link](https://github.com/DP-Plugins/DP-VirtualStorage/releases/tag/1.2.0)\\n**Downloads:** 23\\n**Latest Commit:** Merge pull request #4 from darksoldier1404/master\n\nupdate version to 1.2.0 and improve command messages with localizatio…\\n**Commit Date:** 2026-01-10T22:57:48Z\\n\\n### 🔖 1.1.2\\n[Release Link](https://github.com/DP-Plugins/DP-VirtualStorage/releases/tag/1.1.2)\\n**Downloads:** 2\\n**Latest Commit:** Create README.md\\n**Commit Date:** 2026-01-10T16:16:58Z\\n## Commits\n- [8d20056](https://github.com/DP-Plugins/DP-VirtualStorage/commit/8d20056): Create README.md (DEADPOOLIO)\\n### 🔖 1.1.1\\n[Release Link](https://github.com/DP-Plugins/DP-VirtualStorage/releases/tag/1.1.1)\\n**Downloads:** 20\\n**Latest Commit:** Merge pull request #2 from darksoldier1404/master\n\nfix click cancel\\n**Commit Date:** 2025-12-03T09:27:00Z\\n\\n### 🔖 1.1.0\\n[Release Link](https://github.com/DP-Plugins/DP-VirtualStorage/releases/tag/1.1.0)\\n**Downloads:** 7\\n**Latest Commit:** Merge pull request #1 from darksoldier1404/master\n\n5.3.0 Update\\n**Commit Date:** 2025-11-05T09:09:23Z\\n\\n### 🔖 1.0.0\\n[Release Link](https://github.com/DP-Plugins/DP-VirtualStorage/releases/tag/1.0.0)\\n**Downloads:** 2\\n**Latest Commit:** Initial commit\\n**Commit Date:** 2025-10-08T15:00:03Z\\n\\n",
     "DP-Evaluation": "### 🔖 1.2.0\\n[Release Link](https://github.com/DP-Plugins/DP-Evaluation/releases/tag/1.2.0)\\n**Downloads:** 18\\n**Latest Commit:** Create README.md\\n**Commit Date:** 2026-01-10T10:32:11Z\\n## Commits\n- [98b008a](https://github.com/DP-Plugins/DP-Evaluation/commit/98b008a): Create README.md (DEADPOOLIO)\\n### 🔖 1.1.1\\n[Release Link](https://github.com/DP-Plugins/DP-Evaluation/releases/tag/1.1.1)\\n**Downloads:** 8\\n**Latest Commit:** Merge pull request #3 from darksoldier1404/master\n\nfix bstats id\\n**Commit Date:** 2025-12-20T06:23:22Z\\n## Commits\n- [f08958a](https://github.com/DP-Plugins/DP-Evaluation/commit/f08958a): fix bstats id (DEADPOOLIO) [#3](https://github.com/DP-Plugins/DP-Evaluation/pull/3)\\n### 🔖 1.1.0\\n[Release Link](https://github.com/DP-Plugins/DP-Evaluation/releases/tag/1.1.0)\\n**Downloads:** 18\\n**Latest Commit:** Merge pull request #1 from darksoldier1404/master\n\n5.3.0 Update\\n**Commit Date:** 2025-11-05T09:32:07Z\\n\\n### 🔖 1.0.0\\n[Release Link](https://github.com/DP-Plugins/DP-Evaluation/releases/tag/1.0.0)\\n**Downloads:** 3\\n**Latest Commit:** add action\\n**Commit Date:** 2025-10-08T14:58:31Z\\n\\n",
     "DP-SimpleAnnouncement": "### 🔖 1.1.0\\n[Release Link](https://github.com/DP-Plugins/DP-SimpleAnnouncement/releases/tag/1.1.0)\\n**Downloads:** 51\\n**Latest Commit:** Merge pull request #2 from darksoldier1404/master\n\n5.3.0 Update\\n**Commit Date:** 2025-11-05T09:47:42Z\\n\\n### 🔖 1.0.0\\n[Release Link](https://github.com/DP-Plugins/DP-SimpleAnnouncement/releases/tag/1.0.0)\\n**Downloads:** 4\\n**Latest Commit:** Merge pull request #1 from darksoldier1404/master\n\nadd action workflow\\n**Commit Date:** 2025-09-21T19:16:43Z\\n\\n",
     "DP-Ban": "### 🔖 1.0.0\\n[Release Link](https://github.com/DP-Plugins/DP-Ban/releases/tag/1.0.0)\\n**Downloads:** 16\\n**Latest Commit:** Initialize README with plugin details and instructions\n\nAdded detailed plugin description, features, installation instructions, command list, and support information.\\n**Commit Date:** 2026-01-10T09:16:53Z\\n## Commits\n- [9f127c2](https://github.com/DP-Plugins/DP-Ban/commit/9f127c2): Initialize README with plugin details and instructions (DEADPOOLIO)\\n",
-    "DP-ConsumeBox": "",
-    "DP-ItemCategory": "",
+    "DP-ConsumeBox": "### 🔖 1.0.1\\n[Release Link](https://github.com/DP-Plugins/DP-ConsumeBox/releases/tag/1.0.1)\\n**Downloads:** 22\\n**Latest Commit:** Add README for DP-ConsumeBox plugin\n\nAdd detailed information about the DP-ConsumeBox plugin, including features, installation instructions, commands, and support links.\\n**Commit Date:** 2026-01-10T10:03:00Z\\n## Commits\n- [81cb15f](https://github.com/DP-Plugins/DP-ConsumeBox/commit/81cb15f): Add README for DP-ConsumeBox plugin (DEADPOOLIO)\\n### 🔖 1.0.0\\n[Release Link](https://github.com/DP-Plugins/DP-ConsumeBox/releases/tag/1.0.0)\\n**Downloads:** 28\\n**Latest Commit:** Merge pull request #1 from darksoldier1404/master\n\ninit\\n**Commit Date:** 2025-11-22T10:57:11Z\\n\\n",
+    "DP-ItemCategory": "### 🔖 2.3.0\\n[Release Link](https://github.com/DP-Plugins/DP-ItemCategory/releases/tag/2.3.0)\\n**Downloads:** 21\\n**Latest Commit:** Create README.md\\n**Commit Date:** 2026-01-10T12:21:15Z\\n## Commits\n- [17aa664](https://github.com/DP-Plugins/DP-ItemCategory/commit/17aa664): Create README.md (DEADPOOLIO)\\n### 🔖 2.2.0\\n[Release Link](https://github.com/DP-Plugins/DP-ItemCategory/releases/tag/2.2.0)\\n**Downloads:** 26\\n**Latest Commit:** Merge pull request #3 from darksoldier1404/master\n\nfix command example text\\n**Commit Date:** 2025-11-30T08:46:44Z\\n## Commits\n- [752e99a](https://github.com/DP-Plugins/DP-ItemCategory/commit/752e99a): fix command example text (DEADPOOLIO) [#3](https://github.com/DP-Plugins/DP-ItemCategory/pull/3)\\n",
     "DP-ItemCollection": "### 🔖 1.1.2\\n[Release Link](https://github.com/DP-Plugins/DP-ItemCollection/releases/tag/1.1.2)\\n**Downloads:** 38\\n**Latest Commit:** Update README.MD\\n**Commit Date:** 2025-12-17T05:34:57Z\\n## Commits\n- [ef691a9](https://github.com/DP-Plugins/DP-ItemCollection/commit/ef691a9): Update README.MD (DEADPOOLIO)\\n### 🔖 1.1.0\\n[Release Link](https://github.com/DP-Plugins/DP-ItemCollection/releases/tag/1.1.0)\\n**Downloads:** 8\\n**Latest Commit:** Merge pull request #1 from darksoldier1404/master\n\nadd action\\n**Commit Date:** 2025-11-29T14:33:13Z\\n\\n",
     "DP-ItemSkin": "### 🔖 2.1.0\\n[Release Link](https://github.com/DP-Plugins/DP-ItemSkin/releases/tag/2.1.0)\\n**Downloads:** 13\\n**Latest Commit:** Create README.md\\n**Commit Date:** 2026-01-10T13:38:57Z\\n## Commits\n- [69026b9](https://github.com/DP-Plugins/DP-ItemSkin/commit/69026b9): Create README.md (DEADPOOLIO)\\n",
-    "DP-MailBox": "### 🔖 1.2.0\\n[Release Link](https://github.com/DP-Plugins/DP-MailBox/releases/tag/1.2.0)\\n**Downloads:** 9\\n**Latest Commit:** Merge pull request #4 from darksoldier1404/master\n\nadd mail preset functionality and update version to 1.2.0\\n**Commit Date:** 2026-04-18T21:04:40Z\\n\\n### 🔖 1.1.0\\n[Release Link](https://github.com/DP-Plugins/DP-MailBox/releases/tag/1.1.0)\\n**Downloads:** 14\\n**Latest Commit:** Create README.md\\n**Commit Date:** 2026-01-10T14:19:12Z\\n## Commits\n- [920ba53](https://github.com/DP-Plugins/DP-MailBox/commit/920ba53): Create README.md (DEADPOOLIO)\\n### 🔖 1.0.0\\n[Release Link](https://github.com/DP-Plugins/DP-MailBox/releases/tag/1.0.0)\\n**Downloads:** 35\\n**Latest Commit:** Merge pull request #2 from darksoldier1404/master\n\nfix gradlew\\n**Commit Date:** 2025-11-05T08:57:04Z\\n\\n",
+    "DP-MailBox": "### 🔖 1.2.0\\n[Release Link](https://github.com/DP-Plugins/DP-MailBox/releases/tag/1.2.0)\\n**Downloads:** 10\\n**Latest Commit:** Merge pull request #4 from darksoldier1404/master\n\nadd mail preset functionality and update version to 1.2.0\\n**Commit Date:** 2026-04-18T21:04:40Z\\n\\n### 🔖 1.1.0\\n[Release Link](https://github.com/DP-Plugins/DP-MailBox/releases/tag/1.1.0)\\n**Downloads:** 14\\n**Latest Commit:** Create README.md\\n**Commit Date:** 2026-01-10T14:19:12Z\\n## Commits\n- [920ba53](https://github.com/DP-Plugins/DP-MailBox/commit/920ba53): Create README.md (DEADPOOLIO)\\n### 🔖 1.0.0\\n[Release Link](https://github.com/DP-Plugins/DP-MailBox/releases/tag/1.0.0)\\n**Downloads:** 35\\n**Latest Commit:** Merge pull request #2 from darksoldier1404/master\n\nfix gradlew\\n**Commit Date:** 2025-11-05T08:57:04Z\\n\\n",
     "DP-StreamNotify": "### 🔖 1.1.0\\n[Release Link](https://github.com/DP-Plugins/DP-StreamNotify/releases/tag/1.1.0)\\n**Downloads:** 28\\n**Latest Commit:** fix gradlew\\n**Commit Date:** 2025-11-05T09:25:46Z\\n\\n",
-    "DP-CustomCrafting": "### 🔖 1.1.1\\n[Release Link](https://github.com/DP-Plugins/DP-CustomCrafting/releases/tag/1.1.1)\\n**Downloads:** 15\\n**Latest Commit:** Update README.md\\n**Commit Date:** 2026-01-10T18:51:44Z\\n## Commits\n- [7d0a6a9](https://github.com/DP-Plugins/DP-CustomCrafting/commit/7d0a6a9): Update README.md (DEADPOOLIO)\\n### 🔖 1.1.0\\n[Release Link](https://github.com/DP-Plugins/DP-CustomCrafting/releases/tag/1.1.0)\\n**Downloads:** 3\\n**Latest Commit:** Merge pull request #4 from darksoldier1404/master\n\napply DLang\\n**Commit Date:** 2025-12-27T18:26:59Z\\n\\n### 🔖 1.0.2\\n[Release Link](https://github.com/DP-Plugins/DP-CustomCrafting/releases/tag/1.0.2)\\n**Downloads:** 4\\n**Latest Commit:** Merge pull request #3 from darksoldier1404/master\n\nfix path for Result data\\n**Commit Date:** 2025-12-27T11:53:40Z\\n\\n### 🔖 1.0.1\\n[Release Link](https://github.com/DP-Plugins/DP-CustomCrafting/releases/tag/1.0.1)\\n**Downloads:** 5\\n**Latest Commit:** Merge pull request #2 from darksoldier1404/master\n\ntab complete suggestions fix\nrequire DPP-Core 5.3.3 from this version\\n**Commit Date:** 2025-12-18T22:14:15Z\\n\\n### 🔖 1.0.0\\n[Release Link](https://github.com/DP-Plugins/DP-CustomCrafting/releases/tag/1.0.0)\\n**Downloads:** 2\\n**Latest Commit:** Merge pull request #1 from darksoldier1404/master\n\nfix gradlew\\n**Commit Date:** 2025-12-17T05:16:46Z\\n\\n",
+    "DP-CustomCrafting": "### 🔖 1.1.1\\n[Release Link](https://github.com/DP-Plugins/DP-CustomCrafting/releases/tag/1.1.1)\\n**Downloads:** 16\\n**Latest Commit:** Update README.md\\n**Commit Date:** 2026-01-10T18:51:44Z\\n## Commits\n- [7d0a6a9](https://github.com/DP-Plugins/DP-CustomCrafting/commit/7d0a6a9): Update README.md (DEADPOOLIO)\\n### 🔖 1.1.0\\n[Release Link](https://github.com/DP-Plugins/DP-CustomCrafting/releases/tag/1.1.0)\\n**Downloads:** 3\\n**Latest Commit:** Merge pull request #4 from darksoldier1404/master\n\napply DLang\\n**Commit Date:** 2025-12-27T18:26:59Z\\n\\n### 🔖 1.0.2\\n[Release Link](https://github.com/DP-Plugins/DP-CustomCrafting/releases/tag/1.0.2)\\n**Downloads:** 4\\n**Latest Commit:** Merge pull request #3 from darksoldier1404/master\n\nfix path for Result data\\n**Commit Date:** 2025-12-27T11:53:40Z\\n\\n### 🔖 1.0.1\\n[Release Link](https://github.com/DP-Plugins/DP-CustomCrafting/releases/tag/1.0.1)\\n**Downloads:** 5\\n**Latest Commit:** Merge pull request #2 from darksoldier1404/master\n\ntab complete suggestions fix\nrequire DPP-Core 5.3.3 from this version\\n**Commit Date:** 2025-12-18T22:14:15Z\\n\\n### 🔖 1.0.0\\n[Release Link](https://github.com/DP-Plugins/DP-CustomCrafting/releases/tag/1.0.0)\\n**Downloads:** 2\\n**Latest Commit:** Merge pull request #1 from darksoldier1404/master\n\nfix gradlew\\n**Commit Date:** 2025-12-17T05:16:46Z\\n\\n",
     "DP-Banknote": "### 🔖 1.1.0\\n[Release Link](https://github.com/DP-Plugins/DP-BankNote/releases/tag/1.1.0)\\n**Downloads:** 14\\n**Latest Commit:** Create README.md\\n**Commit Date:** 2026-01-10T09:33:35Z\\n## Commits\n- [938174c](https://github.com/DP-Plugins/DP-Banknote/commit/938174c): Create README.md (DEADPOOLIO)\\n### 🔖 1.0.0\\n[Release Link](https://github.com/DP-Plugins/DP-BankNote/releases/tag/1.0.0)\\n**Downloads:** 8\\n**Latest Commit:** Merge pull request #1 from darksoldier1404/master\n\nfix gradlew\\n**Commit Date:** 2025-12-20T05:20:54Z\\n\\n",
     "DP-ToolRepair": "### 🔖 1.1.1\\n[Release Link](https://github.com/DP-Plugins/DP-ToolRepair/releases/tag/1.1.1)\\n**Downloads:** 13\\n**Latest Commit:** Create README.md\\n**Commit Date:** 2026-01-10T10:58:43Z\\n## Commits\n- [aceb459](https://github.com/DP-Plugins/DP-ToolRepair/commit/aceb459): Create README.md (DEADPOOLIO)\\n### 🔖 1.1.0\\n[Release Link](https://github.com/DP-Plugins/DP-ToolRepair/releases/tag/1.1.0)\\n**Downloads:** 3\\n**Latest Commit:** Merge pull request #1 from darksoldier1404/master\n\napply DLang\\n**Commit Date:** 2025-12-27T18:38:08Z\\n\\n### 🔖 1.0.0\\n[Release Link](https://github.com/DP-Plugins/DP-ToolRepair/releases/tag/1.0.0)\\n**Downloads:** 3\\n**Latest Commit:** Initial commit\\n**Commit Date:** 2025-12-27T11:45:27Z\\n\\n",
     "DP-MaterialShop": "### 🔖 1.0.0\\n[Release Link](https://github.com/DP-Plugins/DP-MaterialShop/releases/tag/1.0.0)\\n**Downloads:** 13\\n**Latest Commit:** Add README documentation for DP-MaterialShop plugin\n\nAdded detailed documentation for DP-MaterialShop plugin, including features, installation instructions, command list, and notes.\\n**Commit Date:** 2026-01-10T09:19:16Z\\n## Commits\n- [3e2a7fb](https://github.com/DP-Plugins/DP-MaterialShop/commit/3e2a7fb): Add README documentation for DP-MaterialShop plugin (DEADPOOLIO)\\n",
@@ -40,11 +40,11 @@
         "assets": [
           {
             "name": "DPP-Core-5.3.3-SNAPSHOT.jar",
-            "download_count": 13,
+            "download_count": 14,
             "url": "https://github.com/DP-Plugins/DPP-Core/releases/download/5.3.3/DPP-Core-5.3.3-SNAPSHOT.jar"
           }
         ],
-        "total_download_count": 13,
+        "total_download_count": 14,
         "plugin": {
           "name": "DPP-Core",
           "version": "5.3.3",
@@ -469,7 +469,336 @@
         }
       }
     ],
-    "DP-SimplePrefix": [],
+    "DP-SimplePrefix": [
+      {
+        "repo": "DP-SimplePrefix",
+        "name": "Release #2.1.1",
+        "tag": "2.1.1",
+        "url": "https://github.com/DP-Plugins/DP-SimplePrefix/releases/tag/2.1.1",
+        "published_at": "2025-12-17T05:12:10Z",
+        "commit_date": "2025-12-15T12:57:38Z",
+        "commit_message": "Merge pull request #10 from darksoldier1404/master\n\nfix wrong import",
+        "body": "",
+        "assets": [
+          {
+            "name": "DP-SimplePrefix-2.1.1-SNAPSHOT.jar",
+            "download_count": 46,
+            "url": "https://github.com/DP-Plugins/DP-SimplePrefix/releases/download/2.1.1/DP-SimplePrefix-2.1.1-SNAPSHOT.jar"
+          }
+        ],
+        "total_download_count": 46,
+        "plugin": {
+          "name": "DP-SimplePrefix",
+          "version": "2.1.1",
+          "main": "com.darksoldier1404.dsp.SimplePrefix",
+          "api-version": 1.2,
+          "authors": [
+            "DEAD_POOLIO_"
+          ],
+          "depend": [
+            "DPP-Core"
+          ],
+          "softdepend": [
+            "LuckPerms",
+            "Vault"
+          ],
+          "commands": {
+            "dsp": {
+              "aliases": [
+                "simpleprefix"
+              ]
+            }
+          }
+        }
+      },
+      {
+        "repo": "DP-SimplePrefix",
+        "name": "Release #2.1.0",
+        "tag": "2.1.0",
+        "url": "https://github.com/DP-Plugins/DP-SimplePrefix/releases/tag/2.1.0",
+        "published_at": "2025-11-05T09:52:54Z",
+        "commit_date": "2025-11-05T09:52:17Z",
+        "commit_message": "Merge pull request #9 from darksoldier1404/master\n\n5.3.0 Update",
+        "body": "",
+        "assets": [
+          {
+            "name": "DP-SimplePrefix-2.1.0-SNAPSHOT.jar",
+            "download_count": 42,
+            "url": "https://github.com/DP-Plugins/DP-SimplePrefix/releases/download/2.1.0/DP-SimplePrefix-2.1.0-SNAPSHOT.jar"
+          }
+        ],
+        "total_download_count": 42,
+        "plugin": {
+          "name": "DP-SimplePrefix",
+          "version": "2.1.1",
+          "main": "com.darksoldier1404.dsp.SimplePrefix",
+          "api-version": 1.2,
+          "authors": [
+            "DEAD_POOLIO_"
+          ],
+          "depend": [
+            "DPP-Core"
+          ],
+          "softdepend": [
+            "LuckPerms",
+            "Vault"
+          ],
+          "commands": {
+            "dsp": {
+              "aliases": [
+                "simpleprefix"
+              ]
+            }
+          }
+        }
+      },
+      {
+        "repo": "DP-SimplePrefix",
+        "name": "Release #2.0.0",
+        "tag": "2.0.0",
+        "url": "https://github.com/DP-Plugins/DP-SimplePrefix/releases/tag/2.0.0",
+        "published_at": "2025-09-28T15:45:57Z",
+        "commit_date": "2025-09-28T15:45:07Z",
+        "commit_message": "Merge pull request #8 from darksoldier1404/master\n\nupdate 5.2 code clean",
+        "body": "## Commits\n- 94040f9: update 5.2 code clean (DEADPOOLIO) [#8](https://github.com/DP-Plugins/DP-SimplePrefix/pull/8)",
+        "assets": [
+          {
+            "name": "DP-SimplePrefix-2.0.0-SNAPSHOT.jar",
+            "download_count": 3,
+            "url": "https://github.com/DP-Plugins/DP-SimplePrefix/releases/download/2.0.0/DP-SimplePrefix-2.0.0-SNAPSHOT.jar"
+          }
+        ],
+        "total_download_count": 3,
+        "plugin": {
+          "name": "DP-SimplePrefix",
+          "version": "2.1.1",
+          "main": "com.darksoldier1404.dsp.SimplePrefix",
+          "api-version": 1.2,
+          "authors": [
+            "DEAD_POOLIO_"
+          ],
+          "depend": [
+            "DPP-Core"
+          ],
+          "softdepend": [
+            "LuckPerms",
+            "Vault"
+          ],
+          "commands": {
+            "dsp": {
+              "aliases": [
+                "simpleprefix"
+              ]
+            }
+          }
+        }
+      },
+      {
+        "repo": "DP-SimplePrefix",
+        "name": "Release #1.0.1.5",
+        "tag": "1.0.1.5",
+        "url": "https://github.com/DP-Plugins/DP-SimplePrefix/releases/tag/1.0.1.5",
+        "published_at": "2025-07-19T15:22:06Z",
+        "commit_date": "2025-07-19T15:21:27Z",
+        "commit_message": "Merge pull request #6 from darksoldier1404/master\n\nfix missing lang key in config.yml",
+        "body": "",
+        "assets": [
+          {
+            "name": "DP-SimplePrefix-1.0.1.5-SNAPSHOT.jar",
+            "download_count": 16,
+            "url": "https://github.com/DP-Plugins/DP-SimplePrefix/releases/download/1.0.1.5/DP-SimplePrefix-1.0.1.5-SNAPSHOT.jar"
+          }
+        ],
+        "total_download_count": 16,
+        "plugin": {
+          "name": "DP-SimplePrefix",
+          "version": "2.1.1",
+          "main": "com.darksoldier1404.dsp.SimplePrefix",
+          "api-version": 1.2,
+          "authors": [
+            "DEAD_POOLIO_"
+          ],
+          "depend": [
+            "DPP-Core"
+          ],
+          "softdepend": [
+            "LuckPerms",
+            "Vault"
+          ],
+          "commands": {
+            "dsp": {
+              "aliases": [
+                "simpleprefix"
+              ]
+            }
+          }
+        }
+      },
+      {
+        "repo": "DP-SimplePrefix",
+        "name": "Release #1.0.1.4",
+        "tag": "1.0.1.4",
+        "url": "https://github.com/DP-Plugins/DP-SimplePrefix/releases/tag/1.0.1.4",
+        "published_at": "2025-06-30T13:42:31Z",
+        "commit_date": "2025-06-30T13:41:38Z",
+        "commit_message": "Merge pull request #5 from darksoldier1404/master\n\nupdate for DPP-Core 5.0.0.34",
+        "body": "",
+        "assets": [
+          {
+            "name": "DP-SimplePrefix-1.0.1.4-SNAPSHOT.jar",
+            "download_count": 7,
+            "url": "https://github.com/DP-Plugins/DP-SimplePrefix/releases/download/1.0.1.4/DP-SimplePrefix-1.0.1.4-SNAPSHOT.jar"
+          }
+        ],
+        "total_download_count": 7,
+        "plugin": {
+          "name": "DP-SimplePrefix",
+          "version": "2.1.1",
+          "main": "com.darksoldier1404.dsp.SimplePrefix",
+          "api-version": 1.2,
+          "authors": [
+            "DEAD_POOLIO_"
+          ],
+          "depend": [
+            "DPP-Core"
+          ],
+          "softdepend": [
+            "LuckPerms",
+            "Vault"
+          ],
+          "commands": {
+            "dsp": {
+              "aliases": [
+                "simpleprefix"
+              ]
+            }
+          }
+        }
+      },
+      {
+        "repo": "DP-SimplePrefix",
+        "name": "Release #1.0.0.2",
+        "tag": "1.0.0.2",
+        "url": "https://github.com/DP-Plugins/DP-SimplePrefix/releases/tag/1.0.0.2",
+        "published_at": "2025-05-25T05:05:37Z",
+        "commit_date": "2025-05-25T05:04:56Z",
+        "commit_message": "Merge pull request #4 from darksoldier1404/dev\n\nDev",
+        "body": "",
+        "assets": [
+          {
+            "name": "DP-SimplePrefix-1.0.0.2-SNAPSHOT.jar",
+            "download_count": 17,
+            "url": "https://github.com/DP-Plugins/DP-SimplePrefix/releases/download/1.0.0.2/DP-SimplePrefix-1.0.0.2-SNAPSHOT.jar"
+          }
+        ],
+        "total_download_count": 17,
+        "plugin": {
+          "name": "DP-SimplePrefix",
+          "version": "2.1.1",
+          "main": "com.darksoldier1404.dsp.SimplePrefix",
+          "api-version": 1.2,
+          "authors": [
+            "DEAD_POOLIO_"
+          ],
+          "depend": [
+            "DPP-Core"
+          ],
+          "softdepend": [
+            "LuckPerms",
+            "Vault"
+          ],
+          "commands": {
+            "dsp": {
+              "aliases": [
+                "simpleprefix"
+              ]
+            }
+          }
+        }
+      },
+      {
+        "repo": "DP-SimplePrefix",
+        "name": "Release #1.0.0.1",
+        "tag": "1.0.0.1",
+        "url": "https://github.com/DP-Plugins/DP-SimplePrefix/releases/tag/1.0.0.1",
+        "published_at": "2025-05-20T06:33:35Z",
+        "commit_date": "2025-05-20T06:34:11Z",
+        "commit_message": "version up",
+        "body": "",
+        "assets": [
+          {
+            "name": "DP-SimplePrefix-1.0.0.1-SNAPSHOT.jar",
+            "download_count": 4,
+            "url": "https://github.com/DP-Plugins/DP-SimplePrefix/releases/download/1.0.0.1/DP-SimplePrefix-1.0.0.1-SNAPSHOT.jar"
+          }
+        ],
+        "total_download_count": 4,
+        "plugin": {
+          "name": "DP-SimplePrefix",
+          "version": "2.1.1",
+          "main": "com.darksoldier1404.dsp.SimplePrefix",
+          "api-version": 1.2,
+          "authors": [
+            "DEAD_POOLIO_"
+          ],
+          "depend": [
+            "DPP-Core"
+          ],
+          "softdepend": [
+            "LuckPerms",
+            "Vault"
+          ],
+          "commands": {
+            "dsp": {
+              "aliases": [
+                "simpleprefix"
+              ]
+            }
+          }
+        }
+      },
+      {
+        "repo": "DP-SimplePrefix",
+        "name": "Release #1.0.0.0",
+        "tag": "1.0.0.0",
+        "url": "https://github.com/DP-Plugins/DP-SimplePrefix/releases/tag/1.0.0.0",
+        "published_at": "2025-05-20T06:32:22Z",
+        "commit_date": "2025-05-20T06:31:41Z",
+        "commit_message": "Merge pull request #3 from darksoldier1404/dev\n\nDLang Added",
+        "body": "",
+        "assets": [
+          {
+            "name": "DP-SimplePrefix-1.0.0.0-SNAPSHOT.jar",
+            "download_count": 3,
+            "url": "https://github.com/DP-Plugins/DP-SimplePrefix/releases/download/1.0.0.0/DP-SimplePrefix-1.0.0.0-SNAPSHOT.jar"
+          }
+        ],
+        "total_download_count": 3,
+        "plugin": {
+          "name": "DP-SimplePrefix",
+          "version": "2.1.1",
+          "main": "com.darksoldier1404.dsp.SimplePrefix",
+          "api-version": 1.2,
+          "authors": [
+            "DEAD_POOLIO_"
+          ],
+          "depend": [
+            "DPP-Core"
+          ],
+          "softdepend": [
+            "LuckPerms",
+            "Vault"
+          ],
+          "commands": {
+            "dsp": {
+              "aliases": [
+                "simpleprefix"
+              ]
+            }
+          }
+        }
+      }
+    ],
     "DP-CustomFarming": [
       {
         "repo": "DP-CustomFarming",
@@ -736,7 +1065,110 @@
         }
       }
     ],
-    "DP-AFKShop": [],
+    "DP-AFKShop": [
+      {
+        "repo": "DP-AFKShop",
+        "name": "Release #2.1.0",
+        "tag": "2.1.0",
+        "url": "https://github.com/DP-Plugins/DP-AFKShop/releases/tag/2.1.0",
+        "published_at": "2026-01-10T17:51:09Z",
+        "commit_date": "2026-01-10T17:50:36Z",
+        "commit_message": "Merge pull request #2 from darksoldier1404/master\n\nUpdate AFKShop functionality and localization support; increment vers…",
+        "body": "",
+        "assets": [
+          {
+            "name": "DP-AFKShop-2.1.0-SNAPSHOT.jar",
+            "download_count": 22,
+            "url": "https://github.com/DP-Plugins/DP-AFKShop/releases/download/2.1.0/DP-AFKShop-2.1.0-SNAPSHOT.jar"
+          }
+        ],
+        "total_download_count": 22,
+        "plugin": {
+          "name": "DP-AFKShop",
+          "version": "2.1.0",
+          "main": "com.darksoldier1404.dpas.AFKShop",
+          "authors": [
+            "DEAD_POOLIO_"
+          ],
+          "api-version": 1.2,
+          "depend": [
+            "DPP-Core",
+            "PlaceholderAPI"
+          ],
+          "commands": {
+            "dpas": null
+          }
+        }
+      },
+      {
+        "repo": "DP-AFKShop",
+        "name": "Release #2.0.0",
+        "tag": "2.0.0",
+        "url": "https://github.com/DP-Plugins/DP-AFKShop/releases/tag/2.0.0",
+        "published_at": "2026-01-10T08:53:19Z",
+        "commit_date": "2026-01-10T08:52:40Z",
+        "commit_message": "Add README for DP-AFKShop plugin\n\nAdded detailed information about the DP-AFKShop plugin, including features, installation instructions, command list, and API integration.",
+        "body": "## Commits\n- 9777922: Add README for DP-AFKShop plugin (DEADPOOLIO)",
+        "assets": [
+          {
+            "name": "DP-AFKShop-2.0.0-SNAPSHOT.jar",
+            "download_count": 3,
+            "url": "https://github.com/DP-Plugins/DP-AFKShop/releases/download/2.0.0/DP-AFKShop-2.0.0-SNAPSHOT.jar"
+          }
+        ],
+        "total_download_count": 3,
+        "plugin": {
+          "name": "DP-AFKShop",
+          "version": "2.1.0",
+          "main": "com.darksoldier1404.dpas.AFKShop",
+          "authors": [
+            "DEAD_POOLIO_"
+          ],
+          "api-version": 1.2,
+          "depend": [
+            "DPP-Core",
+            "PlaceholderAPI"
+          ],
+          "commands": {
+            "dpas": null
+          }
+        }
+      },
+      {
+        "repo": "DP-AFKShop",
+        "name": "Release #1.0.0",
+        "tag": "1.0.0",
+        "url": "https://github.com/DP-Plugins/DP-AFKShop/releases/tag/1.0.0",
+        "published_at": "2025-12-30T20:10:54Z",
+        "commit_date": "2025-12-30T20:08:50Z",
+        "commit_message": "Initial commit",
+        "body": "",
+        "assets": [
+          {
+            "name": "DP-AFKShop-1.0.0-SNAPSHOT.jar",
+            "download_count": 8,
+            "url": "https://github.com/DP-Plugins/DP-AFKShop/releases/download/1.0.0/DP-AFKShop-1.0.0-SNAPSHOT.jar"
+          }
+        ],
+        "total_download_count": 8,
+        "plugin": {
+          "name": "DP-AFKShop",
+          "version": "2.1.0",
+          "main": "com.darksoldier1404.dpas.AFKShop",
+          "authors": [
+            "DEAD_POOLIO_"
+          ],
+          "api-version": 1.2,
+          "depend": [
+            "DPP-Core",
+            "PlaceholderAPI"
+          ],
+          "commands": {
+            "dpas": null
+          }
+        }
+      }
+    ],
     "DP-RewardChest": [
       {
         "repo": "DP-RewardChest",
@@ -1565,7 +1997,125 @@
         }
       }
     ],
-    "DP-ItemEditor": [],
+    "DP-ItemEditor": [
+      {
+        "repo": "DP-ItemEditor",
+        "name": "Release #2.1.0",
+        "tag": "2.1.0",
+        "url": "https://github.com/DP-Plugins/DP-ItemEditor/releases/tag/2.1.0",
+        "published_at": "2026-01-10T12:51:40Z",
+        "commit_date": "2026-01-10T12:51:04Z",
+        "commit_message": "Create README.md",
+        "body": "## Commits\n- 4d5d61f: Create README.md (DEADPOOLIO)",
+        "assets": [
+          {
+            "name": "DP-ItemEditor-2.1.0-SNAPSHOT.jar",
+            "download_count": 24,
+            "url": "https://github.com/DP-Plugins/DP-ItemEditor/releases/download/2.1.0/DP-ItemEditor-2.1.0-SNAPSHOT.jar"
+          }
+        ],
+        "total_download_count": 24,
+        "plugin": {
+          "name": "DP-ItemEditor",
+          "version": "2.1.0",
+          "main": "com.darksoldier1404.die.ItemEditor",
+          "authors": [
+            "DEAD_POOLIO_"
+          ],
+          "api-version": 1.2,
+          "depend": [
+            "DPP-Core"
+          ],
+          "commands": {
+            "dpie": {
+              "aliases": [
+                "dpitemeditor",
+                "itemeditor",
+                "ie"
+              ]
+            }
+          }
+        }
+      },
+      {
+        "repo": "DP-ItemEditor",
+        "name": "Release #2.0.0",
+        "tag": "2.0.0",
+        "url": "https://github.com/DP-Plugins/DP-ItemEditor/releases/tag/2.0.0",
+        "published_at": "2025-09-21T20:59:54Z",
+        "commit_date": "2025-09-21T20:59:11Z",
+        "commit_message": "Merge pull request #2 from darksoldier1404/master\n\nupdate 5.2",
+        "body": "",
+        "assets": [
+          {
+            "name": "DP-ItemEditor-2.0.0-SNAPSHOT.jar",
+            "download_count": 6,
+            "url": "https://github.com/DP-Plugins/DP-ItemEditor/releases/download/2.0.0/DP-ItemEditor-2.0.0-SNAPSHOT.jar"
+          }
+        ],
+        "total_download_count": 6,
+        "plugin": {
+          "name": "DP-ItemEditor",
+          "version": "2.1.0",
+          "main": "com.darksoldier1404.die.ItemEditor",
+          "authors": [
+            "DEAD_POOLIO_"
+          ],
+          "api-version": 1.2,
+          "depend": [
+            "DPP-Core"
+          ],
+          "commands": {
+            "dpie": {
+              "aliases": [
+                "dpitemeditor",
+                "itemeditor",
+                "ie"
+              ]
+            }
+          }
+        }
+      },
+      {
+        "repo": "DP-ItemEditor",
+        "name": "Release #1.0.0.0",
+        "tag": "1.0.0.0",
+        "url": "https://github.com/DP-Plugins/DP-ItemEditor/releases/tag/1.0.0.0",
+        "published_at": "2025-07-19T19:54:40Z",
+        "commit_date": "2025-07-19T19:52:50Z",
+        "commit_message": "Merge pull request #1 from darksoldier1404/master\n\nadd DLang",
+        "body": "",
+        "assets": [
+          {
+            "name": "DP-ItemEditor-1.0.0.0-SNAPSHOT.jar",
+            "download_count": 2,
+            "url": "https://github.com/DP-Plugins/DP-ItemEditor/releases/download/1.0.0.0/DP-ItemEditor-1.0.0.0-SNAPSHOT.jar"
+          }
+        ],
+        "total_download_count": 2,
+        "plugin": {
+          "name": "DP-ItemEditor",
+          "version": "2.1.0",
+          "main": "com.darksoldier1404.die.ItemEditor",
+          "authors": [
+            "DEAD_POOLIO_"
+          ],
+          "api-version": 1.2,
+          "depend": [
+            "DPP-Core"
+          ],
+          "commands": {
+            "dpie": {
+              "aliases": [
+                "dpitemeditor",
+                "itemeditor",
+                "ie"
+              ]
+            }
+          }
+        }
+      }
+    ],
     "DP-GUIShop": [
       {
         "repo": "DP-GUIShop",
@@ -2452,8 +3002,152 @@
         }
       }
     ],
-    "DP-ConsumeBox": [],
-    "DP-ItemCategory": [],
+    "DP-ConsumeBox": [
+      {
+        "repo": "DP-ConsumeBox",
+        "name": "Release #1.0.1",
+        "tag": "1.0.1",
+        "url": "https://github.com/DP-Plugins/DP-ConsumeBox/releases/tag/1.0.1",
+        "published_at": "2026-01-10T10:03:35Z",
+        "commit_date": "2026-01-10T10:03:00Z",
+        "commit_message": "Add README for DP-ConsumeBox plugin\n\nAdd detailed information about the DP-ConsumeBox plugin, including features, installation instructions, commands, and support links.",
+        "body": "## Commits\n- 81cb15f: Add README for DP-ConsumeBox plugin (DEADPOOLIO)",
+        "assets": [
+          {
+            "name": "DP-ConsumeBox-1.0.1-SNAPSHOT.jar",
+            "download_count": 22,
+            "url": "https://github.com/DP-Plugins/DP-ConsumeBox/releases/download/1.0.1/DP-ConsumeBox-1.0.1-SNAPSHOT.jar"
+          }
+        ],
+        "total_download_count": 22,
+        "plugin": {
+          "name": "DP-ConsumeBox",
+          "version": "1.0.1",
+          "main": "com.darksoldier1404.dpcb.ConsumeBox",
+          "authors": [
+            "DEAD_POOLIO_"
+          ],
+          "api-version": 1.2,
+          "depend": [
+            "DPP-Core"
+          ],
+          "commands": {
+            "dpcb": {
+              "aliases": [
+                "consumebox",
+                "cb"
+              ]
+            }
+          }
+        }
+      },
+      {
+        "repo": "DP-ConsumeBox",
+        "name": "Release #1.0.0",
+        "tag": "1.0.0",
+        "url": "https://github.com/DP-Plugins/DP-ConsumeBox/releases/tag/1.0.0",
+        "published_at": "2025-11-22T10:57:42Z",
+        "commit_date": "2025-11-22T10:57:11Z",
+        "commit_message": "Merge pull request #1 from darksoldier1404/master\n\ninit",
+        "body": "",
+        "assets": [
+          {
+            "name": "DP-ConsumeBox-1.0.0-SNAPSHOT.jar",
+            "download_count": 28,
+            "url": "https://github.com/DP-Plugins/DP-ConsumeBox/releases/download/1.0.0/DP-ConsumeBox-1.0.0-SNAPSHOT.jar"
+          }
+        ],
+        "total_download_count": 28,
+        "plugin": {
+          "name": "DP-ConsumeBox",
+          "version": "1.0.1",
+          "main": "com.darksoldier1404.dpcb.ConsumeBox",
+          "authors": [
+            "DEAD_POOLIO_"
+          ],
+          "api-version": 1.2,
+          "depend": [
+            "DPP-Core"
+          ],
+          "commands": {
+            "dpcb": {
+              "aliases": [
+                "consumebox",
+                "cb"
+              ]
+            }
+          }
+        }
+      }
+    ],
+    "DP-ItemCategory": [
+      {
+        "repo": "DP-ItemCategory",
+        "name": "Release #2.3.0",
+        "tag": "2.3.0",
+        "url": "https://github.com/DP-Plugins/DP-ItemCategory/releases/tag/2.3.0",
+        "published_at": "2026-01-10T12:21:50Z",
+        "commit_date": "2026-01-10T12:21:15Z",
+        "commit_message": "Create README.md",
+        "body": "## Commits\n- 17aa664: Create README.md (DEADPOOLIO)",
+        "assets": [
+          {
+            "name": "DP-ItemCategory-2.3.0-SNAPSHOT.jar",
+            "download_count": 21,
+            "url": "https://github.com/DP-Plugins/DP-ItemCategory/releases/download/2.3.0/DP-ItemCategory-2.3.0-SNAPSHOT.jar"
+          }
+        ],
+        "total_download_count": 21,
+        "plugin": {
+          "name": "DP-ItemCategory",
+          "version": "2.3.0",
+          "main": "com.darksoldier1404.dpic.ItemCategory",
+          "api-version": 1.2,
+          "authors": [
+            "DEAD_POOLIO_"
+          ],
+          "depend": [
+            "DPP-Core"
+          ],
+          "commands": {
+            "dic": null
+          }
+        }
+      },
+      {
+        "repo": "DP-ItemCategory",
+        "name": "Release #2.2.0",
+        "tag": "2.2.0",
+        "url": "https://github.com/DP-Plugins/DP-ItemCategory/releases/tag/2.2.0",
+        "published_at": "2025-11-30T08:47:18Z",
+        "commit_date": "2025-11-30T08:46:44Z",
+        "commit_message": "Merge pull request #3 from darksoldier1404/master\n\nfix command example text",
+        "body": "## Commits\n- 752e99a: fix command example text (DEADPOOLIO) [#3](https://github.com/DP-Plugins/DP-ItemCategory/pull/3)",
+        "assets": [
+          {
+            "name": "DP-ItemCategory-2.2.0-SNAPSHOT.jar",
+            "download_count": 26,
+            "url": "https://github.com/DP-Plugins/DP-ItemCategory/releases/download/2.2.0/DP-ItemCategory-2.2.0-SNAPSHOT.jar"
+          }
+        ],
+        "total_download_count": 26,
+        "plugin": {
+          "name": "DP-ItemCategory",
+          "version": "2.3.0",
+          "main": "com.darksoldier1404.dpic.ItemCategory",
+          "api-version": 1.2,
+          "authors": [
+            "DEAD_POOLIO_"
+          ],
+          "depend": [
+            "DPP-Core"
+          ],
+          "commands": {
+            "dic": null
+          }
+        }
+      }
+    ],
     "DP-ItemCollection": [
       {
         "repo": "DP-ItemCollection",
@@ -2572,11 +3266,11 @@
         "assets": [
           {
             "name": "DP-MailBox-1.2.0-SNAPSHOT.jar",
-            "download_count": 9,
+            "download_count": 10,
             "url": "https://github.com/DP-Plugins/DP-MailBox/releases/download/1.2.0/DP-MailBox-1.2.0-SNAPSHOT.jar"
           }
         ],
-        "total_download_count": 9,
+        "total_download_count": 10,
         "plugin": {
           "name": "DP-MailBox",
           "version": "1.2.0",
@@ -2731,11 +3425,11 @@
         "assets": [
           {
             "name": "DP-CustomCrafting-1.1.1-SNAPSHOT.jar",
-            "download_count": 15,
+            "download_count": 16,
             "url": "https://github.com/DP-Plugins/DP-CustomCrafting/releases/download/1.1.1/DP-CustomCrafting-1.1.1-SNAPSHOT.jar"
           }
         ],
-        "total_download_count": 15,
+        "total_download_count": 16,
         "plugin": {
           "name": "DP-CustomCrafting",
           "version": "1.1.1",
